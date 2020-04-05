@@ -32,6 +32,7 @@ button {
   font-size: 18px;
   font-family: RobotoMedium;
   margin: 5px 0px;
+  cursor: pointer;
   &:hover {
     color: white;
     background-color: $site-button-dark;

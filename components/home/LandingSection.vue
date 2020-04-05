@@ -11,14 +11,12 @@
 </template>
 
 <script>
-import AppHeader from '@/components/shared/AppHeader'
 import AppButton from '@/components/shared/AppButton'
 import TheTextAnimation from '@/components/home/TheTextAnimation'
 import AppButtonScroll from '@/components/shared/AppButtonScroll'
 
 export default {
   components: {
-    AppHeader,
     AppButton,
     TheTextAnimation,
     AppButtonScroll
@@ -55,7 +53,6 @@ h1 {
   width: 30% !important;
   min-width: 240px;
   max-width: 550px;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
