@@ -1,10 +1,16 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <landing-section></landing-section>
+  </div>
 </template>
 
 <script>
+import LandingSection from '@/components/home/LandingSection'
+
 export default {
-  components: {}
+  components: {
+    LandingSection
+  }
 }
 </script>
 
