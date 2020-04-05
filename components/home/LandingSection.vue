@@ -6,6 +6,7 @@
       <span>web developer</span>
     </h1>
     <app-button class="landing-button" text="Contact me"></app-button>
+    <app-button-scroll></app-button-scroll>
   </section>
 </template>
 
@@ -13,12 +14,14 @@
 import AppHeader from '@/components/shared/AppHeader'
 import AppButton from '@/components/shared/AppButton'
 import TheTextAnimation from '@/components/home/TheTextAnimation'
+import AppButtonScroll from '@/components/shared/AppButtonScroll'
 
 export default {
   components: {
     AppHeader,
     AppButton,
-    TheTextAnimation
+    TheTextAnimation,
+    AppButtonScroll
   }
 }
 </script>
@@ -27,12 +30,13 @@ export default {
 .landing-section {
   width: 100%;
   height: 100vh;
-  background-color: $site-gray;
+  background: $site-gray url('~assets/images/dots.svg') no-repeat center bottom;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  position: relative;
 }
 
 h1 {
@@ -51,6 +55,7 @@ h1 {
   width: 30% !important;
   min-width: 240px;
   max-width: 550px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
