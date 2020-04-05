@@ -70,6 +70,40 @@ export default {}
 </script>
 
 <style scoped lang="scss">
+@media screen and (max-width: 860px) {
+  #logo {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #logo {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #logo {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #logo {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #logo {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #logo {
+    width: 270px;
+  }
+}
+
 #logo {
   animation: logo-fill 0.5s ease forwards 5.3s;
 }
