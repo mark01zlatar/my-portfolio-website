@@ -28,7 +28,7 @@ export default {
 .landing-section {
   width: 100%;
   height: 100vh;
-  background: $site-gray url('~assets/images/dots.svg') no-repeat center bottom;
+  background: $site-gray url('~assets/images/dots.svg') no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;

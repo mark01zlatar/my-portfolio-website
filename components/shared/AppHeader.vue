@@ -80,10 +80,12 @@ header {
   display: flex;
   li {
     margin-right: 30px;
-    transition: color 200ms ease;
     cursor: pointer;
-    &:hover {
-      color: $site-text-dark;
+    a {
+      transition: color 200ms ease;
+      &:hover {
+        color: $site-text-dark;
+      }
     }
   }
 }

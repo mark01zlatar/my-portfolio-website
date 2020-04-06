@@ -33,6 +33,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
+  // Doc: https://wlada.github.io/vue-carousel-3d/
   plugins: [{ src: '~plugins/vue-carousel-3d', ssr: false }],
   /*
    ** Nuxt.js dev-modules

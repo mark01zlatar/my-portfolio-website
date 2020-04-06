@@ -46,6 +46,7 @@ export default {
   clip-path: circle(0px at 100% -0%);
   -webkit-clip-path: circle(0px at 100% -0%);
   transition: all 1s ease-out;
+  pointer-events: none;
   ul {
     display: flex;
     align-items: center;
@@ -68,5 +69,6 @@ export default {
 .mobile-navigation-container.open {
   clip-path: circle(1200px at 90% -10%);
   -webkit-clip-path: circle(1200px at 90% -10%);
+  pointer-events: all;
 }
 </style>
