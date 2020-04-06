@@ -6,14 +6,23 @@
       </nuxt-link>
       <div class="desktop-navigation">
         <ul class="navigation-list">
-          <nuxt-link to="#" tag="li">About me</nuxt-link>
-          <nuxt-link to="#" tag="li">Projects</nuxt-link>
-          <nuxt-link to="#" tag="li">Technologies</nuxt-link>
+          <nuxt-link to="#" tag="li">
+            <a>About me</a>
+          </nuxt-link>
+          <nuxt-link to="#" tag="li">
+            <a>Projects</a>
+          </nuxt-link>
+          <nuxt-link to="#" tag="li">
+            <a>Technologies</a>
+          </nuxt-link>
         </ul>
         <nuxt-link to="#" class="resume-download" tag="a">Resume</nuxt-link>
         <app-button text="Contact me"></app-button>
       </div>
-      <app-hamburger class="hamburger"></app-hamburger>
+      <div @click="openMobileNav = !openMobileNav" class="hamburger">
+        <app-hamburger></app-hamburger>
+      </div>
+      <app-mobile-navigation :openMobileNav="openMobileNav"></app-mobile-navigation>
     </nav>
   </header>
 </template>
@@ -21,11 +30,18 @@
 <script>
 import AppButton from '@/components/shared/AppButton'
 import AppHamburger from '@/components/shared/AppHamburger'
+import AppMobileNavigation from '@/components/shared/AppMobileNavigation'
 
 export default {
   components: {
     AppButton,
-    AppHamburger
+    AppHamburger,
+    AppMobileNavigation
+  },
+  data() {
+    return {
+      openMobileNav: false
+    }
   }
 }
 </script>
@@ -84,6 +100,7 @@ header {
 .hamburger {
   margin-left: auto;
   display: none;
+  z-index: 100;
 }
 
 @media screen and (max-width: 1000px) {
