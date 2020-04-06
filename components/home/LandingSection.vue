@@ -40,7 +40,7 @@ export default {
 h1 {
   color: transparent;
   font-size: 45px;
-  margin: 20px 0px;
+  margin: 20px 10px;
   color: white;
   span {
     -webkit-text-stroke: 0.1px white;

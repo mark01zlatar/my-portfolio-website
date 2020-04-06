@@ -72,35 +72,35 @@ export default {}
 <style scoped lang="scss">
 @media screen and (max-width: 860px) {
   #logo {
-    width: 700px;
+    width: 670px;
   }
 }
 @media screen and (max-width: 700px) {
   #logo {
-    width: 600px;
+    width: 570px;
   }
 }
 @media screen and (max-width: 600px) {
   #logo {
-    width: 500px;
+    width: 470px;
   }
 }
 
 @media screen and (max-width: 500px) {
   #logo {
-    width: 400px;
+    width: 370px;
   }
 }
 
 @media screen and (max-width: 400px) {
   #logo {
-    width: 300px;
+    width: 280px;
   }
 }
 
 @media screen and (max-width: 300px) {
   #logo {
-    width: 270px;
+    width: 250px;
   }
 }
 
