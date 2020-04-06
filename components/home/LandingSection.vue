@@ -43,7 +43,7 @@ h1 {
   margin: 20px 10px;
   color: white;
   span {
-    -webkit-text-stroke: 0.1px white;
+    -webkit-text-stroke: 0.2px white;
     color: transparent;
     font-size: 50px;
   }

@@ -58,6 +58,7 @@ export default {
       margin: 10px 0px;
       font-size: 20px;
       a {
+          transition: color 200ms ease;
         &:hover {
           color: $site-text-dark;
         }
