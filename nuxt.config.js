@@ -20,7 +20,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+        href:
+          'https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css',
         rel: 'stylesheet'
       }
     ]

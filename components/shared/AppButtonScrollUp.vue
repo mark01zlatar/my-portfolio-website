@@ -1,6 +1,6 @@
 <template>
   <button>
-    <i class="material-icons">expand_less</i>
+    <i class="mdi mdi-chevron-double-up"></i>
   </button>
 </template>
 
@@ -27,7 +27,7 @@ button {
   cursor: pointer;
   z-index: 10;
   i {
-    font-size: 60px;
+    font-size: 55px;
   }
   &:hover {
     background-color: $site-button-dark;
