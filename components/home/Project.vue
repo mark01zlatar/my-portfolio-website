@@ -1,19 +1,19 @@
 <template>
   <div class="project-container">
-    <img width="700px" src="@/assets/images/gem-media.png" alt />
+    <img width="700px" :src="require(`@/assets/images/${project.src}`)" :alt="project.title" />
     <div class="project-text">
-      <h1>Project title</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis illo atque nobis vero, eius sunt officia quas tempora architecto corporis temporibus ratione. Aliquid deserunt provident accusantium, laboriosam beatae porro magni.</p>
+      <h1>{{ project.title }}</h1>
+      <p>{{ project.text }}</p>
       <div>
         <button class="project-button project-button--one">
           <i class="mdi mdi-eye"></i> View more
         </button>
-        <button class="project-button">
+        <a :href="project.links.github" target="_blank" class="project-button">
           <i class="mdi mdi-github"></i> Source code
-        </button>
-        <button class="project-button project-button--three">
+        </a>
+        <a :href="project.links.site" target="_blank" class="project-button project-button--three">
           <i class="mdi mdi-search-web"></i> Visit site
-        </button>
+        </a>
       </div>
     </div>
     <hr class="horizontal-line" />
@@ -21,7 +21,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    project: {
+      type: Object,
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +39,12 @@ export default {}
   background-color: $site-text-dark;
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, $site-gray, $site-text-dark, $site-gray);
+  background-image: linear-gradient(
+    to right,
+    $site-gray,
+    $site-text-dark,
+    $site-gray
+  );
 }
 
 .project-container {
@@ -57,6 +69,9 @@ export default {}
   max-width: 600px;
   h1 {
     margin-bottom: 40px;
+    word-wrap: break-word !important;
+    white-space: pre-wrap;
+    word-break: keep-all;
   }
 
   p {
