@@ -6,7 +6,7 @@
         <slide class="slide" v-for="slide in slides" :key="slide.index" :index="slide.index">
           <img
             height="100"
-            :src="require(`@/assets/icons-services/${slide.src}`)"
+            :src="require(`@/assets/icons/services/${slide.src}`)"
             :alt="slide.title + ' icon'"
           />
           <h3>{{ slide.title }}</h3>
