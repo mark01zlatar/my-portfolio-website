@@ -57,6 +57,7 @@ export default {
   text-align: left;
   img {
     margin-right: 35px;
+    width: 700px;
   }
 }
 
@@ -66,7 +67,7 @@ export default {
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 630px;
   h1 {
     margin-bottom: 40px;
     word-wrap: break-word !important;
@@ -104,6 +105,7 @@ export default {
   font-family: RobotoMedium;
   font-size: 18px;
   cursor: pointer;
+  margin-top: 5px;
   &:hover {
     color: white;
     background: $site-text-dark;
@@ -129,6 +131,40 @@ export default {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
+  .horizontal-line {
+    bottom: -30px;
+  }
+  .project-container {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 100px;
+    img {
+      margin-right: 0px;
+    }
+  }
+
+  .project-text {
+    margin-left: 0px;
+    div {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .project-container {
+    img {
+      width: 90%;
+    }
+  }
+  .project-text {
+    padding: 0px 10px;
+    h1 {
+      font-size: 25px;
+    }
+  }
 }
 </style>
