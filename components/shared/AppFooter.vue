@@ -35,7 +35,6 @@ export default {}
 
 <style lang="scss" scoped>
 footer {
-  margin-top: 100px;
   width: 100%;
   height: 100vh;
   background: $site-gray url('~assets/images/dots.svg') no-repeat center center;
@@ -47,6 +46,9 @@ footer {
   position: relative;
   color: white;
   font-size: 30px;
+  h1 {
+    padding: 0px 20px;
+  }
 }
 nav {
   position: absolute;
@@ -59,7 +61,7 @@ nav {
     margin: 0px auto;
     display: flex;
     align-items: center;
-    padding:10px 0px;
+    padding: 10px 0px;
   }
 }
 
@@ -81,9 +83,38 @@ nav {
 }
 
 .rights {
-    font-size: 15px;
-    background-color: $site-gray-dark;
-    color: $site-text-dark;
-    padding: 5px;
+  font-size: 15px;
+  background-color: $site-gray-dark;
+  color: $site-text-dark;
+  padding: 5px;
+}
+
+@media screen and(max-width: 1000px) {
+  nav {
+    & > div {
+      flex-direction: column;
+    }
+  }
+
+  .navigation-list {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      margin: 10px 15px;
+    }
+  }
+}
+
+@media screen and(max-width: 600px) {
+  footer {
+    h1 {
+      font-size: 30px;
+    }
+  }
+  .navigation-list {
+    flex-direction: column;
+  }
 }
 </style>
