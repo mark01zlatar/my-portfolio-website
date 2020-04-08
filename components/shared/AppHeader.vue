@@ -1,20 +1,29 @@
 <template>
-  <header>
+  <header id="top">
     <nav>
       <nuxt-link tag="a" to="/">
         <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo White" />
       </nuxt-link>
       <div class="desktop-navigation">
         <ul class="navigation-list">
-          <nuxt-link to="#" tag="li">
-            <a>About me</a>
-          </nuxt-link>
-          <nuxt-link to="#" tag="li">
-            <a>Projects</a>
-          </nuxt-link>
-          <nuxt-link to="#" tag="li">
+          <li>
+            <a
+              href="#about-me"
+              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+            >About me</a>
+          </li>
+          <li
+            href="#portfolio"
+            v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+          >
+            <a>Portfolio</a>
+          </li>
+          <li
+            href="#technologies"
+            v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+          >
             <a>Technologies</a>
-          </nuxt-link>
+          </li>
         </ul>
         <nuxt-link to="#" class="resume-download" tag="a">Resume</nuxt-link>
         <app-button text="Contact me"></app-button>

@@ -1,5 +1,9 @@
 <template>
-  <div class="icon-scroll"></div>
+  <a
+    href="#services"
+    class="icon-scroll"
+    v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+  ></a>
 </template>
 
 <script>

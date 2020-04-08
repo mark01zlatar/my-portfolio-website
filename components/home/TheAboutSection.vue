@@ -5,7 +5,7 @@
         <img src="@/assets/images/markozlatar.jpg" height="500px" alt="Marko Zlatar" />
       </div>
       <div class="about-me-text">
-        <h2>Who Am I</h2>
+        <h2 id="about-me">Who Am I</h2>
         <h1>Marko Zlatar</h1>
         <p>
           I was never the best at school or academics, I’m just a super curious guy. I spend a lot of time building websites and web apps, but there’s also a lot more to it.

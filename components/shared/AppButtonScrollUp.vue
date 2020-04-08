@@ -1,7 +1,7 @@
 <template>
-  <button>
+  <a href="#top" v-smooth-scroll="{ duration: 1000, offset: 0, updateHistory: false }">
     <i class="mdi mdi-chevron-double-up"></i>
-  </button>
+  </a>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-button {
+a {
   position: fixed;
   bottom: 50px;
   right: 50px;

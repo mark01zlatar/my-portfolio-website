@@ -1,6 +1,6 @@
 <template>
   <div class="services-container">
-    <h1>Some of my services</h1>
+    <h1 id="services">Some of my services</h1>
     <client-only>
       <carousel-3d class="carousel" :controls-visible="true" width="530" height="360">
         <slide class="slide" v-for="slide in slides" :key="slide.index" :index="slide.index">

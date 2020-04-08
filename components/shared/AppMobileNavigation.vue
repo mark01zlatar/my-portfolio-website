@@ -1,21 +1,30 @@
 <template>
   <div class="mobile-navigation-container" :class="{ open: openMobileNav }">
     <ul>
-      <nuxt-link to="#" tag="li">
-        <a>About me</a>
-      </nuxt-link>
-      <nuxt-link to="#" tag="li">
-        <a>Projects</a>
-      </nuxt-link>
-      <nuxt-link to="#" tag="li">
-        <a>Technologies</a>
-      </nuxt-link>
-      <nuxt-link to="#" tag="li">
-        <a>Resume</a>
-      </nuxt-link>
-      <nuxt-link to="#" tag="li">
-        <a>Contact me</a>
-      </nuxt-link>
+      <li>
+        <a
+          href="#about-me"
+          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+        >About me</a>
+      </li>
+      <li>
+        <a
+          href="#portfolio"
+          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+        >Portfolio</a>
+      </li>
+      <li>
+        <a
+          href="#technologies"
+          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+        >Technologies</a>
+      </li>
+      <li>
+        <a href="#">Resume</a>
+      </li>
+      <li>
+        <a href="#contact-me">Contact me</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -58,7 +67,7 @@ export default {
       margin: 10px 0px;
       font-size: 20px;
       a {
-          transition: color 200ms ease;
+        transition: color 200ms ease;
         &:hover {
           color: $site-text-dark;
         }

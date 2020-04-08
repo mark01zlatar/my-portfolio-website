@@ -1,6 +1,6 @@
 <template>
   <div class="projects-section">
-    <h1>Portfolio</h1>
+    <h1  id="portfolio">Portfolio</h1>
     <project v-for="(project, index) in projects" :key="index" :project="project"></project>
     <transition
       name="fade"
@@ -25,8 +25,10 @@ export default {
     return {
       projects: [
         {
-          imgSrc: 'gem-media.png',
-          videoSrc: 'https://www.youtube.com/embed/jHmw12dDkHY',
+          src: {
+            image: 'gem-media.png',
+            video: 'https://www.youtube.com/embed/jHmw12dDkHY'
+          },
           title: 'Gem Media - Social media project',
           description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -38,8 +40,10 @@ export default {
           overview: ''
         },
         {
-          imgSrc: 'greatathlete.png',
-          videoSrc: 'https://www.youtube.com/embed/lyMZig_bHtM',
+          src: {
+            image: 'greatathlete.png',
+            video: 'https://www.youtube.com/embed/lyMZig_bHtM'
+          },
           title: 'Great Athlete - GYM website project',
           description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -51,8 +55,10 @@ export default {
           overview: ''
         },
         {
-          imgSrc: 'wlf-clothing.png',
-          videoSrc: 'https://www.youtube.com/embed/2zUESAy5e4c',
+          src: {
+            image: 'wlf-clothing.png',
+            video: 'https://www.youtube.com/embed/2zUESAy5e4c'
+          },
           title: 'WLF(We love fashion) Clothing - eCommerce project',
           description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -64,8 +70,10 @@ export default {
           overview: ''
         },
         {
-          imgSrc: 'seomind.png',
-          videoSrc: 'https://www.youtube.com/embed/bkTLRbNk4hE',
+          src: {
+            image: 'seomind.png',
+            video: 'https://www.youtube.com/embed/bkTLRbNk4hE'
+          },
           title: 'SEO Mind - Website project',
           description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',

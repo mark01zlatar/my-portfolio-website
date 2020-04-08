@@ -18,7 +18,7 @@
         <div class="dialog-box-1">
           <iframe
             class="dialog-video"
-            :src="getProjectDialogData.videoSrc"
+            :src="getProjectDialogData.src.video"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
