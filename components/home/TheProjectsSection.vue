@@ -2,21 +2,25 @@
   <div class="projects-section">
     <h1>Portfolio</h1>
     <project v-for="(project, index) in projects" :key="index" :project="project"></project>
+    <project-dialog v-if="$store.getters.isProjectDialog"></project-dialog>
   </div>
 </template>
 
 <script>
 import Project from '@/components/home/Project'
+import ProjectDialog from '@/components/home/ProjectDialog'
 
 export default {
   components: {
-    Project
+    Project,
+    ProjectDialog
   },
   data() {
     return {
       projects: [
         {
-          src: 'gem-media.png',
+          imgSrc: 'gem-media.png',
+          videoSrc: '',
           title: 'Gem Media - Social media project',
           text:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -26,7 +30,8 @@ export default {
           }
         },
         {
-          src: 'greatathlete.png',
+          imgSrc: 'greatathlete.png',
+          videoSrc: 'https://www.youtube.com/embed/lyMZig_bHtM',
           title: 'Great Athlete - GYM website project',
           text:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -36,7 +41,8 @@ export default {
           }
         },
         {
-          src: 'wlf-clothing.png',
+          imgSrc: 'wlf-clothing.png',
+          videoSrc: 'https://youtu.be/2zUESAy5e4c',
           title: 'WLF(We love fashion) Clothing - eCommerce project',
           text:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -46,7 +52,8 @@ export default {
           }
         },
         {
-          src: 'seomind.png',
+          imgSrc: 'seomind.png',
+          videoSrc: '',
           title: 'SEO Mind - Website project',
           text:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',

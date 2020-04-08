@@ -1,6 +1,6 @@
 <template>
   <div class="project-container">
-    <img width="700px" :src="require(`@/assets/images/${project.src}`)" :alt="project.title" />
+    <img width="700px" :src="require(`@/assets/images/${project.imgSrc}`)" :alt="project.title" />
     <div class="project-text">
       <h1>{{ project.title }}</h1>
       <p>{{ project.text }}</p>

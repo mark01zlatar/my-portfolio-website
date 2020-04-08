@@ -16,6 +16,15 @@ import ProjectsSection from '@/components/home/TheProjectsSection'
 import AppButtonScrollUp from '@/components/shared/AppButtonScrollUp'
 
 export default {
+  head() {
+    return {
+      bodyAttrs: {
+        style: `overflow-y: ${
+          this.$store.getters.isProjectDialog ? 'hidden' : 'scroll'
+        }`
+      }
+    }
+  },
   components: {
     LandingSection,
     ServicesSection,
