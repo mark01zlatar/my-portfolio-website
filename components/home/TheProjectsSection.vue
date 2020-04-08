@@ -2,7 +2,13 @@
   <div class="projects-section">
     <h1>Portfolio</h1>
     <project v-for="(project, index) in projects" :key="index" :project="project"></project>
-    <project-dialog v-if="$store.getters.isProjectDialog"></project-dialog>
+    <transition
+      name="fade"
+      mode="out-in"
+      @before-enter="$store.commit('SET_PROJECT_DIALOG_CONTENT', true)"
+    >
+      <project-dialog v-show="$store.getters.isProjectDialogOverlay"></project-dialog>
+    </transition>
   </div>
 </template>
 
@@ -53,7 +59,7 @@ export default {
         },
         {
           imgSrc: 'seomind.png',
-          videoSrc: '',
+          videoSrc: 'https://youtu.be/bkTLRbNk4hE',
           title: 'SEO Mind - Website project',
           text:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
@@ -83,5 +89,24 @@ export default {
     font-size: 50px;
     margin-bottom: 30px;
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 250ms ease 0ms;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-leave-active {
+  transition: opacity 250ms ease 250ms;
+}
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

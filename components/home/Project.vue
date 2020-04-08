@@ -5,7 +5,10 @@
       <h1>{{ project.title }}</h1>
       <p>{{ project.text }}</p>
       <div>
-        <button class="project-button project-button--one">
+        <button
+          @click="$store.commit('SET_PROJECT_DIALOG_OVERLAY', true)"
+          class="project-button project-button--one"
+        >
           <i class="mdi mdi-eye"></i> View more
         </button>
         <a :href="project.links.github" target="_blank" class="project-button">

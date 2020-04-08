@@ -1,10 +1,21 @@
 <template>
-  <div @click.stop="$store.commit('SET_PROJECT_DIALOG', false)" class="overlay">
-    <transition name="slide" mode="out-in">
-      <div v-if="$store.getters.isProjectDialog" class="dialog">
-        <i class="mdi mdi-close"></i>
+  <div
+    @click.stop.self="$store.commit('SET_PROJECT_DIALOG_CONTENT', false)"
+    class="overlay"
+    key="dialog-overlay"
+  >
+    <transition
+      name="scale"
+      mode="out-in"
+      @before-leave="$store.commit('SET_PROJECT_DIALOG_OVERLAY', false)"
+    >
+      <div v-show="$store.getters.isProjectDialogContent" class="dialog" key="dialog">
+        <i
+          @click.stop.self="$store.commit('SET_PROJECT_DIALOG_CONTENT', false)"
+          class="mdi mdi-close"
+        ></i>
         <h2>Project title</h2>
-        <div>
+        <div class="dialog-box-1">
           <iframe
             width="560"
             height="315"
@@ -62,7 +73,7 @@ export default {}
   justify-content: flex-start;
   flex-direction: column;
   padding: 30px;
-  & > div:nth-child(2) {
+  .dialog-box-1 {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -118,6 +129,25 @@ export default {}
   cursor: pointer;
 }
 
+.scale-enter {
+  transform: scale(0);
+}
+.scale-enter-active {
+  transition: transform 250ms ease-in 0ms;
+}
+.scale-enter-to {
+  transform: scale(1);
+}
+.scale-leave {
+  transform: scale(1);
+}
+.scale-leave-active {
+  transition: transform 250ms ease-out 0ms;
+}
+.scale-leave-to {
+  transform: scale(0);
+}
+
 @media screen and(max-width: 1500px) {
   .dialog-video {
     margin-right: 30px;
@@ -130,7 +160,7 @@ export default {}
 
 @media screen and(max-width: 1300px) {
   .dialog {
-    & > div:nth-child(2) {
+    .dialog-box-1 {
       flex-direction: column;
     }
   }
