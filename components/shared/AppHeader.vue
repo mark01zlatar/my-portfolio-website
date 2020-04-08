@@ -12,26 +12,26 @@
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
             >About me</a>
           </li>
-          <li
-            href="#portfolio"
-            v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-          >
-            <a>Portfolio</a>
+          <li>
+            <a
+              href="#portfolio"
+              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+              @click="$store.commit('SET_MOBILE_NAVBAR', false)"
+            >Portfolio</a>
           </li>
-          <li
-            href="#technologies"
-            v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-          >
-            <a>Technologies</a>
+          <li>
+            <a
+              href="#technologies"
+              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+              @click="$store.commit('SET_MOBILE_NAVBAR', false)"
+            >Technologies</a>
           </li>
         </ul>
         <nuxt-link to="#" class="resume-download" tag="a">Resume</nuxt-link>
         <app-button text="Contact me"></app-button>
       </div>
-      <div @click="openMobileNav = !openMobileNav" class="hamburger">
-        <app-hamburger></app-hamburger>
-      </div>
-      <app-mobile-navigation :openMobileNav="openMobileNav"></app-mobile-navigation>
+      <app-hamburger class="hamburger"></app-hamburger>
+      <app-mobile-navigation></app-mobile-navigation>
     </nav>
   </header>
 </template>
@@ -48,9 +48,7 @@ export default {
     AppMobileNavigation
   },
   data() {
-    return {
-      openMobileNav: false
-    }
+    return {}
   }
 }
 </script>

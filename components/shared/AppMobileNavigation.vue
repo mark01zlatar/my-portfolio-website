@@ -1,20 +1,23 @@
 <template>
-  <div class="mobile-navigation-container" :class="{ open: openMobileNav }">
+  <div class="mobile-navigation-container" :class="{ open: $store.getters.isMobileNavbar }">
     <ul>
       <li>
         <a
+          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
           href="#about-me"
           v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
         >About me</a>
       </li>
       <li>
         <a
+          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
           href="#portfolio"
           v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
         >Portfolio</a>
       </li>
       <li>
         <a
+          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
           href="#technologies"
           v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
         >Technologies</a>
@@ -30,14 +33,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    openMobileNav: {
-      type: Boolean,
-      reqired: true
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

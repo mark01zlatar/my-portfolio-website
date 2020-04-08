@@ -1,6 +1,6 @@
 <template>
   <div class="projects-section">
-    <h1  id="portfolio">Portfolio</h1>
+    <h1 id="portfolio">Portfolio</h1>
     <project v-for="(project, index) in projects" :key="index" :project="project"></project>
     <transition
       name="fade"

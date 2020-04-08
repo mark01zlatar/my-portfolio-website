@@ -1,7 +1,8 @@
 export const state = () => ({
   projectDialogOverlay: false,
   projectDialogContent: false,
-  projectDialogData: null
+  projectDialogData: null,
+  mobileNavbar: false
 })
 
 export const getters = {
@@ -13,6 +14,9 @@ export const getters = {
   },
   getProjectDialogData(state) {
     return state.projectDialogData
+  },
+  isMobileNavbar(state) {
+    return state.mobileNavbar
   }
 }
 
@@ -26,6 +30,9 @@ export const mutations = {
   },
   SET_PROJECT_DIALOG_DATA(state, payload) {
     state.projectDialogData = payload
+  },
+  SET_MOBILE_NAVBAR(state, payload) {
+    state.mobileNavbar = payload
   }
 }
 
