@@ -20,7 +20,7 @@ export default {
     return {
       bodyAttrs: {
         style: `overflow-y: ${
-          this.$store.getters.isProjectDialog ? 'hidden' : 'scroll'
+          this.$store.getters.isProjectDialogOverlay ? 'hidden' : 'scroll'
         }`
       }
     }

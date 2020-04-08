@@ -7,7 +7,7 @@
       mode="out-in"
       @before-enter="$store.commit('SET_PROJECT_DIALOG_CONTENT', true)"
     >
-      <project-dialog v-show="$store.getters.isProjectDialogOverlay"></project-dialog>
+      <project-dialog v-if="$store.getters.isProjectDialogOverlay"></project-dialog>
     </transition>
   </div>
 </template>
@@ -26,47 +26,55 @@ export default {
       projects: [
         {
           imgSrc: 'gem-media.png',
-          videoSrc: '',
+          videoSrc: 'https://www.youtube.com/embed/jHmw12dDkHY',
           title: 'Gem Media - Social media project',
-          text:
+          description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/social-media-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
-          }
+          },
+          technologies: [],
+          overview: ''
         },
         {
           imgSrc: 'greatathlete.png',
           videoSrc: 'https://www.youtube.com/embed/lyMZig_bHtM',
           title: 'Great Athlete - GYM website project',
-          text:
+          description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/GYM-website',
             site: 'https://objective-brattain-d22de3.netlify.com'
-          }
+          },
+          technologies: [],
+          overview: ''
         },
         {
           imgSrc: 'wlf-clothing.png',
-          videoSrc: 'https://youtu.be/2zUESAy5e4c',
+          videoSrc: 'https://www.youtube.com/embed/2zUESAy5e4c',
           title: 'WLF(We love fashion) Clothing - eCommerce project',
-          text:
+          description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/e-commerce-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
-          }
+          },
+          technologies: [],
+          overview: ''
         },
         {
           imgSrc: 'seomind.png',
-          videoSrc: 'https://youtu.be/bkTLRbNk4hE',
+          videoSrc: 'https://www.youtube.com/embed/bkTLRbNk4hE',
           title: 'SEO Mind - Website project',
-          text:
+          description:
             'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/SEO-Mind-website',
             site: 'https://mystifying-perlman-1f895e.netlify.com'
-          }
+          },
+          technologies: [],
+          overview: ''
         }
       ]
     }

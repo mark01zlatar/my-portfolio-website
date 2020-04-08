@@ -9,18 +9,16 @@
       mode="out-in"
       @before-leave="$store.commit('SET_PROJECT_DIALOG_OVERLAY', false)"
     >
-      <div v-show="$store.getters.isProjectDialogContent" class="dialog" key="dialog">
+      <div v-if="$store.getters.isProjectDialogContent" class="dialog" key="dialog">
         <i
           @click.stop.self="$store.commit('SET_PROJECT_DIALOG_CONTENT', false)"
           class="mdi mdi-close"
         ></i>
-        <h2>Project title</h2>
+        <h2>{{ getProjectDialogData.title }}</h2>
         <div class="dialog-box-1">
           <iframe
-            width="560"
-            height="315"
             class="dialog-video"
-            src="https://www.youtube.com/embed/lyMZig_bHtM"
+            :src="getProjectDialogData.videoSrc"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -28,13 +26,29 @@
           <div class="dialog-technologies">
             <h3>Technologies used</h3>
             <ul>
-              <li v-for="index in 6" :key="index">{{index}} Technologie</li>
+              <li
+                v-for="(technologie, index) in getProjectDialogData.technologies"
+                :key="index"
+              >{{ technologie }}</li>
             </ul>
+            <div>
+              <a :href="getProjectDialogData.links.github" target="_blank">
+                <project-button text="Source code" icon="mdi-github"></project-button>
+              </a>
+              <a :href="getProjectDialogData.links.site" target="_blank">
+                <project-button
+                  text="Visit site"
+                  icon="mdi-search-web"
+                  bordercolor="white"
+                  buttonClasses="project-button--white"
+                ></project-button>
+              </a>
+            </div>
           </div>
         </div>
         <div class="dialog-overview">
           <h3>Overview</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad, aliquid in temporibus rem veritatis placeat sint fuga molestias quaerat fugiat distinctio ipsam libero, dicta natus molestiae, laboriosam voluptatum quia! Ea tempora, quis sint suscipit porro error voluptas consectetur eligendi.</p>
+          <p>{{ getProjectDialogData.overview || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad, aliquid in temporibus rem veritatis placeat sint fuga molestias quaerat fugiat distinctio ipsam libero, dicta natus molestiae, laboriosam voluptatum quia! Ea tempora, quis sint suscipit porro error voluptas consectetur eligendi.'}}</p>
         </div>
       </div>
     </transition>
@@ -42,7 +56,19 @@
 </template>
 
 <script>
-export default {}
+import ProjectButton from '@/components/home/ProjectButton'
+import { mapGetters, mapActions } from 'vuex'
+
+export default {
+  components: {
+    ProjectButton
+  },
+  computed: {
+    ...mapGetters({
+      getProjectDialogData: 'getProjectDialogData'
+    })
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -94,6 +120,8 @@ export default {}
 
 .dialog-video {
   margin-right: 60px;
+  width: 600px;
+  height: 338px;
 }
 
 .dialog-technologies {
@@ -109,6 +137,14 @@ export default {}
     li {
       color: $site-text-dark;
     }
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 30px;
   }
 }
 

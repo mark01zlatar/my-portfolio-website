@@ -3,19 +3,22 @@
     <img width="700px" :src="require(`@/assets/images/${project.imgSrc}`)" :alt="project.title" />
     <div class="project-text">
       <h1>{{ project.title }}</h1>
-      <p>{{ project.text }}</p>
+      <p>{{ project.description }}</p>
       <div>
-        <button
-          @click="$store.commit('SET_PROJECT_DIALOG_OVERLAY', true)"
-          class="project-button project-button--one"
-        >
-          <i class="mdi mdi-eye"></i> View more
-        </button>
-        <a :href="project.links.github" target="_blank" class="project-button">
-          <i class="mdi mdi-github"></i> Source code
+        <span @click="$store.dispatch('openDialog', project)">
+          <project-button text="View more" icon="mdi-eye" buttonClasses="project-button--reverse"></project-button>
+        </span>
+
+        <a :href="project.links.github" target="_blank">
+          <project-button text="Source code" icon="mdi-github"></project-button>
         </a>
-        <a :href="project.links.site" target="_blank" class="project-button project-button--three">
-          <i class="mdi mdi-search-web"></i> Visit site
+        <a :href="project.links.site" target="_blank">
+          <project-button
+            text="Visit site"
+            icon="mdi-search-web"
+            bordercolor="white"
+            buttonClasses="project-button--white"
+          ></project-button>
         </a>
       </div>
     </div>
@@ -24,7 +27,12 @@
 </template>
 
 <script>
+import ProjectButton from '@/components/home/ProjectButton'
+
 export default {
+  components: {
+    ProjectButton
+  },
   props: {
     project: {
       type: Object,
@@ -88,51 +96,51 @@ export default {
   }
 }
 
-.mdi {
-  font-size: 25px;
-}
+// .mdi {
+//   font-size: 25px;
+// }
 
-.project-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 165px;
-  height: 55px;
-  outline: none;
-  border: 1px solid $site-text-dark;
-  background: transparent;
-  color: $site-text-dark;
-  border-radius: 80px;
-  margin-right: 30px;
-  transition: all 300ms ease-out 0ms;
-  font-family: RobotoMedium;
-  font-size: 18px;
-  cursor: pointer;
-  margin-top: 5px;
-  &:hover {
-    color: white;
-    background: $site-text-dark;
-  }
-}
+// .project-button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-evenly;
+//   width: 165px;
+//   height: 55px;
+//   outline: none;
+//   border: 1px solid $site-text-dark;
+//   background: transparent;
+//   color: $site-text-dark;
+//   border-radius: 80px;
+//   margin-right: 30px;
+//   transition: all 300ms ease-out 0ms;
+//   font-family: RobotoMedium;
+//   font-size: 18px;
+//   cursor: pointer;
+//   margin-top: 5px;
+//   &:hover {
+//     color: white;
+//     background: $site-text-dark;
+//   }
+// }
 
-.project-button--one {
-  background-color: $site-text-dark;
-  color: white;
-  &:hover {
-    color: $site-text-dark;
-    background: transparent;
-  }
-}
+// .project-button--one {
+//   background-color: $site-text-dark;
+//   color: white;
+//   &:hover {
+//     color: $site-text-dark;
+//     background: transparent;
+//   }
+// }
 
-.project-button--three {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  &:hover {
-    color: $site-gray;
-    background: white;
-  }
-}
+// .project-button--three {
+//   background-color: transparent;
+//   color: white;
+//   border: 1px solid white;
+//   &:hover {
+//     color: $site-gray;
+//     background: white;
+//   }
+// }
 
 @media screen and (max-width: 1450px) {
   .horizontal-line {
