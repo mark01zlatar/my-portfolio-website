@@ -95,52 +95,6 @@ export default {
   }
 }
 
-// .mdi {
-//   font-size: 25px;
-// }
-
-// .project-button {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   width: 165px;
-//   height: 55px;
-//   outline: none;
-//   border: 1px solid $site-text-dark;
-//   background: transparent;
-//   color: $site-text-dark;
-//   border-radius: 80px;
-//   margin-right: 30px;
-//   transition: all 300ms ease-out 0ms;
-//   font-family: RobotoMedium;
-//   font-size: 18px;
-//   cursor: pointer;
-//   margin-top: 5px;
-//   &:hover {
-//     color: white;
-//     background: $site-text-dark;
-//   }
-// }
-
-// .project-button--one {
-//   background-color: $site-text-dark;
-//   color: white;
-//   &:hover {
-//     color: $site-text-dark;
-//     background: transparent;
-//   }
-// }
-
-// .project-button--three {
-//   background-color: transparent;
-//   color: white;
-//   border: 1px solid white;
-//   &:hover {
-//     color: $site-gray;
-//     background: white;
-//   }
-// }
-
 @media screen and (max-width: 1450px) {
   .horizontal-line {
     bottom: -30px;

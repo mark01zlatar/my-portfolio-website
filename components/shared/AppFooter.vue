@@ -3,13 +3,13 @@
     <h1>FOCUS. SIMPLICITY. DISCIPLINE.</h1>
     <nav>
       <div>
-        <nuxt-link tag="a" to="/">
+        <a href="#top" v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }">
           <img
             src="@/assets/images/MZ-logo-white-small.png"
             width="70"
             alt="Marko Zlatar Logo White"
           />
-        </nuxt-link>
+        </a>
         <div>
           <ul class="navigation-list">
             <li>
@@ -36,6 +36,17 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="social-media-icons">
+          <a href="#">
+            <i class="mdi mdi-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="mdi mdi-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="mdi mdi-linkedin"></i>
+          </a>
         </div>
       </div>
       <p class="rights">&copy; 2020 Marko Zlatar.</p>
@@ -103,7 +114,19 @@ nav {
   padding: 5px;
 }
 
-@media screen and(max-width: 1000px) {
+.social-media-icons {
+  margin-left: auto;
+  margin-right: 50px;
+  a {
+    transition: color 200ms ease;
+    margin: 5px;
+    &:hover {
+      color: $site-text-dark;
+    }
+  }
+}
+
+@media screen and(max-width: 1050px) {
   nav {
     & > div {
       flex-direction: column;
@@ -118,6 +141,12 @@ nav {
     li {
       margin: 10px 15px;
     }
+  }
+  .social-media-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
