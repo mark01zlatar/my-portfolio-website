@@ -23,7 +23,7 @@
         >Technologies</a>
       </li>
       <li>
-        <a href="/MarkoZlatarResume.pdf" download class="resume-download">
+        <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
           <i class="mdi mdi-download"></i> Resume
         </a>
       </li>
