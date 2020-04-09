@@ -30,14 +30,21 @@ export default {
             video: 'https://www.youtube.com/embed/jHmw12dDkHY'
           },
           title: 'Gem Media - Social media project',
-          description:
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/social-media-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
           },
-          technologies: [],
-          overview: ''
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'SASS(SCSS)',
+            'Webpack',
+            'Git',
+            'Github'
+          ],
+          overview:
+            'To create this project, first I created setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for fast development process and bundled minified code in production. Sass is used as css extension so i was able to to reuse css and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.'
         },
         {
           src: {
@@ -45,14 +52,22 @@ export default {
             video: 'https://www.youtube.com/embed/lyMZig_bHtM'
           },
           title: 'Great Athlete - GYM website project',
-          description:
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/GYM-website',
             site: 'https://objective-brattain-d22de3.netlify.com'
           },
-          technologies: [],
-          overview: ''
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'SASS(SCSS)',
+            'Vue.js',
+            'Nuxt.js',
+            'Git',
+            'Github'
+          ],
+          overview:
+            'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
         },
         {
           src: {
@@ -60,14 +75,30 @@ export default {
             video: 'https://www.youtube.com/embed/2zUESAy5e4c'
           },
           title: 'WLF(We love fashion) Clothing - eCommerce project',
-          description:
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/e-commerce-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
           },
-          technologies: [],
-          overview: ''
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'JavaScript ',
+            'SASS(SCSS)',
+            'Vue.js',
+            'Nuxt.js',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'Mongoose',
+            'AWS-SDK',
+            'Paypal API',
+            'JWT',
+            'SendGrid API',
+            'Git',
+            'Github'
+          ],
+          overview:
+            'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. Some of features that are implemented are: Authentication & Authorization, Payment with paypal, CMS for users and products, pagination, email interactions, AWS S3 storage... basically everything one e-commerce must have.'
         },
         {
           src: {
@@ -75,14 +106,29 @@ export default {
             video: 'https://www.youtube.com/embed/bkTLRbNk4hE'
           },
           title: 'SEO Mind - Website project',
-          description:
-            'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ratione eaque corrupti veniam aut illum voluptatibus, animi aliquid explicabo quo repudiandae odio soluta optio consectetur.',
           links: {
             github: 'https://github.com/mark01Zlatar/SEO-Mind-website',
             site: 'https://mystifying-perlman-1f895e.netlify.com'
           },
-          technologies: [],
-          overview: ''
+          technologies: [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'SASS(SCSS)',
+            'Vue.js',
+            'Nuxt.js',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'Mongoose',
+            'AWS-SDK',
+            'Socket.io',
+            'JWT',
+            'Git',
+            'Github'
+          ],
+          overview:
+            'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. To implement private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also rate-limiting is implemented.'
         }
       ]
     }

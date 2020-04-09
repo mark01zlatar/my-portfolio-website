@@ -3,7 +3,6 @@
     <img width="700px" :src="require(`@/assets/images/${project.src.image}`)" :alt="project.title" />
     <div class="project-text">
       <h1>{{ project.title }}</h1>
-      <p>{{ project.description }}</p>
       <div>
         <span @click="$store.dispatch('openDialog', project)">
           <project-button text="View more" icon="mdi-eye" buttonClasses="project-button--reverse"></project-button>
