@@ -18,7 +18,7 @@ export default {}
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 30px 0px;
+  margin: 15px 0px;
 }
 .technology-image {
   filter: grayscale(100%);
@@ -30,7 +30,7 @@ p {
   color: $site-text-dark;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1700px) {
   .box-container {
     width: 175px;
     height: 175px;
@@ -41,53 +41,18 @@ p {
   p {
     font-size: 20px;
   }
-  .technology-image.responsive-special {
-    width: 120px;
-  }
 }
 
-@media screen and (max-width: 1035px) {
+@media screen and (max-width: 450px) {
   .box-container {
-    width: 230px;
-    height: 230px;
-  }
-  .technology-image {
-    width: 120px;
-  }
-  p {
-    font-size: 25px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .box-container {
-    width: 150px;
-    height: 150px;
-  }
-  .technology-image {
-    width: 70px;
-  }
-  .technology-image.responsive-special {
-    width: 95px;
-  }
-  p {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .box-container {
-    width: 120px;
-    height: 120px;
+    width: 125px;
+    height: 125px;
   }
   .technology-image {
     width: 60px;
   }
-  .technology-image.responsive-special {
-    width: 85px;
-  }
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 </style>

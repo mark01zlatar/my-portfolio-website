@@ -1,9 +1,12 @@
 <template>
   <div class="skewed-box">
     <div class="technologies-container">
+      <h1 id="technologies">Favourite Technologies</h1>
       <div class="technologies-text">
-        <h2>Technologies that I use to create beautiful front-end applications</h2>
-        <h3>Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.</h3>
+        <div>
+          <h2>Technologies that I use to create beautiful front-end applications</h2>
+          <h3>Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.</h3>
+        </div>
       </div>
       <div class="technologies-images">
         <div class="image-box-container first">
@@ -76,6 +79,85 @@
         </div>
       </div>
     </div>
+
+    <div class="technologies-container technologies-container-backend">
+      <div class="technologies-images-backend">
+        <div class="image-box-container fourth">
+          <image-box></image-box>
+          <image-box></image-box>
+          <image-box></image-box>
+        </div>
+        <div class="image-box-container third">
+          <image-box></image-box>
+          <image-box></image-box>
+          <image-box></image-box>
+        </div>
+        <div class="image-box-container image-box-container-backend second">
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/socketio.png"
+              class="technology-image"
+              width="150px"
+              alt
+            />
+            <p>Socket.io</p>
+          </image-box>
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/graphql.png"
+              class="technology-image"
+              width="150px"
+              alt
+            />
+            <p>GraphQL</p>
+          </image-box>
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/express.png"
+              class="technology-image"
+              width="150px"
+              alt
+            />
+            <p>Express.js</p>
+          </image-box>
+        </div>
+        <div class="image-box-container image-box-container-backend first">
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/nodejs.png"
+              class="technology-image responsive-special"
+              width="170px"
+              alt
+            />
+            <p>Node.js</p>
+          </image-box>
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/mongodb.png"
+              class="technology-image"
+              width="130px"
+              alt
+            />
+            <p>MongoDB</p>
+          </image-box>
+          <image-box>
+            <img
+              src="@/assets/images/technologies-images/mysql.png"
+              class="technology-image"
+              width="150px"
+              alt
+            />
+            <p>MySQL</p>
+          </image-box>
+        </div>
+      </div>
+      <div class="technologies-text">
+        <div>
+          <h2>Technologies that I use to create scaleable back-end applications</h2>
+          <h3>Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL...</h3>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,11 +172,13 @@ export default {
 
 <style lang="scss" scoped>
 .skewed-box {
-  padding: 300px 0px;
+  padding: 400px 0px 300px 0px;
   background-color: $site-gray-dark;
   transform: skew(0, -10deg);
   margin-top: 150px;
   margin-bottom: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
 .technologies-container {
@@ -104,10 +188,24 @@ export default {
   justify-content: center;
   color: white;
   min-height: 600px;
+
+  & > h1 {
+    font-size: 40px;
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.technologies-container-backend {
+  margin-top: 200px;
 }
 
 .technologies-text {
-  max-width: 500px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   h2 {
     font-size: 40px;
     //   font-weight: bold;
@@ -118,60 +216,86 @@ export default {
     font-weight: normal;
     color: $site-text-dark;
   }
+  div {
+    padding: 0px 30px;
+    max-width: 600px;
+  }
 }
 .technologies-images {
-  width: 35%;
-  margin-left: 200px;
-  height: auto;
+  width: 60%;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  transform: translateX(80px);
+}
+
+.technologies-images-backend {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  transform: translateX(-80px);
 }
 
 .image-box-container {
   margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.image-box-container.first {
-  transform: translateY(-70px);
-}
+.image-box-container.first,
 .image-box-container.third {
   transform: translateY(-70px);
+}
+
+.image-box-container.third {
   opacity: 0.4;
 }
 .image-box-container.fourth {
   opacity: 0.2;
 }
 
-@media screen and (max-width: 1400px) {
-  .technologies-images {
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 1035px) {
-  .image-box-container.third,
-  .image-box-container.fourth {
-    display: none;
-  }
+@media screen and (max-width: 1250px) {
   .technologies-container {
     flex-direction: column;
   }
-  .technologies-images {
-    margin-left: 0px;
-    width: 100%;
-    justify-content: center;
-    margin-top: 100px;
+  .technologies-images-backend {
+    order: 2;
   }
   .image-box-container.second {
     margin-right: 0px;
   }
+  .image-box-container-backend.first {
+    margin-right: 0px;
+  }
+  .image-box-container-backend.second {
+    margin-right: 30px;
+  }
+  .technologies-images,
+  .technologies-images-backend {
+    width: 100%;
+    transform: translateX(0px);
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .technologies-text {
+    width: 100%;
+    text-align: center;
+  }
+  .image-box-container.third,
+  .image-box-container.fourth {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
   .technologies-text {
-    padding: 15px;
+    div {
+      padding: 15px;
+    }
     h2 {
-      font-size: 30px;
+      font-size: 25px;
     }
     h3 {
       font-size: 20px;
