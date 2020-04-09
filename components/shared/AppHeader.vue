@@ -27,7 +27,9 @@
             >Technologies</a>
           </li>
         </ul>
-        <nuxt-link to="#" class="resume-download" tag="a">Resume</nuxt-link>
+        <a href="/MarkoZlatarResume.pdf" download class="resume-download">
+          <i class="mdi mdi-download"></i> Resume
+        </a>
         <app-button text="Contact me"></app-button>
       </div>
       <app-hamburger class="hamburger"></app-hamburger>

@@ -12,15 +12,29 @@
         </nuxt-link>
         <div>
           <ul class="navigation-list">
-            <nuxt-link to="#" tag="li">
-              <a>About me</a>
-            </nuxt-link>
-            <nuxt-link to="#" tag="li">
-              <a>Projects</a>
-            </nuxt-link>
-            <nuxt-link to="#" tag="li">
-              <a>Technologies</a>
-            </nuxt-link>
+            <li>
+              <a
+                href="#about-me"
+                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+              >About me</a>
+            </li>
+            <li>
+              <a
+                href="#portfolio"
+                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+              >Portfolio</a>
+            </li>
+            <li>
+              <a
+                href="#technologies"
+                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
+              >Technologies</a>
+            </li>
+            <li>
+              <a href="/MarkoZlatarResume.pdf" download class="resume-download">
+                <i class="mdi mdi-download"></i> Resume
+              </a>
+            </li>
           </ul>
         </div>
       </div>

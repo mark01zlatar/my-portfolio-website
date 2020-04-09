@@ -154,7 +154,7 @@
       <div class="technologies-text">
         <div>
           <h2>Technologies that I use to create scaleable back-end applications</h2>
-          <h3>Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL...</h3>
+          <h3>Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...</h3>
         </div>
       </div>
     </div>

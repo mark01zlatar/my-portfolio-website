@@ -23,7 +23,9 @@
         >Technologies</a>
       </li>
       <li>
-        <a href="#">Resume</a>
+        <a href="/MarkoZlatarResume.pdf" download class="resume-download">
+          <i class="mdi mdi-download"></i> Resume
+        </a>
       </li>
       <li>
         <a href="#contact-me">Contact me</a>
