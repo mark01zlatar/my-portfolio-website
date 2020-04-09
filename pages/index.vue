@@ -4,6 +4,7 @@
     <services-section></services-section>
     <about-section></about-section>
     <projects-section></projects-section>
+    <technologies-section></technologies-section>
     <app-button-scroll-up></app-button-scroll-up>
   </div>
 </template>
@@ -14,6 +15,7 @@ import ServicesSection from '@/components/home/TheServicesSection'
 import AboutSection from '@/components/home/TheAboutSection'
 import ProjectsSection from '@/components/home/TheProjectsSection'
 import AppButtonScrollUp from '@/components/shared/AppButtonScrollUp'
+import TechnologiesSection from '@/components/home/TheTechnologiesSection'
 
 export default {
   head() {
@@ -30,7 +32,8 @@ export default {
     ServicesSection,
     AboutSection,
     ProjectsSection,
-    AppButtonScrollUp
+    AppButtonScrollUp,
+    TechnologiesSection
   }
 }
 </script>
