@@ -27,9 +27,9 @@
           <i class="mdi mdi-download"></i> Resume
         </a>
       </li>
-      <li>
-        <a href="/contact-me">Contact me</a>
-      </li>
+      <nuxt-link to="/contact-me" tag="li">
+        <a>Contact me</a>
+      </nuxt-link>
     </ul>
   </div>
 </template>

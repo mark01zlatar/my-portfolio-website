@@ -2,11 +2,17 @@
   <div class="contact-container">
     <form @submit.prevent>
       <transition mode="out-in" name="slide-fade">
-        <button v-if="!email.show" @click="email.show = true" class="contact-button">Fill the form</button>
-        <div v-else-if="email.show" class="form-group">
+        <button
+          v-if="!email.show && !name.show && !subject.show && !message.show"
+          @click="email.show = true"
+          class="contact-button"
+          :key="'start'"
+        >Fill the form</button>
+        <!-- Email Input -->
+        <div v-else-if="email.show" class="form-group" :key="'email'">
           <label for="email">Email</label>
           <div>
-            <input type="email" id="email" />
+            <input v-model="email['value']" type="email" id="email" />
             <span class="border-line"></span>
           </div>
           <small>Some text</small>
@@ -14,11 +20,77 @@
             <span @click.stop.prevent="email.show = false">
               <app-button text="Back"></app-button>
             </span>
-            <span>
+            <span @click="cancel">
               <app-button text="Cancel"></app-button>
             </span>
-            <span>
+            <span @click="email.show = false; name.show = true">
               <app-button text="Next"></app-button>
+            </span>
+          </div>
+        </div>
+        <!-- Name Input -->
+        <div v-else-if="name.show" class="form-group" :key="'name'">
+          <label for="firstName">First Name</label>
+          <div>
+            <input v-model="name['first']" type="text" id="firstName" />
+            <span class="border-line"></span>
+          </div>
+          <small style="margin-bottom: 30px;">Some text</small>
+          <label for="lastName">Last Name</label>
+          <div>
+            <input type="text" v-model="name['last']" id="lastName" />
+            <span class="border-line"></span>
+          </div>
+          <small>Some text</small>
+          <div class="buttons-container">
+            <span @click="name.show = false; email.show = true">
+              <app-button text="Back"></app-button>
+            </span>
+            <span @click="cancel">
+              <app-button text="Cancel"></app-button>
+            </span>
+            <span @click="subject.show = true; name.show = false">
+              <app-button text="Next"></app-button>
+            </span>
+          </div>
+        </div>
+        <!-- Subject Input -->
+        <div v-else-if="subject.show" class="form-group" :key="'subject'">
+          <label for="subject">Subject</label>
+          <div>
+            <input v-model="subject['value']" type="text" id="subject" />
+            <span class="border-line"></span>
+          </div>
+          <small>Some text</small>
+          <div class="buttons-container">
+            <span @click="subject.show = false; name.show = true">
+              <app-button text="Back"></app-button>
+            </span>
+            <span @click="cancel">
+              <app-button text="Cancel"></app-button>
+            </span>
+            <span @click="subject.show = false; message.show = true">
+              <app-button text="Next"></app-button>
+            </span>
+          </div>
+        </div>
+        <!-- Message Input -->
+        <div v-else-if="message.show" class="form-group" :key="'message'">
+          <label for="message">Message</label>
+          <div>
+            <textarea v-model="message['value']" id="message"></textarea>
+            <span class="border-line"></span>
+          </div>
+          <small>Some text</small>
+          <div class="buttons-container">
+            <span @click="subject.show = true; message.show = false">
+              <app-button text="Back"></app-button>
+            </span>
+            <span @click="cancel">
+              <app-button text="Cancel"></app-button>
+            </span>
+            <span @click="submit">
+              <app-button text="Submit"></app-button>
             </span>
           </div>
         </div>
@@ -38,12 +110,47 @@ export default {
       email: {
         show: false,
         value: ''
+      },
+      name: {
+        show: false,
+        first: '',
+        last: ''
+      },
+      subject: {
+        show: false,
+        value: ''
+      },
+      message: {
+        show: false,
+        value: ''
       }
     }
   },
   methods: {
-    log() {
-      console.log('works')
+    submit() {
+      console.log(this.email)
+      console.log(this.name)
+      console.log(this.subject)
+      console.log(this.message)
+    },
+    cancel() {
+      this.email = {
+        show: false,
+        value: ''
+      }
+      this.name = {
+        show: false,
+        first: '',
+        last: ''
+      }
+      this.subject = {
+        show: false,
+        value: ''
+      }
+      this.message = {
+        show: false,
+        value: ''
+      }
     }
   }
 }
@@ -97,13 +204,18 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
   label {
     font-size: 23px;
   }
   div {
     position: relative;
     width: 100%;
-    input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    input,
+    textarea {
       width: 100%;
       height: 65px;
       outline: none;
@@ -116,6 +228,13 @@ form {
       &:focus ~ .border-line {
         transform: scaleX(1);
       }
+    }
+    textarea {
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-size: 18px;
+      resize: vertical;
+      max-height: 400px;
     }
   }
 
@@ -147,6 +266,7 @@ form {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   span {
     margin: 5px 5px 0px 0px;
   }
@@ -158,10 +278,10 @@ form {
 
 .slide-fade-enter {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(150px);
 }
 .slide-fade-enter-active {
-  transition: all 1000ms ease 0ms;
+  transition: all 700ms ease 0ms;
 }
 .slide-fade-enter-to {
   opacity: 1;
@@ -172,7 +292,7 @@ form {
   transform: translateY(0%);
 }
 .slide-fade-leave-active {
-  transition: all 1000ms ease 0ms;
+  transition: all 700ms ease 0ms;
 }
 .slide-fade-leave-to {
   opacity: 0;

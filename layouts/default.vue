@@ -14,6 +14,11 @@ export default {
   components: {
     AppHeader,
     AppFooter
+  },
+  watch: {
+    '$route.path': function(value) {
+      this.$store.commit('SET_MOBILE_NAVBAR', false)
+    }
   }
 }
 </script>
