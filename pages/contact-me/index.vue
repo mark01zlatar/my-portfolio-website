@@ -12,10 +12,20 @@
         <div v-else-if="email.show" class="form-group" :key="'email'">
           <label for="email">Email</label>
           <div>
-            <input v-model="email['value']" type="email" id="email" />
+            <input
+              @input="$v.email.value.$touch()"
+              @blur="$v.email.value.$touch()"
+              v-model="email['value']"
+              type="email"
+              id="email"
+            />
             <span class="border-line"></span>
           </div>
-          <small>Some text</small>
+          <transition mode="out-in" name="shake">
+            <small
+              v-if="$v.email.value.$invalid && $v.email.value.$dirty"
+            >Please enter a valid email</small>
+          </transition>
           <div class="buttons-container">
             <span @click.stop.prevent="email.show = false">
               <app-button text="Back"></app-button>
@@ -32,16 +42,35 @@
         <div v-else-if="name.show" class="form-group" :key="'name'">
           <label for="firstName">First Name</label>
           <div>
-            <input v-model="name['first']" type="text" id="firstName" />
+            <input
+              @input="$v.name.first.$touch()"
+              @blur="$v.name.first.$touch()"
+              v-model="name['first']"
+              type="text"
+              id="firstName"
+            />
             <span class="border-line"></span>
           </div>
-          <small style="margin-bottom: 30px;">Some text</small>
+          <transition mode="out-in" name="shake">
+            <small
+              v-if="$v.name.first.$invalid && $v.name.first.$dirty"
+              style="margin-bottom: 30px;"
+            >Please enter a valid text</small>
+          </transition>
           <label for="lastName">Last Name</label>
           <div>
-            <input type="text" v-model="name['last']" id="lastName" />
+            <input
+              @input="$v.name.last.$touch()"
+              @blur="$v.name.last.$touch()"
+              type="text"
+              v-model="name['last']"
+              id="lastName"
+            />
             <span class="border-line"></span>
           </div>
-          <small>Some text</small>
+          <transition mode="out-in" name="shake">
+            <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">Please enter a valid text</small>
+          </transition>
           <div class="buttons-container">
             <span @click="name.show = false; email.show = true">
               <app-button text="Back"></app-button>
@@ -58,10 +87,20 @@
         <div v-else-if="subject.show" class="form-group" :key="'subject'">
           <label for="subject">Subject</label>
           <div>
-            <input v-model="subject['value']" type="text" id="subject" />
+            <input
+              @input="$v.subject.value.$touch()"
+              @blur="$v.subject.value.$touch()"
+              v-model="subject['value']"
+              type="text"
+              id="subject"
+            />
             <span class="border-line"></span>
           </div>
-          <small>Some text</small>
+          <transition mode="out-in" name="shake">
+            <small
+              v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
+            >Please enter a valid subject</small>
+          </transition>
           <div class="buttons-container">
             <span @click="subject.show = false; name.show = true">
               <app-button text="Back"></app-button>
@@ -78,10 +117,19 @@
         <div v-else-if="message.show" class="form-group" :key="'message'">
           <label for="message">Message</label>
           <div>
-            <textarea v-model="message['value']" id="message"></textarea>
+            <textarea
+              @input="$v.message.value.$touch()"
+              @blur="$v.message.value.$touch()"
+              v-model="message['value']"
+              id="message"
+            ></textarea>
             <span class="border-line"></span>
           </div>
-          <small>Some text</small>
+          <transition mode="out-in" name="shake">
+            <small
+              v-if="$v.message.value.$invalid && $v.message.value.$dirty"
+            >Please enter a valid message</small>
+          </transition>
           <div class="buttons-container">
             <span @click="subject.show = true; message.show = false">
               <app-button text="Back"></app-button>
@@ -139,24 +187,32 @@ export default {
   },
   validations() {
     return {
-      'email.value': {
-        required,
-        email
+      email: {
+        value: {
+          required,
+          email
+        }
       },
-      'name.first': {
-        required,
-        alpha
+      name: {
+        first: {
+          required,
+          alpha
+        },
+        last: {
+          required,
+          alpha
+        }
       },
-      'name.last': {
-        required,
-        alpha
+      subject: {
+        value: {
+          required
+        }
       },
-      'subject.value': {
-        required
-      },
-      'message.value': {
-        required,
-        alpha
+      message: {
+        value: {
+          required,
+          alpha
+        }
       }
     }
   },
@@ -275,8 +331,11 @@ form {
   }
 
   small {
+    position: absolute;
+    top: 100%;
     font-size: 16px;
     padding: 5px 0px;
+    color: rgb(228, 72, 72);
   }
   .border-line {
     display: inline-block;
@@ -296,7 +355,7 @@ form {
 .buttons-container {
   position: absolute !important;
   width: 100%;
-  top: 130%;
+  top: 150%;
   left: 0px;
   display: flex;
   flex-direction: row;
@@ -339,6 +398,43 @@ form {
   100% {
     opacity: 0;
     transform: translateY(150px);
+  }
+}
+
+.shake-enter-active {
+  animation: shake-in 500ms forwards;
+}
+.shake-leave {
+  opacity: 1;
+}
+.shake-leave-active {
+  transition: opacity 500ms;
+}
+.shake-leave-to {
+  opacity: 0;
+}
+
+@keyframes shake-in {
+  0% {
+    transform: translate(3px, 0);
+  }
+  15% {
+    transform: translate(-3px, 0);
+  }
+  30% {
+    transform: translate(3px, 0);
+  }
+  45% {
+    transform: translate(-3px, 0);
+  }
+  60% {
+    transform: translate(3px, 0);
+  }
+  75% {
+    transform: translate(-3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 </style>

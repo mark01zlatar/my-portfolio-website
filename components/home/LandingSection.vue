@@ -5,7 +5,9 @@
       Self-taught software and
       <span>web developer</span>
     </h1>
-    <app-button class="landing-button" text="Contact me"></app-button>
+    <nuxt-link style="width: 100%;" to="/contact-me">
+      <app-button class="landing-button" text="Contact me"></app-button>
+    </nuxt-link>
     <app-button-scroll></app-button-scroll>
   </section>
 </template>
