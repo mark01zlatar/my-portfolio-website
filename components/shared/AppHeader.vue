@@ -30,7 +30,9 @@
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
           <i class="mdi mdi-download"></i> Resume
         </a>
-        <app-button text="Contact me"></app-button>
+        <nuxt-link to="/contact-me" active-class exact>
+          <app-button text="Contact me"></app-button>
+        </nuxt-link>
       </div>
       <app-hamburger class="hamburger"></app-hamburger>
       <app-mobile-navigation></app-mobile-navigation>

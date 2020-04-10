@@ -28,7 +28,7 @@
         </a>
       </li>
       <li>
-        <a href="#contact-me">Contact me</a>
+        <a href="/contact-me">Contact me</a>
       </li>
     </ul>
   </div>
