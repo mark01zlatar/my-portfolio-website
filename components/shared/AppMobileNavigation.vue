@@ -1,9 +1,6 @@
 <template>
   <div class="mobile-navigation-container" :class="{ open: $store.getters.isMobileNavbar }">
-    <ul>
-      <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
-        <a>Home</a>
-      </nuxt-link>
+    <ul v-if="$route.path === '/'">
       <li>
         <a
           @click="$store.commit('SET_MOBILE_NAVBAR', false)"
@@ -34,11 +31,31 @@
         <a>Contact me</a>
       </nuxt-link>
     </ul>
+    <ul v-else>
+      <nuxt-link to="/" tag="li">
+        <a>Home</a>
+      </nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: '#about-me' }" tag="li">
+        <a>About me</a>
+      </nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: '#portfolio' }" tag="li">
+        <a>Portfolio</a>
+      </nuxt-link>
+      <nuxt-link :to="{ path: '/', hash: '#technologies' }" tag="li">
+        <a>Technologies</a>
+      </nuxt-link>
+    </ul>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  watch: {
+    '$router.path': function(value) {
+      console.log(value)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

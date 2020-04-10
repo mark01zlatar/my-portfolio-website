@@ -5,10 +5,7 @@
         <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo White" />
       </nuxt-link>
       <div class="desktop-navigation">
-        <ul class="navigation-list">
-          <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
-            <a>Home</a>
-          </nuxt-link>
+        <ul class="navigation-list" v-if="$route.path === '/'">
           <li>
             <a
               href="#about-me"
@@ -29,6 +26,20 @@
               @click="$store.commit('SET_MOBILE_NAVBAR', false)"
             >Technologies</a>
           </li>
+        </ul>
+        <ul class="navigation-list" v-else>
+          <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
+            <a>Home</a>
+          </nuxt-link>
+          <nuxt-link :to="{ path: '/', hash: '#about-me' }" tag="li">
+            <a>About me</a>
+          </nuxt-link>
+          <nuxt-link :to="{ path: '/', hash: '#portfolio' }" tag="li">
+            <a>Portfolio</a>
+          </nuxt-link>
+          <nuxt-link :to="{ path: '/', hash: '#technologies' }" tag="li">
+            <a>Technologies</a>
+          </nuxt-link>
         </ul>
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
           <i class="mdi mdi-download"></i> Resume
