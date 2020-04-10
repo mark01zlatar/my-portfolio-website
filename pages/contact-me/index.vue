@@ -312,26 +312,33 @@ form {
   }
 }
 
-.slide-fade-enter {
-  opacity: 0;
-  transform: translateY(150px);
-}
 .slide-fade-enter-active {
-  transition: all 700ms ease 0ms;
-}
-.slide-fade-enter-to {
-  opacity: 1;
-  transform: translateY(0%);
-}
-.slide-fade-leave {
-  opacity: 1;
-  transform: translateY(0%);
+  animation: slade-fade-in 500ms forwards;
 }
 .slide-fade-leave-active {
-  transition: all 700ms ease 0ms;
+  animation: slade-fade-out 500ms forwards;
 }
-.slide-fade-leave-to {
-  opacity: 0;
-  transform: translateY(150px);
+
+@keyframes slade-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slade-fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(150px);
+  }
 }
 </style>
