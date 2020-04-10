@@ -11,7 +11,7 @@
           </nuxt-link>
           <li>
             <a
-              href="/#about-me"
+              href="#about-me"
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
             >About me</a>
           </li>

@@ -4,9 +4,12 @@
     <div class="project-text">
       <h1>{{ project.title }}</h1>
       <div>
-        <span @click="$store.dispatch('openDialog', project)">
-          <project-button text="View more" icon="mdi-eye" buttonClasses="project-button--reverse"></project-button>
-        </span>
+        <project-button
+          @click.native="$store.dispatch('openDialog', project)"
+          text="View more"
+          icon="mdi-eye"
+          buttonClasses="project-button--reverse"
+        ></project-button>
 
         <a :href="project.links.github" target="_blank">
           <project-button text="Source code" icon="mdi-github"></project-button>

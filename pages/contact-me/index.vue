@@ -27,15 +27,13 @@
             >Please enter a valid email</small>
           </transition>
           <div class="buttons-container">
-            <span @click.stop.prevent="email.show = false">
-              <app-button text="Back"></app-button>
-            </span>
-            <span @click="cancel">
-              <app-button text="Cancel"></app-button>
-            </span>
-            <span @click="email.show = false; name.show = true">
-              <app-button text="Next"></app-button>
-            </span>
+            <app-button @click.native="email.show = false" text="Back"></app-button>
+            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button
+              :disabled="$v.email.value.$invalid"
+              @click.native="email.show = false; name.show = true"
+              text="Next"
+            ></app-button>
           </div>
         </div>
         <!-- Name Input -->
@@ -72,15 +70,13 @@
             <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">Please enter a valid text</small>
           </transition>
           <div class="buttons-container">
-            <span @click="name.show = false; email.show = true">
-              <app-button text="Back"></app-button>
-            </span>
-            <span @click="cancel">
-              <app-button text="Cancel"></app-button>
-            </span>
-            <span @click="subject.show = true; name.show = false">
-              <app-button text="Next"></app-button>
-            </span>
+            <app-button @click.native="name.show = false; email.show = true" text="Back"></app-button>
+            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button
+              :disabled="$v.name.first.$invalid || $v.name.last.$invalid"
+              @click.native="subject.show = true; name.show = false"
+              text="Next"
+            ></app-button>
           </div>
         </div>
         <!-- Subject Input -->
@@ -102,15 +98,13 @@
             >Please enter a valid subject</small>
           </transition>
           <div class="buttons-container">
-            <span @click="subject.show = false; name.show = true">
-              <app-button text="Back"></app-button>
-            </span>
-            <span @click="cancel">
-              <app-button text="Cancel"></app-button>
-            </span>
-            <span @click="subject.show = false; message.show = true">
-              <app-button text="Next"></app-button>
-            </span>
+            <app-button @click.native="subject.show = false; name.show = true" text="Back"></app-button>
+            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button
+              :disabled="$v.subject.value.$invalid"
+              @click.native="subject.show = false; message.show = true"
+              text="Next"
+            ></app-button>
           </div>
         </div>
         <!-- Message Input -->
@@ -131,15 +125,9 @@
             >Please enter a valid message</small>
           </transition>
           <div class="buttons-container">
-            <span @click="subject.show = true; message.show = false">
-              <app-button text="Back"></app-button>
-            </span>
-            <span @click="cancel">
-              <app-button text="Cancel"></app-button>
-            </span>
-            <span @click="submit">
-              <app-button text="Submit"></app-button>
-            </span>
+            <app-button @click.native="subject.show = true; message.show = false" text="Back"></app-button>
+            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button :disabled="$v.$invalid" @click.native="submit" text="Submit"></app-button>
           </div>
         </div>
       </transition>
@@ -210,8 +198,7 @@ export default {
       },
       message: {
         value: {
-          required,
-          alpha
+          required
         }
       }
     }
@@ -362,10 +349,10 @@ form {
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  span {
+  button {
     margin: 5px 5px 0px 0px;
   }
-  span:last-child {
+  button:last-child {
     margin-left: auto;
     margin-right: 0px;
   }
