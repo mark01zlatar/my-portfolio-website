@@ -37,4 +37,16 @@ a {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  a {
+    width: 40px;
+    height: 40px;
+    i {
+      font-size: 40px;
+    }
+    bottom: 25px;
+    right: 25px;
+  }
+}
 </style>
