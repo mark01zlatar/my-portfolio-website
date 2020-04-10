@@ -7,7 +7,7 @@
           @click="email.show = true"
           class="contact-button"
           :key="'start'"
-        >Fill the form</button>
+        >Click me and fill the form</button>
         <!-- Email Input -->
         <div v-else-if="email.show" class="form-group" :key="'email'">
           <label for="email">Email</label>
@@ -101,10 +101,21 @@
 
 <script>
 import AppButton from '@/components/shared/AppButton'
+
+import { validationMixin } from 'vuelidate'
+
+import {
+  required,
+  email,
+  minLength,
+  maxLength,
+  alpha
+} from 'vuelidate/lib/validators'
 export default {
   components: {
     AppButton
   },
+  mixins: [validationMixin],
   data() {
     return {
       email: {
@@ -123,6 +134,29 @@ export default {
       message: {
         show: false,
         value: ''
+      }
+    }
+  },
+  validations() {
+    return {
+      'email.value': {
+        required,
+        email
+      },
+      'name.first': {
+        required,
+        alpha
+      },
+      'name.last': {
+        required,
+        alpha
+      },
+      'subject.value': {
+        required
+      },
+      'message.value': {
+        required,
+        alpha
       }
     }
   },
@@ -167,6 +201,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 }
 
 form {
@@ -183,9 +218,10 @@ form {
 }
 
 .contact-button {
+  padding: 5px;
   width: 100%;
   border-radius: 0px;
-  height: 65px;
+  min-height: 65px;
   border: 1px solid $site-text-dark;
   font-size: 25px;
   background-color: $site-text-dark;

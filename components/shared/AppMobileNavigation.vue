@@ -1,6 +1,9 @@
 <template>
   <div class="mobile-navigation-container" :class="{ open: $store.getters.isMobileNavbar }">
     <ul>
+      <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
+        <a>Home</a>
+      </nuxt-link>
       <li>
         <a
           @click="$store.commit('SET_MOBILE_NAVBAR', false)"

@@ -6,9 +6,12 @@
       </nuxt-link>
       <div class="desktop-navigation">
         <ul class="navigation-list">
+          <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
+            <a>Home</a>
+          </nuxt-link>
           <li>
             <a
-              href="#about-me"
+              href="/#about-me"
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
             >About me</a>
           </li>
@@ -30,7 +33,7 @@
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
           <i class="mdi mdi-download"></i> Resume
         </a>
-        <nuxt-link to="/contact-me" active-class exact>
+        <nuxt-link v-if="$route.path !== '/contact-me'" to="/contact-me" active-class exact>
           <app-button text="Contact me"></app-button>
         </nuxt-link>
       </div>
