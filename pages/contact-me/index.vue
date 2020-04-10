@@ -20,12 +20,12 @@
               id="email"
             />
             <span class="border-line"></span>
+            <transition mode="out-in" name="shake">
+              <small
+                v-if="$v.email.value.$invalid && $v.email.value.$dirty"
+              >Please enter a valid email</small>
+            </transition>
           </div>
-          <transition mode="out-in" name="shake">
-            <small
-              v-if="$v.email.value.$invalid && $v.email.value.$dirty"
-            >Please enter a valid email</small>
-          </transition>
           <div class="buttons-container">
             <app-button @click.native="email.show = false" text="Back"></app-button>
             <app-button @click.native="cancel" text="Cancel"></app-button>
@@ -48,13 +48,13 @@
               id="firstName"
             />
             <span class="border-line"></span>
+            <transition mode="out-in" name="shake">
+              <small
+                v-if="$v.name.first.$invalid && $v.name.first.$dirty"
+                style="margin-bottom: 30px;"
+              >Please enter a valid text</small>
+            </transition>
           </div>
-          <transition mode="out-in" name="shake">
-            <small
-              v-if="$v.name.first.$invalid && $v.name.first.$dirty"
-              style="margin-bottom: 30px;"
-            >Please enter a valid text</small>
-          </transition>
           <label for="lastName">Last Name</label>
           <div>
             <input
@@ -65,10 +65,10 @@
               id="lastName"
             />
             <span class="border-line"></span>
+            <transition mode="out-in" name="shake">
+              <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">Please enter a valid text</small>
+            </transition>
           </div>
-          <transition mode="out-in" name="shake">
-            <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">Please enter a valid text</small>
-          </transition>
           <div class="buttons-container">
             <app-button @click.native="name.show = false; email.show = true" text="Back"></app-button>
             <app-button @click.native="cancel" text="Cancel"></app-button>
@@ -91,12 +91,12 @@
               id="subject"
             />
             <span class="border-line"></span>
+            <transition mode="out-in" name="shake">
+              <small
+                v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
+              >Please enter a valid subject</small>
+            </transition>
           </div>
-          <transition mode="out-in" name="shake">
-            <small
-              v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
-            >Please enter a valid subject</small>
-          </transition>
           <div class="buttons-container">
             <app-button @click.native="subject.show = false; name.show = true" text="Back"></app-button>
             <app-button @click.native="cancel" text="Cancel"></app-button>
@@ -118,12 +118,12 @@
               id="message"
             ></textarea>
             <span class="border-line"></span>
+            <transition mode="out-in" name="shake">
+              <small
+                v-if="$v.message.value.$invalid && $v.message.value.$dirty"
+              >Please enter a valid message</small>
+            </transition>
           </div>
-          <transition mode="out-in" name="shake">
-            <small
-              v-if="$v.message.value.$invalid && $v.message.value.$dirty"
-            >Please enter a valid message</small>
-          </transition>
           <div class="buttons-container">
             <app-button @click.native="subject.show = true; message.show = false" text="Back"></app-button>
             <app-button @click.native="cancel" text="Cancel"></app-button>
@@ -293,6 +293,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 32px;
     input,
     textarea {
       width: 100%;
@@ -309,10 +310,10 @@ form {
       }
     }
     textarea {
-      height: 200px;
+      height: 300px;
       background-color: rgba(0, 0, 0, 0.2);
       font-size: 18px;
-      resize: vertical;
+      resize: none;
       max-height: 400px;
     }
   }
@@ -320,6 +321,7 @@ form {
   small {
     position: absolute;
     top: 100%;
+    left: 0px;
     font-size: 16px;
     padding: 5px 0px;
     color: rgb(228, 72, 72);
@@ -340,17 +342,17 @@ form {
 }
 
 .buttons-container {
-  position: absolute !important;
   width: 100%;
-  top: 150%;
-  left: 0px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 35px;
   button {
     margin: 5px 5px 0px 0px;
+    width: 100px !important;
+    height: 50px !important;
   }
   button:last-child {
     margin-left: auto;
@@ -422,6 +424,21 @@ form {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@media screen and(max-width: 650px) {
+  .buttons-container {
+    button {
+      height: 40px !important;
+      width: 80px !important;
+    }
+  }
+}
+
+@media screen and(max-width: 400px) {
+  form {
+    width: 95%;
   }
 }
 </style>
