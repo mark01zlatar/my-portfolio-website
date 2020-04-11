@@ -5,51 +5,27 @@
         <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo White" />
       </nuxt-link>
       <div class="desktop-navigation">
-        <ul class="navigation-list" v-if="$route.path === '/'">
-          <li>
-            <a
-              href="#about-me"
-              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-            >{{ $t('links.about') }}</a>
-          </li>
-          <li>
-            <a
-              href="#portfolio"
-              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            >{{ $t('links.portfolio') }}</a>
-          </li>
-          <li>
-            <a
-              href="#technologies"
-              v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            >{{ $t('links.technologies') }}</a>
-          </li>
+        <ul class="navigation-list">
+          <nuxt-link v-if="$route.path !== '/'" tag="li" to="/">
+            <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.home') }}</a>
+          </nuxt-link>
+          <nuxt-link tag="li" to="/#about-me">
+            <a>{{ $t('links.about') }}</a>
+          </nuxt-link>
+          <nuxt-link tag="li" to="/#portfolio">
+            <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a>
+          </nuxt-link>
+
+          <nuxt-link tag="li" to="/#technologies">
+            <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
+          </nuxt-link>
           <nuxt-link
-            tag="li"
             v-for="locale in availableLocales"
             :key="locale.code"
             :to="switchLocalePath(locale.code)"
           >
-            <a>
-              <i class="mdi mdi-translate"></i>
-              {{ locale.name }}
-            </a>
-          </nuxt-link>
-        </ul>
-        <ul class="navigation-list" v-else>
-          <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
-            <a>{{ $t('links.home') }}</a>
-          </nuxt-link>
-          <nuxt-link :to="{ path: '/', hash: '#about-me' }" tag="li">
-            <a>{{ $t('links.about') }}</a>
-          </nuxt-link>
-          <nuxt-link :to="{ path: '/', hash: '#portfolio' }" tag="li">
-            <a>{{ $t('links.portfolio') }}</a>
-          </nuxt-link>
-          <nuxt-link :to="{ path: '/', hash: '#technologies' }" tag="li">
-            <a>{{ $t('links.technologies') }}</a>
+            <i class="mdi mdi-translate"></i>
+            {{ locale.name }}
           </nuxt-link>
         </ul>
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">

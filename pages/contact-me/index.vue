@@ -7,10 +7,10 @@
           @click="email.show = true"
           class="contact-button"
           :key="'start'"
-        >Click me and fill the form</button>
+        >{{ $t('contact.buttons.start') }}</button>
         <!-- Email Input -->
         <div v-else-if="email.show" class="form-group" :key="'email'">
-          <label for="email">Email</label>
+          <label for="email">{{ $t('contact.labels.email.title') }}</label>
           <div>
             <input
               @input="$v.email.value.$touch()"
@@ -23,7 +23,7 @@
             <transition mode="out-in" name="shake">
               <small
                 v-if="$v.email.value.$invalid && $v.email.value.$dirty"
-              >Please enter a valid email</small>
+              >{{ $t('contact.labels.email.errorText') }}</small>
             </transition>
           </div>
           <div class="buttons-container">
@@ -38,7 +38,7 @@
         </div>
         <!-- Name Input -->
         <div v-else-if="name.show" class="form-group" :key="'name'">
-          <label for="firstName">First Name</label>
+          <label for="firstName">{{ $t('contact.labels.name.first') }}</label>
           <div>
             <input
               @input="$v.name.first.$touch()"
@@ -52,10 +52,10 @@
               <small
                 v-if="$v.name.first.$invalid && $v.name.first.$dirty"
                 style="margin-bottom: 30px;"
-              >Please enter a valid text</small>
+              >{{ $t('contact.labels.name.errorText') }}</small>
             </transition>
           </div>
-          <label for="lastName">Last Name</label>
+          <label for="lastName">{{ $t('contact.labels.name.last') }}</label>
           <div>
             <input
               @input="$v.name.last.$touch()"
@@ -66,7 +66,9 @@
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
-              <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">Please enter a valid text</small>
+              <small
+                v-if="$v.name.last.$invalid && $v.name.last.$dirty"
+              >{{ $t('contact.labels.name.errorText') }}</small>
             </transition>
           </div>
           <div class="buttons-container">
@@ -81,7 +83,7 @@
         </div>
         <!-- Subject Input -->
         <div v-else-if="subject.show" class="form-group" :key="'subject'">
-          <label for="subject">Subject</label>
+          <label for="subject">{{ $t('contact.labels.subject.title') }}</label>
           <div>
             <input
               @input="$v.subject.value.$touch()"
@@ -94,7 +96,7 @@
             <transition mode="out-in" name="shake">
               <small
                 v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
-              >Please enter a valid subject</small>
+              >{{ $t('contact.labels.subject.errorText') }}</small>
             </transition>
           </div>
           <div class="buttons-container">
@@ -109,7 +111,7 @@
         </div>
         <!-- Message Input -->
         <div v-else-if="message.show" class="form-group" :key="'message'">
-          <label for="message">Message</label>
+          <label for="message">{{ $t('contact.labels.message.title') }}</label>
           <div>
             <textarea
               @input="$v.message.value.$touch()"
@@ -121,7 +123,7 @@
             <transition mode="out-in" name="shake">
               <small
                 v-if="$v.message.value.$invalid && $v.message.value.$dirty"
-              >Please enter a valid message</small>
+              >{{ $t('contact.labels.message.errorText') }}</small>
             </transition>
           </div>
           <div class="buttons-container">

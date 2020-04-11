@@ -1,9 +1,5 @@
 <template>
-  <a
-    href="#services"
-    class="icon-scroll"
-    v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-  ></a>
+  <nuxt-link to="/#services" class="icon-scroll"></nuxt-link>
 </template>
 
 <script>

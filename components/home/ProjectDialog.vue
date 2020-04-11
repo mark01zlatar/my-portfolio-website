@@ -24,7 +24,7 @@
             allowfullscreen
           ></iframe>
           <div class="dialog-technologies">
-            <h3>Technologies used</h3>
+            <h3>{{ $t('home.projectsSection.dialogTechnologies') }}</h3>
             <ul>
               <li
                 v-for="(technologie, index) in getProjectDialogData.technologies"
@@ -33,11 +33,11 @@
             </ul>
             <div>
               <a :href="getProjectDialogData.links.github" target="_blank">
-                <project-button text="Source code" icon="mdi-github"></project-button>
+                <project-button :text="$t('links.sourceCode')" icon="mdi-github"></project-button>
               </a>
               <a :href="getProjectDialogData.links.site" target="_blank">
                 <project-button
-                  text="Visit site"
+                  :text="$t('links.visitSite')"
                   icon="mdi-search-web"
                   bordercolor="white"
                   buttonClasses="project-button--white"
@@ -47,8 +47,8 @@
           </div>
         </div>
         <div class="dialog-overview">
-          <h3>Overview</h3>
-          <p>{{ getProjectDialogData.overview || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ad, aliquid in temporibus rem veritatis placeat sint fuga molestias quaerat fugiat distinctio ipsam libero, dicta natus molestiae, laboriosam voluptatum quia! Ea tempora, quis sint suscipit porro error voluptas consectetur eligendi.'}}</p>
+          <h3>{{ $t('home.projectsSection.dialogOverview') }}</h3>
+          <p>{{ getProjectDialogData.overview }}</p>
         </div>
       </div>
     </transition>

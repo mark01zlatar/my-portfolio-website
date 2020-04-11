@@ -4,121 +4,134 @@ export default {
     description: ''
   },
   links: {
-    home: 'Pocetna stranica',
+    home: 'Početna stranica',
     about: 'O meni',
     portfolio: 'Portfolio',
     technologies: 'Tehnologije',
     contact: 'Kontakiraj me',
-    resume: 'Resume',
+    resume: 'Rezime',
     english: 'Engleski',
     serbian: 'Srpski',
     visitSite: 'Poseti sajt',
-    viewMore: 'Prikazi vise',
+    viewMore: 'Prikaži vise',
     sourceCode: 'Izvorni kod'
   },
   home: {
     landingSection: {
-      title: 'Samouki software i <span>web developer</span>'
+      title: 'Samouki software i web developer'
     },
     servicesSection: {
-      title: 'Some of my services',
+      title: 'Neke od mojih usluga',
       mobileFriendly: {
-        title: 'Mobile-friendly',
+        title: 'Dizajn prikladan svim uredjajima',
         text:
-          'A responsive design makes your website accessible to all users, regardless of their device.'
+          'Dizajn koji omogućava pristup svim korisnicima bez obzira na kom su uredjaju.'
       },
       websiteAudits: {
-        title: 'Website audits',
+        title: 'Unapredjivanje sajta',
         text:
-          'Looking to improve your page performance, SEO, or user experience? Request a free site audit.'
+          'U koliko želite da poboljšate performanse sajta, SEO, ili da povećate zadovoljstvo vaših korisnika, kroz jednostavan proces možemo učiniti to zajedno'
       },
       cms: {
         title: 'CMS(Content-Management-System)',
-        text: 'Easily update content without knowing how to code.'
+        text:
+          'Jednostavno i brzo upravljenje kontentom bez potrebe za kodovanjem'
       },
       designDevelopment: {
-        title: 'Design + Development',
+        title: 'Dizajn + Kreiranje',
         text:
-          'Clean, modern designs - optimized for performance, search engines, and converting users to customers.'
+          'Jednostavan, moderan dizajn - optimizovan za performanse, SEO i pretvaranje korisnika u klijente'
       },
       eCommerce: {
-        title: 'eCommerce',
+        title: 'eCommerce - Internet Prodavnice',
         text:
-          'Integration of eCommerce platforms, payment gateways, custom product templates, and more.'
+          'Integrisanje eCommerce platformi, načina plaćanja, kreiranje željenog izgleda proizvoda na sajtu i još mnogo toga'
       },
       analytics: {
-        title: 'Analytics',
+        title: 'Analitika',
         text:
-          'Get insights into who is browsing your site so that you can make smarter business decisions.'
+          'Saznajte ko su vaši korisnici kako bi ste mogli doneti pametnije biznis odluke.'
       }
     },
     aboutSection: {
-      title: 'Who Am I',
+      title: 'Moja priča',
       firstPara:
-        'I was never the best at school or academics, I’m just a super curious guy. I spend a lot of time building websites and web apps, but there’s also a lot more to it. Also I spent at least one hour a day working out or having some physical activity - for me health is most important thing, and then comes everything else.',
+        'Nikada nisam bio najbolji u skoli, jednostavno volim da radim i posvecujem vreme onome sto me stvarno zanima.Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takodje svaki dan se bavim fizickom aktivnoscu - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo',
       secondPara:
-        'I started my journey as a self-taught web and software developer in second year of High School. Ever since I have fallen in love with programming and spend most of my days taking my craft and skills to the next level.',
+        'Moje iskustvo kao samouki web i software developer pocelo je u drugoj godini srednje skole. Od kako sam zavoleo programiranje, posvecujem najvise vremena kako bi kreirao nove stvari i unapredio svoje vestine na najbolji moguci nacin.',
       thirdPara:
-        'Nowadays I tend to code all of my projects from scratch in order to deliver a unique experience to every company. I spend my free time learning and using what i learn by building new and challenging projects.'
+        'Danas spreman sam da se suocim sa svim problemima koji mogu nastati kako bih dostavio najbolje moguce rezultate svakoj kompaniji. U slobodno vreme ucim stvari koje me zanimaju i koristim naucene stvari kako bih kreirao nove projekte i postavio sebi nove izazove'
     },
     projectsSection: {
       title: 'Portfolio',
+      dialogTechnologies: 'Korišćene tehnologije',
+      dialogOverview: 'Ukratko o projektu',
       gemMedia: {
-        title: 'Gem Media - Social media project',
+        title: 'Gem Media - Socijalna mreža',
         overview:
-          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. To implement private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also rate-limiting is implemented.'
+          'Ovaj projekat je kreiran iz dva odvojena dela - frontend i backend. Na frontend-u koristio sam Nuxt.js kako bi postigao SSR(Server Side Render) Vue.js aplikacije. Za UI(User Interface) koristio sam Vuetify.js(Material Design framework). Za backend koristio sam REST API sa Node.js(Express framework). Kao bazu podataka koristio sam MongoDB(NoSQL baza podataka). Za interakciju sa MongoDB bazom podataka koristio sam mongoose biblioteku. Kako bih kreirao mogućnost slanja privatnih poruka, koristio sam socket.io biblioteku. Node.js aplikacija je testirana pomoću Mocha.js, Chai.js, Sinon.js... Takodje je integrisan rate-limit.'
       },
       wlfClothing: {
-        title: 'WLF(We love fashion) Clothing - eCommerce project',
+        title: 'WLF(We love fashion) Clothing - eCommerce projekat',
         overview:
-          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. Some of features that are implemented are: Authentication & Authorization, Payment with paypal, CMS for users and products, pagination, email interactions, AWS S3 storage... basically everything one e-commerce must have.'
+          'Ovaj projekat je kreiran iz dva odvojena dela - frontend i backend.  Na frontend-u koristio sam Nuxt.js kako bi postigao SSR(Server Side Render) Vue.js aplikacije. Za UI(User Interface) koristio sam Vuetify.js(Material Design framework). Za backend koristio sam REST API sa Node.js(Express framework). Kao bazu podataka koristio sam MongoDB(NoSQL baza podataka). Za interakciju sa MongoDB bazom podataka koristio sam mongoose biblioteku. Neke od mogućnosti koje su kreirane u aplikaciji su: Autentikacija & Autorizacija, plaćanje pomoću Paypal-a, CMS za korisnike i proizvode, paginacija, slanje email-a, AWS S3 skladištenje... Sve što bi jedan eCommerce morao imati.'
       },
       seoMind: {
-        title: 'SEO Mind - Website project',
+        title: 'SEO Mind - Website projekat',
         overview:
-          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
+          'Kako bih kreirao ovaj projekat, koristio sam alatku kreiranu od strane Nuxt.js tima zvanu create-nuxt-app. U procesu kreiranja web aplikacije, kako bih organizovao CSS i bolje iskoristio kod, korišćen je SCSS a za kontrolu verzije je korišćen Git uz Github'
       },
       greatAthlete: {
-        title: 'Great Athlete - GYM website project',
+        title: 'Great Athlete - Websajt za Teretanu',
         overview:
-          'To create this project, first I created setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for fast development process and bundled minified code in production. Sass is used as css extension so i was able to to reuse css and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.'
+          'Kako bih kreirao ovaj projekat, prvo sam iskoristio Webpack(module bundler). Kada je Webpack iskorišćen korektno, on je odgovoran za brže proces rada i za smanjenju veličinu koda u produkciji(bundled minified code). Sass je korišćen kao ekstenzija za CSS, čime sam bio u mogućnosti da organizujem i bolje iskoristim kod. Za sve interakcije sa korisnikom je korišćen vanilla JavaScript. Git i Github su korišćeni za kontrolu verzije.'
       }
     },
     technologiesSection: {
-      title: 'Favourite Technologies',
-      frontEnd: {
+      title: 'Moje Tehnologije',
+      frontend: {
         title:
-          'Technologies that I use to create beautiful front-end applications',
+          'Tehnologije koje koristim kako bih kreirao prelepe frontend aplikacije.',
         subtitle:
-          'Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.'
+          'Neke od njih su: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, itd.'
       },
-      backEnd: {
+      backend: {
         title:
-          'Technologies that I use to create scaleable back-end applications',
+          'Tehnologije koje koristim kako bih kreirao funkcionalne backend aplikacije.',
         subtitle:
-          'Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...'
+          'Neke od njih su: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...'
       }
     },
     footer: {
-      title: 'FOCUS. DISCIPLINE. SIMPLICITY.'
+      title: 'FOKUS. DISCIPLINA. JEDNOSTAVNOST.'
     }
   },
   contact: {
     buttons: {
-      start: 'Click here to send a message',
-      prev: 'Previous',
-      cancel: 'Cancel',
-      next: 'Next',
-      submit: 'Submit'
+      start: 'Klikni ovde kako bi poslao poruku',
+      prev: 'Prethodno',
+      cancel: 'Otkaži',
+      next: 'Sledeće',
+      submit: 'Pošalji'
     },
     labels: {
       name: {
-        first: 'First Name',
-        last: 'Last Name'
+        first: 'Ime',
+        last: 'Prezime',
+        errorText: 'Enter a valid ttext'
       },
-      email: 'Email',
-      subject: 'Subject',
-      message: 'Message'
+      email: {
+        title: 'Email',
+        errorText: 'Unesite ispravan email'
+      },
+      subject: {
+        title: 'Tema',
+        errorText: 'Unesite ispravnu temu'
+      },
+      message: {
+        title: 'Poruka',
+        errorText: 'Unesite ispravnu poruku'
+      }
     }
   }
 }

@@ -3,33 +3,24 @@
     <h1>{{ $t('footer.title') }}</h1>
     <nav>
       <div>
-        <a href="#top" v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }">
+        <nuxt-link to="#top">
           <img
             src="@/assets/images/MZ-logo-white-small.png"
             width="70"
             alt="Marko Zlatar Logo White"
           />
-        </a>
+        </nuxt-link>
         <div>
           <ul class="navigation-list">
-            <li>
-              <a
-                href="#about-me"
-                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >{{ $t('links.about') }}</a>
-            </li>
-            <li>
-              <a
-                href="#portfolio"
-                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >{{ $t('links.portfolio') }}</a>
-            </li>
-            <li>
-              <a
-                href="#technologies"
-                v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >{{ $t('links.technologies') }}</a>
-            </li>
+            <nuxt-link tag="li" to="/#about-me">
+              <a>{{ $t('links.about') }}</a>
+            </nuxt-link>
+            <nuxt-link tag="li" to="#portfolio">
+              <a href="/#portfolio">{{ $t('links.portfolio') }}</a>
+            </nuxt-link>
+            <nuxt-link tag="li" to="#technologies">
+              <a href="/#technologies">{{ $t('links.technologies') }}</a>
+            </nuxt-link>
             <li>
               <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
                 <i class="mdi mdi-download"></i>

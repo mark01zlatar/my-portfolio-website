@@ -1,48 +1,26 @@
 <template>
   <div class="mobile-navigation-container" :class="{ open: $store.getters.isMobileNavbar }">
-    <ul v-if="$route.path === '/'">
-      <li>
-        <a
-          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-          href="#about-me"
-          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-        >About me</a>
-      </li>
-      <li>
-        <a
-          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-          href="#portfolio"
-          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-        >Portfolio</a>
-      </li>
-      <li>
-        <a
-          @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-          href="#technologies"
-          v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-        >Technologies</a>
-      </li>
+    <ul>
+      <nuxt-link v-if="$route.path !== '/'" tag="li" to="/">
+        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.home') }}</a>
+      </nuxt-link>
+      <nuxt-link tag="li" to="/#about-me">
+        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.about') }}</a>
+      </nuxt-link>
+      <nuxt-link tag="li" to="/#portfolio">
+        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a>
+      </nuxt-link>
+      <nuxt-link tag="li" to="/#technologies">
+        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
+      </nuxt-link>
       <li>
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-          <i class="mdi mdi-download"></i> Resume
+          <i class="mdi mdi-download"></i>
+          {{ $t('links.resume') }}
         </a>
       </li>
-      <nuxt-link to="/contact-me" tag="li">
-        <a>Contact me</a>
-      </nuxt-link>
-    </ul>
-    <ul v-else>
-      <nuxt-link to="/" tag="li">
-        <a>Home</a>
-      </nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: '#about-me' }" tag="li">
-        <a>About me</a>
-      </nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: '#portfolio' }" tag="li">
-        <a>Portfolio</a>
-      </nuxt-link>
-      <nuxt-link :to="{ path: '/', hash: '#technologies' }" tag="li">
-        <a>Technologies</a>
+      <nuxt-link v-if="$route.path === '/'" to="/contact-me" tag="li">
+        <a>{{ $t('links.contact') }}</a>
       </nuxt-link>
     </ul>
   </div>

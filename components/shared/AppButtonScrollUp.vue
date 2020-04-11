@@ -1,7 +1,7 @@
 <template>
-  <a href="#top" v-smooth-scroll="{ duration: 1000, offset: 0, updateHistory: false }">
+  <nuxt-link to="/#top">
     <i class="mdi mdi-chevron-double-up"></i>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

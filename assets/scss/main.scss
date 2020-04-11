@@ -48,3 +48,25 @@ a {
 .next {
   color: #fff !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $site-gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $site-text-dark;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+

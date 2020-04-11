@@ -53,9 +53,9 @@ export default {
       }
     },
     aboutSection: {
-      title: 'Who Am I',
+      title: 'My story',
       firstPara:
-        'I was never the best at school or academics, I’m just a super curious guy. I spend a lot of time building websites and web apps, but there’s also a lot more to it. Also I spent at least one hour a day working out or having some physical activity - for me health is most important thing, and then comes everything else.',
+        'I was never the best at school or academics, I’m just a super passionate and hard working guy. Most of my time I spend building websites and web apps, but there’s also a lot more to it. Also I spent at least one hour a day working out or having some physical activity - for me health is most important thing, and then comes everything else.',
       secondPara:
         'I started my journey as a self-taught web and software developer in second year of High School. Ever since I have fallen in love with programming and spend most of my days taking my craft and skills to the next level.',
       thirdPara:
@@ -63,6 +63,8 @@ export default {
     },
     projectsSection: {
       title: 'Portfolio',
+      dialogTechnologies: 'Technologies used',
+      dialogOverview: 'Overview',
       gemMedia: {
         title: 'Gem Media - Social media project',
         overview:
@@ -76,7 +78,7 @@ export default {
       seoMind: {
         title: 'SEO Mind - Website project',
         overview:
-          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
+          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
       },
       greatAthlete: {
         title: 'Great Athlete - GYM website project',
@@ -94,14 +96,14 @@ export default {
       },
       backend: {
         title:
-          'Technologies that I use to create scaleable back-end applications',
+          'Technologies that I use to create functional back-end applications',
         subtitle:
           'Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...'
       }
     }
   },
   footer: {
-    title: 'FOCUS. DISCIPLINE. SIMPLICITY.'
+    title: 'DISCIPLINE. FREEDOM.'
   },
   contact: {
     buttons: {
@@ -114,11 +116,21 @@ export default {
     labels: {
       name: {
         first: 'First Name',
-        last: 'Last Name'
+        last: 'Last Name',
+        errorText: 'Enter a valid text'
       },
-      email: 'Email',
-      subject: 'Subject',
-      message: 'Message'
+      email: {
+        title: 'Email',
+        errorText: 'Please enter a valid email'
+      },
+      subject: {
+        title: 'Subject',
+        errorText: 'Please enter a valid subject'
+      },
+      message: {
+        title: 'Message',
+        errorText: 'Please enter a valid message'
+      }
     }
   }
 }

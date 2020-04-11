@@ -16,7 +16,6 @@
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.8.1",
     "vue-carousel-3d": "^0.2.0",
-    "vue2-smooth-scroll": "^1.2.0",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
