@@ -29,7 +29,7 @@ export default {
             image: 'gem-media.png',
             video: 'https://www.youtube.com/embed/jHmw12dDkHY'
           },
-          title: 'Gem Media - Social media project',
+          title: this.$t('home.projectsSection.gemMedia.title'),
           links: {
             github: 'https://github.com/mark01Zlatar/social-media-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
@@ -43,15 +43,14 @@ export default {
             'Git',
             'Github'
           ],
-          overview:
-            'To create this project, first I created setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for fast development process and bundled minified code in production. Sass is used as css extension so i was able to to reuse css and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.'
+          overview: this.$t('home.projectsSection.gemMedia.overview')
         },
         {
           src: {
             image: 'greatathlete.png',
             video: 'https://www.youtube.com/embed/lyMZig_bHtM'
           },
-          title: 'Great Athlete - GYM website project',
+          title: this.$t('home.projectsSection.greatAthlete.title'),
           links: {
             github: 'https://github.com/mark01Zlatar/GYM-website',
             site: 'https://objective-brattain-d22de3.netlify.com'
@@ -66,15 +65,14 @@ export default {
             'Git',
             'Github'
           ],
-          overview:
-            'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
+          overview: this.$t('home.projectsSection.greatAthlete.overview')
         },
         {
           src: {
             image: 'wlf-clothing.png',
             video: 'https://www.youtube.com/embed/2zUESAy5e4c'
           },
-          title: 'WLF(We love fashion) Clothing - eCommerce project',
+          title: this.$t('home.projectsSection.wlfClothing.title'),
           links: {
             github: 'https://github.com/mark01Zlatar/e-commerce-frontend',
             site: 'https://gem-media-frontend.herokuapp.com/'
@@ -97,15 +95,14 @@ export default {
             'Git',
             'Github'
           ],
-          overview:
-            'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. Some of features that are implemented are: Authentication & Authorization, Payment with paypal, CMS for users and products, pagination, email interactions, AWS S3 storage... basically everything one e-commerce must have.'
+          overview: this.$t('home.projectsSection.wlfClothing.overview')
         },
         {
           src: {
             image: 'seomind.png',
             video: 'https://www.youtube.com/embed/bkTLRbNk4hE'
           },
-          title: 'SEO Mind - Website project',
+          title: this.$t('home.projectsSection.seoMind.title'),
           links: {
             github: 'https://github.com/mark01Zlatar/SEO-Mind-website',
             site: 'https://mystifying-perlman-1f895e.netlify.com'
@@ -127,8 +124,7 @@ export default {
             'Git',
             'Github'
           ],
-          overview:
-            'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. To implement private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also rate-limiting is implemented.'
+          overview: this.$t('home.projectsSection.seoMind.overview')
         }
       ]
     }

@@ -10,21 +10,21 @@
             <a
               href="#about-me"
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-            >About me</a>
+            >{{ $t('links.about') }}</a>
           </li>
           <li>
             <a
               href="#portfolio"
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
               @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            >Portfolio</a>
+            >{{ $t('links.portfolio') }}</a>
           </li>
           <li>
             <a
               href="#technologies"
               v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
               @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            >Technologies</a>
+            >{{ $t('links.technologies') }}</a>
           </li>
           <nuxt-link
             tag="li"
@@ -40,23 +40,24 @@
         </ul>
         <ul class="navigation-list" v-else>
           <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
-            <a>Home</a>
+            <a>{{ $t('links.home') }}</a>
           </nuxt-link>
           <nuxt-link :to="{ path: '/', hash: '#about-me' }" tag="li">
-            <a>About me</a>
+            <a>{{ $t('links.about') }}</a>
           </nuxt-link>
           <nuxt-link :to="{ path: '/', hash: '#portfolio' }" tag="li">
-            <a>Portfolio</a>
+            <a>{{ $t('links.portfolio') }}</a>
           </nuxt-link>
           <nuxt-link :to="{ path: '/', hash: '#technologies' }" tag="li">
-            <a>Technologies</a>
+            <a>{{ $t('links.technologies') }}</a>
           </nuxt-link>
         </ul>
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-          <i class="mdi mdi-download"></i> Resume
+          <i class="mdi mdi-download"></i>
+          {{ $t('links.resume') }}
         </a>
         <nuxt-link v-if="$route.path !== '/contact-me'" to="/contact-me" active-class exact>
-          <app-button text="Contact me"></app-button>
+          <app-button :text="$t('links.contact')"></app-button>
         </nuxt-link>
       </div>
       <app-hamburger class="hamburger"></app-hamburger>

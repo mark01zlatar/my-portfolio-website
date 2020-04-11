@@ -5,7 +5,7 @@
         <img src="@/assets/images/markozlatar.jpg" height="500px" alt="Marko Zlatar" />
       </div>
       <div class="about-me-text">
-        <h2 id="about-me">{{ $t('home.about.title') }}</h2>
+        <h2 id="about-me">{{ $t('home.aboutSection.title') }}</h2>
         <h1>Marko Zlatar</h1>
         <p>{{ $t('home.aboutSection.firstPara') }}</p>
         <p>{{ $t('home.aboutSection.secondPara') }}</p>

@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <h1>FOCUS. SIMPLICITY. DISCIPLINE.</h1>
+    <h1>{{ $t('footer.title') }}</h1>
     <nav>
       <div>
         <a href="#top" v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }">
@@ -16,23 +16,24 @@
               <a
                 href="#about-me"
                 v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >About me</a>
+              >{{ $t('links.about') }}</a>
             </li>
             <li>
               <a
                 href="#portfolio"
                 v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >Portfolio</a>
+              >{{ $t('links.portfolio') }}</a>
             </li>
             <li>
               <a
                 href="#technologies"
                 v-smooth-scroll="{ duration: 1000, offset: -50, updateHistory: false }"
-              >Technologies</a>
+              >{{ $t('links.technologies') }}</a>
             </li>
             <li>
               <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-                <i class="mdi mdi-download"></i> Resume
+                <i class="mdi mdi-download"></i>
+                {{ $t('links.resume') }}
               </a>
             </li>
           </ul>

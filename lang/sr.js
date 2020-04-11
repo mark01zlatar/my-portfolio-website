@@ -62,10 +62,11 @@ export default {
         'Nowadays I tend to code all of my projects from scratch in order to deliver a unique experience to every company. I spend my free time learning and using what i learn by building new and challenging projects.'
     },
     projectsSection: {
+      title: 'Portfolio',
       gemMedia: {
         title: 'Gem Media - Social media project',
         overview:
-          'To create this project, first I created setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for fast development process and bundled minified code in production. Sass is used as css extension so i was able to to reuse css and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.'
+          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. To implement private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also rate-limiting is implemented.'
       },
       wlfClothing: {
         title: 'WLF(We love fashion) Clothing - eCommerce project',
@@ -75,12 +76,12 @@ export default {
       seoMind: {
         title: 'SEO Mind - Website project',
         overview:
-          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI i used Vuetify.js(Material Design component framework). For backend I created REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For  interactions with MongoDB mongoose library is used. To implement private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also rate-limiting is implemented.'
+          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
       },
       greatAthlete: {
         title: 'Great Athlete - GYM website project',
         overview:
-          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. Nuxt.js is framework for Vue.js. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github'
+          'To create this project, first I created setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for fast development process and bundled minified code in production. Sass is used as css extension so i was able to to reuse css and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.'
       }
     },
     technologiesSection: {
@@ -88,13 +89,13 @@ export default {
       frontEnd: {
         title:
           'Technologies that I use to create beautiful front-end applications',
-        subTitle:
+        subtitle:
           'Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.'
       },
       backEnd: {
         title:
           'Technologies that I use to create scaleable back-end applications',
-        subTitle:
+        subtitle:
           'Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...'
       }
     },

@@ -1,11 +1,11 @@
 <template>
   <div class="skewed-box">
     <div class="technologies-container">
-      <h1 id="technologies">Favourite Technologies</h1>
+      <h1 id="technologies">{{ $t('home.technologiesSection.title') }}</h1>
       <div class="technologies-text">
         <div>
-          <h2>Technologies that I use to create beautiful front-end applications</h2>
-          <h3>Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.</h3>
+          <h2>{{ $t('home.technologiesSection.frontend.title') }}</h2>
+          <h3>{{ $t('home.technologiesSection.frontend.subtitle') }}</h3>
         </div>
       </div>
       <div class="technologies-images">
@@ -153,8 +153,8 @@
       </div>
       <div class="technologies-text">
         <div>
-          <h2>Technologies that I use to create scaleable back-end applications</h2>
-          <h3>Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...</h3>
+          <h2>{{ $t('home.technologiesSection.backend.title') }}</h2>
+          <h3>{{ $t('home.technologiesSection.backend.subtitle') }}</h3>
         </div>
       </div>
     </div>
