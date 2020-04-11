@@ -11,6 +11,9 @@ import AppHeader from '@/components/shared/AppHeader'
 import AppFooter from '@/components/shared/AppFooter'
 
 export default {
+  head() {
+    return this.$nuxtI18nSeo()
+  },
   components: {
     AppHeader,
     AppFooter

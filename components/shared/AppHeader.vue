@@ -26,6 +26,17 @@
               @click="$store.commit('SET_MOBILE_NAVBAR', false)"
             >Technologies</a>
           </li>
+          <nuxt-link
+            tag="li"
+            v-for="locale in availableLocales"
+            :key="locale.code"
+            :to="switchLocalePath(locale.code)"
+          >
+            <a>
+              <i class="mdi mdi-translate"></i>
+              {{ locale.name }}
+            </a>
+          </nuxt-link>
         </ul>
         <ul class="navigation-list" v-else>
           <nuxt-link to="/" v-if="$route.path !== '/'" tag="li">
@@ -67,6 +78,15 @@ export default {
   },
   data() {
     return {}
+  },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  },
+  mounted() {
+    console.log(this.$i18n.locales)
+    console.log(this.$i18n.locale)
   }
 }
 </script>
@@ -130,7 +150,7 @@ header {
   z-index: 100;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .desktop-navigation {
     display: none;
   }

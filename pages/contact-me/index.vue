@@ -148,6 +148,20 @@ import {
   alpha
 } from 'vuelidate/lib/validators'
 export default {
+  head() {
+    return {
+      title: 'Contact me',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Tell me what you have in mind - Here you can send me a message about any subject you are interested in.'
+        }
+      ],
+      noscript: [{ innerHTML: 'Body No Scripts', body: true }]
+    }
+  },
   components: {
     AppButton
   },

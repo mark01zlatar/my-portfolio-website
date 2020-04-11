@@ -7,7 +7,7 @@
           <img
             height="100"
             :src="require(`@/assets/icons/services/${slide.src}`)"
-            :alt="slide.title + ' icon'"
+            :alt="slide.title + ' - service image'"
           />
           <h3>{{ slide.title }}</h3>
           <p>{{ slide.text }}</p>

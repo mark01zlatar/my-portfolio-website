@@ -1,3 +1,9 @@
+require('dotenv').config()
+
+// Languages
+import en from './lang/en'
+import sr from './lang/sr'
+
 export default {
   mode: 'universal',
   /*
@@ -56,9 +62,11 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    ['@nuxtjs/dotenv', { systemvars: true }],
     // Doc: https://www.npmjs.com/package/@nuxtjs/style-resources
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    // Doc: https://nuxt-community.github.io/nuxt-i18n/
+    'nuxt-i18n'
   ],
   /*
    ** Axios module configuration
@@ -67,6 +75,29 @@ export default {
   axios: {},
   styleResources: {
     scss: ['@/assets/scss/_colors.scss']
+  },
+  i18n: {
+    locales: [
+      { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
+      { code: 'en', iso: 'en-US', name: 'English' }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: { en, sr }
+    },
+    baseUrl: process.env.baseURL,
+    parsePages: false,
+    pages: {
+      'contact-me': {
+        en: '/contact-me',
+        sr: '/kontaktiraj-me'
+      }
+    },
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true
+    }
   },
   /*
    ** Build configuration

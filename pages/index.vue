@@ -24,7 +24,17 @@ export default {
         style: `overflow-y: ${
           this.$store.getters.isProjectDialogOverlay ? 'hidden' : 'scroll'
         }`
-      }
+      },
+      title: 'Home',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Marko Zlatar - Self taught software and web developer. I tend to code all of my projects from scratch in order to deliver a unique experience to every company. I spend my free time learning and using what i learn by building new and challenging projects.'
+        }
+      ],
+      noscript: [{ innerHTML: 'Body No Scripts', body: true }]
     }
   },
   components: {
