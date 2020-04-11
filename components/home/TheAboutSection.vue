@@ -5,17 +5,11 @@
         <img src="@/assets/images/markozlatar.jpg" height="500px" alt="Marko Zlatar" />
       </div>
       <div class="about-me-text">
-        <h2 id="about-me">Who Am I</h2>
+        <h2 id="about-me">{{ $t('home.about.title') }}</h2>
         <h1>Marko Zlatar</h1>
-        <p>
-          I was never the best at school or academics, I’m just a super curious guy. I spend a lot of time building websites and web apps, but there’s also a lot more to it.
-          Also I spent at least one hour a day working out or having some physical activity - for me health is most important thing, and then comes everything else.
-        </p>
-        <p>I started my journey as a self-taught web and software developer in second year of High School. Ever since I have fallen in love with programming and spend most of my days taking my craft and skills to the next level.</p>
-        <p>
-          Nowadays I tend to code all of my projects from scratch in order to deliver a unique experience to every company.
-          I spend my free time learning and using what i learn by building new and challenging projects.
-        </p>
+        <p>{{ $t('home.aboutSection.firstPara') }}</p>
+        <p>{{ $t('home.aboutSection.secondPara') }}</p>
+        <p>{{ $t('home.aboutSection.thirdPara') }}</p>
       </div>
     </div>
   </div>

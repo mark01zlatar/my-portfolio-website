@@ -18,9 +18,10 @@ export default {
   },
   home: {
     landingSection: {
-      title: 'Self taught software and <span>web developer</span>'
+      title: 'Self taught software and web developer'
     },
     servicesSection: {
+      title: "Some of my services",
       mobileFriendly: {
         title: 'Mobile-friendly',
         text:
@@ -51,7 +52,7 @@ export default {
           'Get insights into who is browsing your site so that you can make smarter business decisions.'
       }
     },
-    aboutMeSection: {
+    aboutSection: {
       title: 'Who Am I',
       firstPara:
         'I was never the best at school or academics, I’m just a super curious guy. I spend a lot of time building websites and web apps, but there’s also a lot more to it. Also I spent at least one hour a day working out or having some physical activity - for me health is most important thing, and then comes everything else.',
