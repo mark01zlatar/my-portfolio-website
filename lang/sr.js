@@ -13,12 +13,12 @@ export default {
     english: 'Engleski',
     serbian: 'Srpski',
     visitSite: 'Poseti sajt',
-    viewMore: 'Prikaži vise',
+    viewMore: 'Prikaži više',
     sourceCode: 'Izvorni kod'
   },
   home: {
     landingSection: {
-      title: 'Samouki software i web developer'
+      title: 'Software i Web developer'
     },
     servicesSection: {
       title: 'Neke od mojih usluga',
@@ -56,11 +56,11 @@ export default {
     aboutSection: {
       title: 'Moja priča',
       firstPara:
-        'Nikada nisam bio najbolji u skoli, jednostavno volim da radim i posvecujem vreme onome sto me stvarno zanima.Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takodje svaki dan se bavim fizickom aktivnoscu - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo',
+        'Nikada nisam bio najbolji u školi, jednostavno volim da radim i da se fokusiram na ono što me stvarno zanima. Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takodje svaki dan se bavim fizičkom aktivnošću - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo.',
       secondPara:
-        'Moje iskustvo kao samouki web i software developer pocelo je u drugoj godini srednje skole. Od kako sam zavoleo programiranje, posvecujem najvise vremena kako bi kreirao nove stvari i unapredio svoje vestine na najbolji moguci nacin.',
+        'Moje iskustvo kao samouki web i software developer je počelo u drugoj godini srednje škole. Iako mi u početku nije bilo sasvim prirodno da razmišljam na drugačiji način, da zavolim programiranje nije mi trebalo mnogo vremena. Posvećivao sve više i više vremena za računarom kako bi kreirao nove stvari i unapredio svoje veštine na najbolji mogući način.',
       thirdPara:
-        'Danas spreman sam da se suocim sa svim problemima koji mogu nastati kako bih dostavio najbolje moguce rezultate svakoj kompaniji. U slobodno vreme ucim stvari koje me zanimaju i koristim naucene stvari kako bih kreirao nove projekte i postavio sebi nove izazove'
+        'Danas sam spreman da se suočim sa svim problemima koji mogu nastati kako bih dostavio najbolje moguće rezultate svakom klijentu. U slobodno vreme učim nove tehnologije i koristim naučeno kako bih kreirao nove projekte i postavio sebi nove izazove.'
     },
     projectsSection: {
       title: 'Portfolio',
@@ -79,7 +79,7 @@ export default {
       seoMind: {
         title: 'SEO Mind - Website projekat',
         overview:
-          'Kako bih kreirao ovaj projekat, koristio sam alatku kreiranu od strane Nuxt.js tima zvanu create-nuxt-app. U procesu kreiranja web aplikacije, kako bih organizovao CSS i bolje iskoristio kod, korišćen je SCSS a za kontrolu verzije je korišćen Git uz Github'
+          'Kako bih kreirao ovaj projekat, koristio sam alatku kreiranu od strane Nuxt.js tima zvanu create-nuxt-app. U procesu kreiranja web aplikacije, kako bih organizovao CSS i bolje iskoristio kod, korišćen je Scss a za kontrolu verzije je korišćen Git uz Github'
       },
       greatAthlete: {
         title: 'Great Athlete - Websajt za Teretanu',
@@ -103,7 +103,7 @@ export default {
       }
     },
     footer: {
-      title: 'FOKUS. DISCIPLINA. JEDNOSTAVNOST.'
+      title: 'RAD. DISCIPLINA. SLOBODA.'
     }
   },
   contact: {

@@ -103,7 +103,7 @@ export default {
     }
   },
   footer: {
-    title: 'DISCIPLINE. FREEDOM.'
+    title: 'WORK. DISCIPLINE. FREEDOM.'
   },
   contact: {
     buttons: {
