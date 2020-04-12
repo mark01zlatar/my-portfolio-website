@@ -23,12 +23,12 @@ export default {
     servicesSection: {
       title: 'Neke od mojih usluga',
       mobileFriendly: {
-        title: 'Dizajn prikladan svim uredjajima',
+        title: 'Dizajn prikladan svim uređajima',
         text:
-          'Dizajn koji omogućava pristup svim korisnicima bez obzira na kom su uredjaju.'
+          'Dizajn koji omogućava pristup svim korisnicima bez obzira na kom su uređaju.'
       },
       websiteAudits: {
-        title: 'Unapredjivanje sajta',
+        title: 'Unapređivanje sajta',
         text:
           'U koliko želite da poboljšate performanse sajta, SEO, ili da povećate zadovoljstvo vaših korisnika, kroz jednostavan proces možemo učiniti to zajedno'
       },
@@ -56,7 +56,7 @@ export default {
     aboutSection: {
       title: 'Moja priča',
       firstPara:
-        'Nikada nisam bio najbolji u školi, jednostavno volim da radim i da se fokusiram na ono što me stvarno zanima. Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takodje svaki dan se bavim fizičkom aktivnošću - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo.',
+        'Nikada nisam bio najbolji u školi, jednostavno volim da radim i da se fokusiram na ono što me stvarno zanima. Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takođe svaki dan se bavim fizičkom aktivnošću - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo.',
       secondPara:
         'Moje iskustvo kao samouki web i software developer je počelo u drugoj godini srednje škole. Iako mi u početku nije bilo sasvim prirodno da razmišljam na drugačiji način, da zavolim programiranje nije mi trebalo mnogo vremena. Posvećivao sam sve više i više vremena za računarom kako bi kreirao nove stvari i unapredio svoje veštine na najbolji mogući način.',
       thirdPara:
@@ -69,7 +69,7 @@ export default {
       gemMedia: {
         title: 'Gem Media - Socijalna mreža',
         overview:
-          'Ovaj projekat je kreiran iz dva odvojena dela - frontend i backend. Na frontend-u koristio sam Nuxt.js kako bi postigao SSR(Server Side Render) Vue.js aplikacije. Za UI(User Interface) koristio sam Vuetify.js(Material Design framework). Za backend koristio sam REST API sa Node.js(Express framework). Kao bazu podataka koristio sam MongoDB(NoSQL baza podataka). Za interakciju sa MongoDB bazom podataka koristio sam mongoose biblioteku. Kako bih kreirao mogućnost slanja privatnih poruka, koristio sam socket.io biblioteku. Node.js aplikacija je testirana pomoću Mocha.js, Chai.js, Sinon.js... Takodje je integrisan rate-limit.'
+          'Ovaj projekat je kreiran iz dva odvojena dela - frontend i backend. Na frontend-u koristio sam Nuxt.js kako bi postigao SSR(Server Side Render) Vue.js aplikacije. Za UI(User Interface) koristio sam Vuetify.js(Material Design framework). Za backend koristio sam REST API sa Node.js(Express framework). Kao bazu podataka koristio sam MongoDB(NoSQL baza podataka). Za interakciju sa MongoDB bazom podataka koristio sam mongoose biblioteku. Kako bih kreirao mogućnost slanja privatnih poruka, koristio sam socket.io biblioteku. Node.js aplikacija je testirana pomoću Mocha.js, Chai.js, Sinon.js... Takođe je integrisan rate-limit.'
       },
       wlfClothing: {
         title: 'WLF(We love fashion) Clothing - eCommerce projekat',

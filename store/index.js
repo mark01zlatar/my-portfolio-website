@@ -2,7 +2,8 @@ export const state = () => ({
   projectDialogOverlay: false,
   projectDialogContent: false,
   projectDialogData: null,
-  mobileNavbar: false
+  mobileNavbar: false,
+  cookiesAccepted: true
 })
 
 export const getters = {
@@ -17,6 +18,9 @@ export const getters = {
   },
   isMobileNavbar(state) {
     return state.mobileNavbar
+  },
+  isCookiesAccepted(state) {
+    return state.cookiesAccepted
   }
 }
 
@@ -33,6 +37,9 @@ export const mutations = {
   },
   SET_MOBILE_NAVBAR(state, payload) {
     state.mobileNavbar = payload
+  },
+  SET_COOKIES_ACCEPTED(state, payload) {
+    state.cookiesAccepted = payload
   }
 }
 
