@@ -1,6 +1,6 @@
 <template>
   <div class="contact-container">
-    <form @submit.prevent>
+    <form @submit.prevent name="contact">
       <transition mode="out-in" name="slide-fade">
         <button
           v-if="!email.show && !name.show && !subject.show && !message.show"
@@ -18,6 +18,7 @@
               v-model="email['value']"
               type="email"
               id="email"
+              @keypress.enter.prevent
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -27,12 +28,12 @@
             </transition>
           </div>
           <div class="buttons-container">
-            <app-button @click.native="email.show = false" text="Back"></app-button>
-            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button @click.native="email.show = false" :text="$t('contact.buttons.prev')"></app-button>
+            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.email.value.$invalid"
               @click.native="email.show = false; name.show = true"
-              text="Next"
+              :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
         </div>
@@ -46,6 +47,7 @@
               v-model="name['first']"
               type="text"
               id="firstName"
+              @keypress.enter.prevent
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -63,6 +65,7 @@
               type="text"
               v-model="name['last']"
               id="lastName"
+              @keypress.enter.prevent
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -72,12 +75,15 @@
             </transition>
           </div>
           <div class="buttons-container">
-            <app-button @click.native="name.show = false; email.show = true" text="Back"></app-button>
-            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button
+              @click.native="name.show = false; email.show = true"
+              :text="$t('contact.buttons.prev')"
+            ></app-button>
+            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.name.first.$invalid || $v.name.last.$invalid"
               @click.native="subject.show = true; name.show = false"
-              text="Next"
+              :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
         </div>
@@ -91,6 +97,7 @@
               v-model="subject['value']"
               type="text"
               id="subject"
+              @keypress.enter.prevent
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -100,12 +107,15 @@
             </transition>
           </div>
           <div class="buttons-container">
-            <app-button @click.native="subject.show = false; name.show = true" text="Back"></app-button>
-            <app-button @click.native="cancel" text="Cancel"></app-button>
+            <app-button
+              @click.native="subject.show = false; name.show = true"
+              :text="$t('contact.buttons.prev')"
+            ></app-button>
+            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.subject.value.$invalid"
               @click.native="subject.show = false; message.show = true"
-              text="Next"
+              :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
         </div>
@@ -118,6 +128,7 @@
               @blur="$v.message.value.$touch()"
               v-model="message['value']"
               id="message"
+              @keypress.enter.prevent
             ></textarea>
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -127,9 +138,17 @@
             </transition>
           </div>
           <div class="buttons-container">
-            <app-button @click.native="subject.show = true; message.show = false" text="Back"></app-button>
-            <app-button @click.native="cancel" text="Cancel"></app-button>
-            <app-button :disabled="$v.$invalid" @click.native="submit" text="Submit"></app-button>
+            <app-button
+              @click.native="subject.show = true; message.show = false"
+              :text="$t('contact.buttons.prev')"
+            ></app-button>
+            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              :disabled="$v.$invalid"
+              @click.native="submit"
+              :text="$t('contact.buttons.submit')"
+              type="submit"
+            ></app-button>
           </div>
         </div>
       </transition>

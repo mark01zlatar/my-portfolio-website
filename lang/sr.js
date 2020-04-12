@@ -110,7 +110,7 @@ export default {
     buttons: {
       start: 'Klikni ovde kako bi poslao poruku',
       prev: 'Prethodno',
-      cancel: 'Otkaži',
+      cancel: 'Odustani',
       next: 'Sledeće',
       submit: 'Pošalji'
     },
