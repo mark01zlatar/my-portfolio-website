@@ -56,7 +56,7 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $site-gray;
+  background: $site-gray-dark;
 }
 
 /* Handle */
@@ -68,5 +68,3 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: white;
 }
-
-

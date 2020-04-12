@@ -2,7 +2,7 @@
   <div>
     <app-header></app-header>
     <nuxt />
-    <app-footer v-if="$route.path !== '/contact-me'"></app-footer>
+    <app-footer></app-footer>
   </div>
 </template>
 

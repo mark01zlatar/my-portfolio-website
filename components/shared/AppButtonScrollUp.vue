@@ -1,7 +1,9 @@
 <template>
-  <nuxt-link to="/#top">
-    <i class="mdi mdi-chevron-double-up"></i>
-  </nuxt-link>
+  <scrollactive tag="div">
+    <a :href="localePath('/#top')" class="scrollactive-item">
+      <i class="mdi mdi-chevron-double-up"></i>
+    </a>
+  </scrollactive>
 </template>
 
 <script>
@@ -38,7 +40,7 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   a {
     width: 40px;
     height: 40px;

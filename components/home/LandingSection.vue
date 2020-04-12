@@ -2,8 +2,8 @@
   <section class="landing-section">
     <the-text-animation></the-text-animation>
     <h1>{{ $t('home.landingSection.title') }}</h1>
-    <nuxt-link style="width: 100%;" to="/contact-me">
-      <app-button class="landing-button" :text="$t('links.contact')"></app-button>
+    <nuxt-link class="landing-button" to="/contact-me">
+      <app-button width="100%" :text="$t('links.contact')"></app-button>
     </nuxt-link>
     <app-button-scroll></app-button-scroll>
   </section>
@@ -41,11 +41,6 @@ h1 {
   font-size: 45px;
   margin: 20px 10px;
   color: white;
-  // span {
-  //   -webkit-text-stroke: 0.2px white;
-  //   color: transparent;
-  //   font-size: 50px;
-  // }
 }
 
 .landing-button {

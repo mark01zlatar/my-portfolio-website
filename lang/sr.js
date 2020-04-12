@@ -101,10 +101,10 @@ export default {
         subtitle:
           'Neke od njih su: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...'
       }
-    },
-    footer: {
-      title: 'RAD. DISCIPLINA. SLOBODA.'
     }
+  },
+  footer: {
+    title: 'RAD. DISCIPLINA. SLOBODA.'
   },
   contact: {
     buttons: {

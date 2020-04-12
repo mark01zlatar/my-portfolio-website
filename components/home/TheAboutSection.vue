@@ -5,7 +5,7 @@
         <img src="@/assets/images/markozlatar.jpg" height="500px" alt="Marko Zlatar" />
       </div>
       <div class="about-me-text">
-        <h2 id="about-me">{{ $t('home.aboutSection.title') }}</h2>
+        <h2 id="about">{{ $t('home.aboutSection.title') }}</h2>
         <h1>Marko Zlatar</h1>
         <p>{{ $t('home.aboutSection.firstPara') }}</p>
         <p>{{ $t('home.aboutSection.secondPara') }}</p>
@@ -27,6 +27,7 @@ export default {}
   margin-top: 150px;
 }
 .about-me-container {
+  position: relative;
   transform: skew(0, 10deg);
   display: flex;
   align-items: center;

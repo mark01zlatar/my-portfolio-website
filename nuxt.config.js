@@ -49,6 +49,7 @@ export default {
   // Doc: https://wlada.github.io/vue-carousel-3d/
   plugins: [
     { src: '~plugins/vue-carousel-3d', ssr: false },
+    { src: '~plugins/vue-scrollactive' }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -80,6 +81,7 @@ export default {
       { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
       { code: 'en', iso: 'en-US', name: 'English' }
     ],
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
@@ -88,7 +90,7 @@ export default {
     baseUrl: process.env.baseURL,
     parsePages: false,
     pages: {
-      'contact-me': {
+      'contact-me/index': {
         en: '/contact-me',
         sr: '/kontaktiraj-me'
       }
@@ -116,5 +118,5 @@ export default {
 
       return config
     }
-  }
+  },
 }

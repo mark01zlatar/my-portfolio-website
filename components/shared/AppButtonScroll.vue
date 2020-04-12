@@ -1,5 +1,7 @@
 <template>
-  <nuxt-link to="/#services" class="icon-scroll"></nuxt-link>
+  <scrollactive tag="div">
+    <a :href="localePath('/#services')" class="scrollactive-item icon-scroll"></a>
+  </scrollactive>
 </template>
 
 <script>

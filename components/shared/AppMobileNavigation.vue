@@ -1,33 +1,75 @@
 <template>
   <div class="mobile-navigation-container" :class="{ open: $store.getters.isMobileNavbar }">
-    <ul>
-      <nuxt-link v-if="$route.path !== '/'" tag="li" to="/">
-        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.home') }}</a>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/#about-me">
-        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.about') }}</a>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/#portfolio">
-        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/#technologies">
-        <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
-      </nuxt-link>
-      <li>
-        <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-          <i class="mdi mdi-download"></i>
-          {{ $t('links.resume') }}
-        </a>
-      </li>
-      <nuxt-link v-if="$route.path === '/'" to="/contact-me" tag="li">
+    <scrollactive tag="ul">
+      <!-- Home Page Links -->
+      <template
+        v-if="$route.path === localePath('/') || $route.path=== localePath('/').slice(0, -1) "
+      >
+        <li>
+          <a
+            :href="localePath({ path: '/', hash: '#about' })"
+            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
+            class="scrollactive-item"
+          >{{ $t('links.about') }}</a>
+        </li>
+        <li>
+          <a
+            :href="localePath({ path: '/', hash: '#portfolio' })"
+            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
+            class="scrollactive-item"
+          >{{ $t('links.portfolio') }}</a>
+        </li>
+        <li>
+          <a
+            :href="localePath({ path: '/', hash: '#technologies' })"
+            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
+            class="scrollactive-item"
+          >{{ $t('links.technologies') }}</a>
+        </li>
+      </template>
+      <!-- Links for other pages -->
+      <template v-else>
+        <nuxt-link tag="li" :to="localePath('/')">
+          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.home') }}</a>
+        </nuxt-link>
+        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#about' })">
+          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.about') }}</a>
+        </nuxt-link>
+        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#portfolio' })">
+          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a>
+        </nuxt-link>
+
+        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#technologies' })">
+          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
+        </nuxt-link>
+      </template>
+
+      <nuxt-link
+        v-if="$route.path !== localePath('contact-me')"
+        :to="localePath('contact-me')"
+        tag="li"
+      >
         <a>{{ $t('links.contact') }}</a>
       </nuxt-link>
-    </ul>
+      <nuxt-link
+        v-for="locale in availableLocales"
+        :key="locale.code"
+        :to="switchLocalePath(locale.code)"
+      >
+        <i class="mdi mdi-translate"></i>
+        {{ locale.name }}
+      </nuxt-link>
+    </scrollactive>
   </div>
 </template>
 
 <script>
 export default {
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  },
   watch: {
     '$router.path': function(value) {
       console.log(value)

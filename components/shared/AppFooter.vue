@@ -2,31 +2,43 @@
   <footer>
     <h1>{{ $t('footer.title') }}</h1>
     <nav>
-      <div>
-        <nuxt-link to="#top">
+      <scrollactive tag="div">
+        <a :href="localePath({ path: '/', hash: '#top' })" class="scrollactive-item">
           <img
             src="@/assets/images/MZ-logo-white-small.png"
             width="70"
             alt="Marko Zlatar Logo White"
           />
-        </nuxt-link>
+        </a>
         <div>
           <ul class="navigation-list">
-            <nuxt-link tag="li" to="/#about-me">
-              <a>{{ $t('links.about') }}</a>
-            </nuxt-link>
-            <nuxt-link tag="li" to="#portfolio">
-              <a href="/#portfolio">{{ $t('links.portfolio') }}</a>
-            </nuxt-link>
-            <nuxt-link tag="li" to="#technologies">
-              <a href="/#technologies">{{ $t('links.technologies') }}</a>
-            </nuxt-link>
+            <li>
+              <a
+                :href="localePath({ path: '/', hash: '#about' })"
+                class="scrollactive-item"
+              >{{ $t('links.about') }}</a>
+            </li>
+            <li>
+              <a
+                :href="localePath({ path: '/', hash: '#portfolio' })"
+                class="scrollactive-item"
+              >{{ $t('links.portfolio') }}</a>
+            </li>
+            <li>
+              <a
+                :href="localePath({ path: '/', hash: '#technologies' })"
+                class="scrollactive-item"
+              >{{ $t('links.technologies') }}</a>
+            </li>
             <li>
               <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
                 <i class="mdi mdi-download"></i>
                 {{ $t('links.resume') }}
               </a>
             </li>
+            <nuxt-link :to="localePath('contact-me')" tag="li">
+              <a>{{ $t('links.contact') }}</a>
+            </nuxt-link>
           </ul>
         </div>
         <div class="social-media-icons">
@@ -40,7 +52,7 @@
             <i class="mdi mdi-linkedin"></i>
           </a>
         </div>
-      </div>
+      </scrollactive>
       <p class="rights">&copy; 2020 Marko Zlatar.</p>
     </nav>
   </footer>
@@ -118,7 +130,7 @@ nav {
   }
 }
 
-@media screen and(max-width: 1050px) {
+@media screen and(max-width: 1210px) {
   nav {
     & > div {
       flex-direction: column;
@@ -142,7 +154,7 @@ nav {
   }
 }
 
-@media screen and(max-width: 600px) {
+@media screen and(max-width: 720px) {
   footer {
     h1 {
       font-size: 30px;
