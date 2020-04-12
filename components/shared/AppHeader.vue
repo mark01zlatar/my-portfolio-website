@@ -50,9 +50,12 @@
             v-for="locale in availableLocales"
             :key="locale.code"
             :to="switchLocalePath(locale.code)"
+            tag="li"
           >
-            <i class="mdi mdi-translate"></i>
-            {{ locale.name }}
+            <a>
+              <i class="mdi mdi-translate"></i>
+              {{ locale.name }}
+            </a>
           </nuxt-link>
         </scrollactive>
         <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">

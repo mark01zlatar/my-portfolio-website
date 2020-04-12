@@ -8,7 +8,7 @@ export default {
     about: 'O meni',
     portfolio: 'Portfolio',
     technologies: 'Tehnologije',
-    contact: 'Kontakiraj me',
+    contact: 'Kontaktiraj me',
     resume: 'Rezime',
     english: 'Engleski',
     serbian: 'Srpski',
@@ -58,7 +58,7 @@ export default {
       firstPara:
         'Nikada nisam bio najbolji u školi, jednostavno volim da radim i da se fokusiram na ono što me stvarno zanima. Najveći deo svog vremena posvećujem kreiranju web stranica i web aplikacija, ali postoji još mnogo stvari pored toga. Takodje svaki dan se bavim fizičkom aktivnošću - za mene je zdravlje najbitnija stvar, posle tog dolazi sve ostalo.',
       secondPara:
-        'Moje iskustvo kao samouki web i software developer je počelo u drugoj godini srednje škole. Iako mi u početku nije bilo sasvim prirodno da razmišljam na drugačiji način, da zavolim programiranje nije mi trebalo mnogo vremena. Posvećivao sve više i više vremena za računarom kako bi kreirao nove stvari i unapredio svoje veštine na najbolji mogući način.',
+        'Moje iskustvo kao samouki web i software developer je počelo u drugoj godini srednje škole. Iako mi u početku nije bilo sasvim prirodno da razmišljam na drugačiji način, da zavolim programiranje nije mi trebalo mnogo vremena. Posvećivao sam sve više i više vremena za računarom kako bi kreirao nove stvari i unapredio svoje veštine na najbolji mogući način.',
       thirdPara:
         'Danas sam spreman da se suočim sa svim problemima koji mogu nastati kako bih dostavio najbolje moguće rezultate svakom klijentu. U slobodno vreme učim nove tehnologije i koristim naučeno kako bih kreirao nove projekte i postavio sebi nove izazove.'
     },
