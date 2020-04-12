@@ -168,6 +168,12 @@ import {
   maxLength,
   alpha
 } from 'vuelidate/lib/validators'
+
+const subjectValidation = value => {
+  let regEx = /^[\w\s]+$/gi
+  return regEx.test(value)
+}
+
 export default {
   head() {
     return {
@@ -228,7 +234,8 @@ export default {
       },
       subject: {
         value: {
-          required
+          required,
+          subjectValidation
         }
       },
       message: {
@@ -388,6 +395,11 @@ form {
     margin: 5px 5px 0px 0px;
     width: 100px !important;
     height: 50px !important;
+  }
+  button:disabled,
+  button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
   button:last-child {
     margin-left: auto;
