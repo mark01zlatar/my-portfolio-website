@@ -118,7 +118,7 @@ export default {
       name: {
         first: 'Ime',
         last: 'Prezime',
-        errorText: 'Enter a valid ttext'
+        errorText: 'Unesite ispravne podatke'
       },
       email: {
         title: 'Email',
