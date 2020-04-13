@@ -1,6 +1,14 @@
 <template>
   <div class="contact-container">
-    <form ref="contactForm" action @submit.prevent name="contact" method="POST" data-netlify="true">
+    <form
+      @submit.prevent
+      ref="contactForm"
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <transition mode="out-in" name="slide-fade">
         <button
           v-if="!email.show && !name.show && !subject.show && !message.show"
@@ -150,7 +158,7 @@
             <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.$invalid"
-              @click.native="submit"
+              @click.native="handleSubmit"
               :text="$t('contact.buttons.submit')"
               type="submit"
             ></app-button>
@@ -251,13 +259,32 @@ export default {
     }
   },
   methods: {
-    async submit() {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
+    async handleSubmit() {
       if (!this.$v.$invalid) {
-        let data = new FormData(this.$refs.contactForm)
-        let uri = this.$refs.contactForm.attributes.action.baseURI
-        console.log(this.$refs.contactForm.attributes)
         try {
-          const result = await this.$axios.$post(uri, data)
+          const result = await this.$axios.post(
+            '/',
+            this.encode({
+              'form-name': 'contact',
+              email: this.email.value,
+              firstName: this.name.first,
+              lastName: this.name.last,
+              subject: this.subject.value,
+              message: this.message.value
+            }),
+            {
+              header: {
+                'Content-Type': 'application/x-www/form-urlencoded'
+              }
+            }
+          )
 
           if (!result) throw new Error('An error occurred')
 
