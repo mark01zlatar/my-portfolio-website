@@ -2,7 +2,7 @@
   <section class="landing-section">
     <the-text-animation></the-text-animation>
     <h1>{{ $t('home.landingSection.title') }}</h1>
-    <nuxt-link class="landing-button" to="/contact-me">
+    <nuxt-link class="landing-button" :to="localePath('contact-me')">
       <app-button width="100%" :text="$t('links.contact')"></app-button>
     </nuxt-link>
     <app-button-scroll></app-button-scroll>

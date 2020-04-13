@@ -30,6 +30,12 @@ export default {
     this.cookiesAccepted = JSON.parse(localStorage.getItem('cookiesAccepted'))
 
     this.$store.commit('SET_COOKIES_ACCEPTED', this.cookiesAccepted)
+
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
   }
 }
 </script>
