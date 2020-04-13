@@ -269,25 +269,24 @@ export default {
     },
     async handleSubmit() {
       if (!this.$v.$invalid) {
+        let data = this.encode({
+          'form-name': 'contact',
+          email: this.email.value,
+          firstName: this.name.first,
+          lastName: this.name.last,
+          subject: this.subject.value,
+          message: this.message.value
+        })
+        let header = {
+          'Content-Type': 'application/x-www/form-urlencoded'
+        }
+        let url = this.$refs.contactForm.attributes.action.baseURI
         try {
-          const result = await this.$axios.post(
-            '/',
-            this.encode({
-              'form-name': 'contact',
-              email: this.email.value,
-              firstName: this.name.first,
-              lastName: this.name.last,
-              subject: this.subject.value,
-              message: this.message.value
-            }),
-            {
-              header: {
-                'Content-Type': 'application/x-www/form-urlencoded'
-              }
-            }
-          )
-
-          if (!result) throw new Error('An error occurred')
+          await this.$axios.post({
+            url,
+            data,
+            header
+          })
 
           this.showSuccessNotification({
             title: this.$t('contact.notifications.success.title'),
