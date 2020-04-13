@@ -1,6 +1,6 @@
 <template>
   <div class="contact-container">
-    <form @submit.prevent name="contact">
+    <form ref="contactForm" action @submit.prevent name="contact" method="POST" data-netlify="true">
       <transition mode="out-in" name="slide-fade">
         <button
           v-if="!email.show && !name.show && !subject.show && !message.show"
@@ -19,6 +19,7 @@
               type="email"
               id="email"
               @keypress.enter.prevent
+              name="email"
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -48,6 +49,7 @@
               type="text"
               id="firstName"
               @keypress.enter.prevent
+              name="firstName"
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -66,6 +68,7 @@
               v-model="name['last']"
               id="lastName"
               @keypress.enter.prevent
+              name="lastName"
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -98,6 +101,7 @@
               type="text"
               id="subject"
               @keypress.enter.prevent
+              name="subject"
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -129,6 +133,7 @@
               v-model="message['value']"
               id="message"
               @keypress.enter.prevent
+              name="message"
             ></textarea>
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
@@ -245,18 +250,24 @@ export default {
       }
     }
   },
-  mounted() {
-    if (process.client) {
-      this.showSuccessNotification()
-      this.showErrorNotification()
-    }
-  },
   methods: {
-    submit() {
-      console.log(this.email)
-      console.log(this.name)
-      console.log(this.subject)
-      console.log(this.message)
+    async submit() {
+      if (!this.$v.$invalid) {
+        let data = new FormData(this.$refs.contactForm)
+        let uri = this.$refs.contactForm.attributes.action.baseURI
+        console.log(this.$refs.contactForm.attributes)
+        try {
+          const result = await this.$axios.$post(uri, data)
+
+          if (!result) throw new Error('An error occurred')
+
+          this.showSuccessNotification()
+          this.cancel()
+        } catch (err) {
+          this.showErrorNotification()
+          this.cancel()
+        }
+      }
     },
     cancel() {
       this.email = {
