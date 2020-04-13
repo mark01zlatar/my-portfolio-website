@@ -1,8 +1,8 @@
 <template>
   <div class="cookie-banner-container">
     <i class="mdi mdi-cookie"></i>
-    <p>Cookies are used to enhance user experience</p>
-    <button @click="acceptCookies">Accept</button>
+    <p>{{ $t('cookies.message') }}</p>
+    <button @click="acceptCookies">{{ $t('cookies.button') }}</button>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   methods: {
     acceptCookies() {
       localStorage.setItem('cookiesAccepted', true)
-      this.$store.commit('SET_COOKIES_ACCEPTED', true);
+      this.$store.commit('SET_COOKIES_ACCEPTED', true)
     }
   }
 }

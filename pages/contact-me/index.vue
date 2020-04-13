@@ -554,7 +554,7 @@ form {
   .buttons-container {
     button {
       height: 40px !important;
-      width: 80px !important;
+      width: 90px !important;
     }
   }
 }

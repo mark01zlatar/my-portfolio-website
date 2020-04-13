@@ -143,5 +143,9 @@ export default {
         message: "Somewhere in process an error occurred, I'm working on it..."
       }
     }
+  },
+  cookies: {
+    message: 'Cookies are used to enhance user experience',
+    button: 'Accept'
   }
 }

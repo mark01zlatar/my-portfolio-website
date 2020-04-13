@@ -145,5 +145,9 @@ export default {
           'U procesu slanja poruke je došlo do greške, radim na popravci...'
       }
     }
+  },
+  cookies: {
+    message: 'Kolačići se koriste kako bi se poboljšalo iskustvo korisnika',
+    button: 'Prihvati'
   }
 }
