@@ -188,6 +188,7 @@ const subjectValidation = value => {
 }
 
 export default {
+  name: 'contact-me',
   head() {
     return {
       title: 'Contact me',

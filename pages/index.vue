@@ -18,6 +18,7 @@ import AppButtonScrollUp from '@/components/shared/AppButtonScrollUp'
 import TechnologiesSection from '@/components/home/TheTechnologiesSection'
 
 export default {
+  name: 'index',
   head() {
     return {
       bodyAttrs: {
