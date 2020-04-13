@@ -1,8 +1,8 @@
 <template>
   <div class="error-page">
-    <h1>The sky is blue.</h1>
-    <h1>The earth is round.</h1>
-    <h1 class="not-found">The page you want cannot be found.</h1>
+    <p>{{ $t('error.firstPara') }}</p>
+    <p>{{ $t('error.secondPara') }}</p>
+    <h1 class="not-found">{{ $t('error.mainMessage') }}</h1>
     <nuxt-link to="/" tag="a">
       <app-button class="home-button" text="HOME"></app-button>
     </nuxt-link>

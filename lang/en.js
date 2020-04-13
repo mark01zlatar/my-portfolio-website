@@ -147,5 +147,10 @@ export default {
   cookies: {
     message: 'Cookies are used to enhance user experience',
     button: 'Accept'
+  },
+  error: {
+    firstPara: 'The sky is blue.',
+    secondPara: 'The earth is round.',
+    mainMessage: 'The page you want cannot be found.'
   }
 }

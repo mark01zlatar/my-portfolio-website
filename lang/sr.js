@@ -149,5 +149,10 @@ export default {
   cookies: {
     message: 'Kolačići se koriste kako bi se poboljšalo iskustvo korisnika',
     button: 'Prihvati'
+  },
+  error: {
+    firstPara: '',
+    secondPara: '',
+    mainMessage: 'Stranica koju tražite nije pronađena.'
   }
 }

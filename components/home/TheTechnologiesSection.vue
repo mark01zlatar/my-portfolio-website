@@ -15,7 +15,7 @@
               src="@/assets/images/technologies-images/vuejs.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="Vue.js logo image"
             />
             <p>Vue.js</p>
           </image-box>
@@ -24,7 +24,7 @@
               src="@/assets/images/technologies-images/nuxtjs.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="Nuxt.js logo image"
             />
             <p>Nuxt.js</p>
           </image-box>
@@ -33,7 +33,7 @@
               src="@/assets/images/technologies-images/webpack.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="Webpack logo image"
             />
             <p>Webpack</p>
           </image-box>
@@ -44,7 +44,7 @@
               src="@/assets/images/technologies-images/htmllogo.png"
               class="technology-image responsive-special"
               width="170px"
-              alt
+              alt="HTML logo image"
             />
             <p>HTML</p>
           </image-box>
@@ -53,7 +53,7 @@
               src="@/assets/images/technologies-images/csslogo.png"
               class="technology-image"
               width="130px"
-              alt
+              alt="CSS logo image"
             />
             <p>CSS</p>
           </image-box>
@@ -62,7 +62,7 @@
               src="@/assets/images/technologies-images/javascript.png"
               class="technology-image"
               width="120px"
-              alt
+              alt="JavaScript logo image"
             />
             <p>Javascript</p>
           </image-box>
@@ -98,7 +98,7 @@
               src="@/assets/images/technologies-images/socketio.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="Socket.io logo image"
             />
             <p>Socket.io</p>
           </image-box>
@@ -107,7 +107,7 @@
               src="@/assets/images/technologies-images/graphql.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="GraphQL logo image"
             />
             <p>GraphQL</p>
           </image-box>
@@ -116,7 +116,7 @@
               src="@/assets/images/technologies-images/express.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="Express framework logo image"
             />
             <p>Express.js</p>
           </image-box>
@@ -127,7 +127,7 @@
               src="@/assets/images/technologies-images/nodejs.png"
               class="technology-image responsive-special"
               width="170px"
-              alt
+              alt="Node.js logo image"
             />
             <p>Node.js</p>
           </image-box>
@@ -136,7 +136,7 @@
               src="@/assets/images/technologies-images/mongodb.png"
               class="technology-image"
               width="130px"
-              alt
+              alt="MongoDB logo image"
             />
             <p>MongoDB</p>
           </image-box>
@@ -145,7 +145,7 @@
               src="@/assets/images/technologies-images/mysql.png"
               class="technology-image"
               width="150px"
-              alt
+              alt="MySQL logo image"
             />
             <p>MySQL</p>
           </image-box>

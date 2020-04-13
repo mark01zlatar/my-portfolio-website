@@ -7,7 +7,7 @@
           <img
             src="@/assets/images/MZ-logo-white-small.png"
             width="70"
-            alt="Marko Zlatar Logo White"
+            alt="Marko Zlatar Logo"
           />
         </a>
         <div>

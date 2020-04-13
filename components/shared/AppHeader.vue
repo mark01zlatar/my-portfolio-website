@@ -2,7 +2,7 @@
   <header id="top">
     <nav>
       <nuxt-link tag="a" :to="localePath('/')">
-        <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo White" />
+        <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo" />
       </nuxt-link>
       <div class="desktop-navigation">
         <scrollactive tag="ul" class="navigation-list">
