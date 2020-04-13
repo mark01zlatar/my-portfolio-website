@@ -287,14 +287,11 @@ export default {
             message: this.message.value
           })
           let header = {
-            'Content-Type': 'application/x-www/form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded'
           }
           let url = this.$refs.contactForm.attributes.action.baseURI
 
-          await this.$axios({
-            method: 'post',
-            url,
-            data,
+          await this.$axios.post(url, data, {
             header
           })
 
@@ -302,6 +299,7 @@ export default {
             title: this.$t('contact.notifications.success.title'),
             message: this.$t('contact.notifications.success.message')
           })
+          this.$v.$reset()
           this.cancel()
         } catch (err) {
           this.showErrorNotification({
