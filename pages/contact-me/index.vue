@@ -282,7 +282,8 @@ export default {
         }
         let url = this.$refs.contactForm.attributes.action.baseURI
         try {
-          await this.$axios.post({
+          await this.$axios({
+            method: 'post',
             url,
             data,
             header
