@@ -3,7 +3,7 @@ import VueNotifications from 'vue-notifications'
 import iziToast from 'izitoast'
 import 'izitoast/dist/css/iziToast.min.css'
 
-function toast({
+let toast = ({
   title,
   message,
   type,
@@ -15,7 +15,7 @@ function toast({
   progressBarColor,
   theme = 'light',
   backgroundColor
-}) {
+}) => {
   if (type === VueNotifications.types.warn) type = 'warning'
   return iziToast[type]({
     title,

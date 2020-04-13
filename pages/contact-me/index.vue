@@ -288,10 +288,16 @@ export default {
 
           if (!result) throw new Error('An error occurred')
 
-          this.showSuccessNotification()
+          this.showSuccessNotification({
+            title: this.$t('contact.notifications.success.title'),
+            message: this.$t('contact.notifications.success.message')
+          })
           this.cancel()
         } catch (err) {
-          this.showErrorNotification()
+          this.showErrorNotification({
+            title: this.$t('contact.notifications.error.title'),
+            message: this.$t('contact.notifications.error.message')
+          })
           this.cancel()
         }
       }
@@ -318,9 +324,9 @@ export default {
   },
   notifications: {
     showSuccessNotification: {
-      title: 'Thank you for your message.',
+      title: 'Message successfully recieved',
       message:
-        "Hi, your message was successfully sent, I'll try to answer as soon as posible.",
+        "Hi, your message was successfully sent, I'll try to answer as soon as possible.",
       type: 'success',
       image: require('~/assets/images/markozlatar.jpg'),
       layout: 2,

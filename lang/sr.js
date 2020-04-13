@@ -132,6 +132,18 @@ export default {
         title: 'Poruka',
         errorText: 'Unesite ispravnu poruku'
       }
+    },
+    notifications: {
+      success: {
+        title: 'Poruka uspešno poslata',
+        message:
+          'Pozdrav, uspešno ste poslali poruku, pokušat ću da odgovorim u što kraćem roku.'
+      },
+      error: {
+        title: 'Došlo je do greške',
+        message:
+          'U procesu slanja poruke je došlo do greške, radim na popravci...'
+      }
     }
   }
 }

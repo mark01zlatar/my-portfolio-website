@@ -131,6 +131,17 @@ export default {
         title: 'Message',
         errorText: 'Please enter a valid message'
       }
+    },
+    notifications: {
+      success: {
+        title: 'Message successfully recieved',
+        message:
+          "Hi, your message was successfully sent, I'll try to answer as soon as possible."
+      },
+      error: {
+        title: 'An Error Occurred',
+        message: "Somewhere in process an error occurred, I'm working on it..."
+      }
     }
   }
 }
