@@ -13,7 +13,7 @@
       <transition mode="out-in" name="slide-fade">
         <button
           v-if="!email.show && !name.show && !subject.show && !message.show"
-          @click="email.show = true"
+          @click.prevent="email.show = true"
           class="contact-button"
           :key="'start'"
         >{{ $t('contact.buttons.start') }}</button>
@@ -38,11 +38,14 @@
             </transition>
           </div>
           <div class="buttons-container">
-            <app-button @click.native="email.show = false" :text="$t('contact.buttons.prev')"></app-button>
-            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              @click.prevent.native="email.show = false"
+              :text="$t('contact.buttons.prev')"
+            ></app-button>
+            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.email.value.$invalid"
-              @click.native="email.show = false; name.show = true"
+              @click.prevent.native="email.show = false; name.show = true"
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -88,13 +91,13 @@
           </div>
           <div class="buttons-container">
             <app-button
-              @click.native="name.show = false; email.show = true"
+              @click.prevent.native="name.show = false; email.show = true"
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.name.first.$invalid || $v.name.last.$invalid"
-              @click.native="subject.show = true; name.show = false"
+              @click.prevent.native="subject.show = true; name.show = false"
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -121,13 +124,13 @@
           </div>
           <div class="buttons-container">
             <app-button
-              @click.native="subject.show = false; name.show = true"
+              @click.prevent.native="subject.show = false; name.show = true"
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.subject.value.$invalid"
-              @click.native="subject.show = false; message.show = true"
+              @click.prevent.native="subject.show = false; message.show = true"
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -153,13 +156,13 @@
           </div>
           <div class="buttons-container">
             <app-button
-              @click.native="subject.show = true; message.show = false"
+              @click.prevent.native="subject.show = true; message.show = false"
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
             <app-button
               :disabled="$v.$invalid"
-              @click.native="handleSubmit"
+              @click.prevent.native="handleSubmit"
               :text="$t('contact.buttons.submit')"
               type="submit"
             ></app-button>
@@ -240,22 +243,26 @@ export default {
       name: {
         first: {
           required,
-          alpha
+          alpha,
+          maxLength: maxLength(100)
         },
         last: {
           required,
-          alpha
+          alpha,
+          maxLength: maxLength(100)
         }
       },
       subject: {
         value: {
           required,
-          subjectValidation
+          subjectValidation,
+          maxLength: maxLength(200)
         }
       },
       message: {
         value: {
-          required
+          required,
+          maxLength: maxLength(5000)
         }
       }
     }
