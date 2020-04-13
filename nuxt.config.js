@@ -49,7 +49,8 @@ export default {
   // Doc: https://wlada.github.io/vue-carousel-3d/
   plugins: [
     { src: '~plugins/vue-carousel-3d', ssr: false },
-    { src: '~plugins/vue-scrollactive' }
+    { src: '~plugins/vue-scrollactive' },
+    { src: '~plugins/vue-notifications', ssr: false }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -118,5 +119,5 @@ export default {
 
       return config
     }
-  },
+  }
 }

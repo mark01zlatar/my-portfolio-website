@@ -245,6 +245,12 @@ export default {
       }
     }
   },
+  mounted() {
+    if (process.client) {
+      this.showSuccessNotification()
+      this.showErrorNotification()
+    }
+  },
   methods: {
     submit() {
       console.log(this.email)
@@ -270,6 +276,32 @@ export default {
         show: false,
         value: ''
       }
+    }
+  },
+  notifications: {
+    showSuccessNotification: {
+      title: 'Thank you for your message.',
+      message:
+        "Hi, your message was successfully sent, I'll try to answer as soon as posible.",
+      type: 'success',
+      image: require('~/assets/images/markozlatar.jpg'),
+      layout: 2,
+      imageWidth: 100,
+      timeout: 20000,
+      progressBarColor: 'rgb(0, 255, 184)',
+      theme: 'dark',
+      backgroundColor: '#575D71'
+    },
+    showErrorNotification: {
+      title: 'An Error Occurred',
+      message: "Somewhere in process an error occurred, I'm working on it...",
+      type: 'error',
+      layout: 2,
+      image: require('~/assets/images/markozlatar.jpg'),
+      imageWidth: 100,
+      timeout: 20000,
+      theme: 'dark',
+      backgroundColor: '#FF5252'
     }
   }
 }
