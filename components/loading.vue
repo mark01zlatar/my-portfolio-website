@@ -1,8 +1,8 @@
 <template>
   <div class="loader-container" v-if="loading">
     <img src="~/assets/images/MZ-logo-white-small.png" width="100" alt="Marko Zlatar Logo" />
-    <div class="loadingio-spinner-eclipse-u1b973kbcuq">
-      <div class="ldio-7h8o6h526pt">
+    <div class="loadingio-spinner">
+      <div class="ldio">
         <div></div>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
   }
 }
 
-@keyframes ldio-7h8o6h526pt {
+@keyframes ldio {
   0% {
     transform: rotate(0deg);
   }
@@ -55,9 +55,9 @@ export default {
     transform: rotate(360deg);
   }
 }
-.ldio-7h8o6h526pt div {
+.ldio div {
   position: absolute;
-  animation: ldio-7h8o6h526pt 1s linear infinite;
+  animation: ldio 1s linear infinite;
   width: 160px;
   height: 160px;
   top: 20px;
@@ -67,14 +67,18 @@ export default {
   transform-origin: 80px 82px;
   box-sizing: content-box;
 }
-.loadingio-spinner-eclipse-u1b973kbcuq {
+.loadingio-spinner {
   width: 200px;
   height: 200px;
   display: inline-block;
   overflow: hidden;
-  background: #1d1f2a;
+  background: transparent;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.ldio-7h8o6h526pt {
+.ldio {
   width: 100%;
   height: 100%;
   position: relative;

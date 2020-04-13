@@ -103,6 +103,7 @@ export default {
     bottom: -30px;
   }
   .project-container {
+    text-align: center;
     height: auto;
     flex-direction: column;
     margin-bottom: 100px;
@@ -117,6 +118,9 @@ export default {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+      button {
+        margin: 5px !important;
+      }
     }
   }
 }
