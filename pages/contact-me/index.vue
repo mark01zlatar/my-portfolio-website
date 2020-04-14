@@ -1,7 +1,7 @@
 <template>
   <div class="contact-container">
     <form
-      @submit.prevent
+      @submit.prevent="handleSubmit"
       ref="contactForm"
       name="contact"
       method="post"

@@ -69,6 +69,10 @@ export default {
     '@nuxtjs/style-resources',
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
     'nuxt-i18n',
+    // Doc: https://www.npmjs.com/package/@nuxtjs/robots
+    '@nuxtjs/robots',
+    // Doc: https://www.npmjs.com/package/@nuxtjs/sitemap
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Axios module configuration
@@ -107,6 +111,10 @@ export default {
       syncMessages: false,
       syncRouteParams: true,
     },
+  },
+  robots: {},
+  sitemap: {
+    hostname: 'https://markozlatar.com'
   },
   /*
    ** Build configuration
