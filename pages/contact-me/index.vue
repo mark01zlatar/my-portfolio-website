@@ -339,7 +339,7 @@ export default {
       message:
         "Hi, your message was successfully sent, I'll try to answer as soon as possible.",
       type: 'success',
-      image: require('~/assets/images/markozlatar.jpg'),
+      image: require('~/assets/images/markozlatar.webp'),
       layout: 2,
       imageWidth: 100,
       timeout: 20000,
@@ -352,7 +352,7 @@ export default {
       message: "Somewhere in process an error occurred, I'm working on it...",
       type: 'error',
       layout: 2,
-      image: require('~/assets/images/markozlatar.jpg'),
+      image: require('~/assets/images/markozlatar.webp'),
       imageWidth: 100,
       timeout: 20000,
       theme: 'dark',

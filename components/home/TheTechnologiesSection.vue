@@ -12,7 +12,7 @@
         <div class="image-box-container first">
           <image-box>
             <img
-              src="@/assets/images/technologies-images/vuejs.png"
+              src="@/assets/images/technologies-images/vuejs.webp"
               class="technology-image"
               width="150px"
               alt="Vue.js logo image"
@@ -21,7 +21,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/nuxtjs.png"
+              src="@/assets/images/technologies-images/nuxtjs.webp"
               class="technology-image"
               width="150px"
               alt="Nuxt.js logo image"
@@ -30,7 +30,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/webpack.png"
+              src="@/assets/images/technologies-images/webpack.webp"
               class="technology-image"
               width="150px"
               alt="Webpack logo image"
@@ -41,7 +41,7 @@
         <div class="image-box-container second">
           <image-box>
             <img
-              src="@/assets/images/technologies-images/htmllogo.png"
+              src="@/assets/images/technologies-images/htmllogo.webp"
               class="technology-image responsive-special"
               width="170px"
               alt="HTML logo image"
@@ -50,7 +50,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/csslogo.png"
+              src="@/assets/images/technologies-images/csslogo.webp"
               class="technology-image"
               width="130px"
               alt="CSS logo image"
@@ -59,7 +59,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/javascript.png"
+              src="@/assets/images/technologies-images/javascript.webp"
               class="technology-image"
               width="120px"
               alt="JavaScript logo image"
@@ -95,7 +95,7 @@
         <div class="image-box-container image-box-container-backend second">
           <image-box>
             <img
-              src="@/assets/images/technologies-images/socketio.png"
+              src="@/assets/images/technologies-images/socketio.webp"
               class="technology-image"
               width="150px"
               alt="Socket.io logo image"
@@ -104,7 +104,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/graphql.png"
+              src="@/assets/images/technologies-images/graphql.webp"
               class="technology-image"
               width="150px"
               alt="GraphQL logo image"
@@ -113,7 +113,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/express.png"
+              src="@/assets/images/technologies-images/express.webp"
               class="technology-image"
               width="150px"
               alt="Express framework logo image"
@@ -124,7 +124,7 @@
         <div class="image-box-container image-box-container-backend first">
           <image-box>
             <img
-              src="@/assets/images/technologies-images/nodejs.png"
+              src="@/assets/images/technologies-images/nodejs.webp"
               class="technology-image responsive-special"
               width="170px"
               alt="Node.js logo image"
@@ -133,7 +133,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/mongodb.png"
+              src="@/assets/images/technologies-images/mongodb.webp"
               class="technology-image"
               width="130px"
               alt="MongoDB logo image"
@@ -142,7 +142,7 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/mysql.png"
+              src="@/assets/images/technologies-images/mysql.webp"
               class="technology-image"
               width="150px"
               alt="MySQL logo image"

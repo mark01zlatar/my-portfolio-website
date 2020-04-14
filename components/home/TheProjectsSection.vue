@@ -26,7 +26,7 @@ export default {
       projects: [
         {
           src: {
-            image: 'gem-media.png',
+            image: 'gem-media.webp',
             video: 'https://www.youtube.com/embed/jHmw12dDkHY'
           },
           title: this.$t('home.projectsSection.gemMedia.title'),
@@ -47,7 +47,7 @@ export default {
         },
         {
           src: {
-            image: 'greatathlete.png',
+            image: 'greatathlete.webp',
             video: 'https://www.youtube.com/embed/lyMZig_bHtM'
           },
           title: this.$t('home.projectsSection.greatAthlete.title'),
@@ -69,7 +69,7 @@ export default {
         },
         {
           src: {
-            image: 'wlf-clothing.png',
+            image: 'wlf-clothing.webp',
             video: 'https://www.youtube.com/embed/2zUESAy5e4c'
           },
           title: this.$t('home.projectsSection.wlfClothing.title'),
@@ -99,7 +99,7 @@ export default {
         },
         {
           src: {
-            image: 'seomind.png',
+            image: 'seomind.webp',
             video: 'https://www.youtube.com/embed/bkTLRbNk4hE'
           },
           title: this.$t('home.projectsSection.seoMind.title'),

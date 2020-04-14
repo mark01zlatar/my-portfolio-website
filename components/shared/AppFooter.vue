@@ -35,15 +35,15 @@
           </ul>
         </div>
         <div class="social-media-icons">
-          <a href="#">
+          <span href="#">
             <i class="mdi mdi-facebook"></i>
-          </a>
-          <a href="#">
+          </span>
+          <span href="#">
             <i class="mdi mdi-instagram"></i>
-          </a>
-          <a href="#">
+          </span>
+          <span href="#">
             <i class="mdi mdi-linkedin"></i>
-          </a>
+          </span>
         </div>
       </scrollactive>
       <p class="rights">&copy; 2020 Marko Zlatar.</p>
@@ -120,7 +120,7 @@ nav {
 .social-media-icons {
   margin-left: auto;
   margin-right: 50px;
-  a {
+  span {
     transition: color 200ms ease;
     margin: 5px;
     &:hover {
