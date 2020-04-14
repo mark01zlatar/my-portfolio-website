@@ -55,15 +55,16 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    ['@nuxtjs/dotenv', { systemvars: true }],
+  ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    ['@nuxtjs/dotenv', { systemvars: true }],
     // Doc: https://www.npmjs.com/package/@nuxtjs/style-resources
     '@nuxtjs/style-resources',
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
@@ -119,5 +120,8 @@ export default {
 
       return config
     },
+  },
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
   },
 }
