@@ -101,6 +101,12 @@ export default {
       useCookie: true,
       alwaysRedirect: true,
     },
+    vuex: {
+      moduleName: 'i18n',
+      syncLocale: true,
+      syncMessages: false,
+      syncRouteParams: true,
+    },
   },
   /*
    ** Build configuration

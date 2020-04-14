@@ -58,10 +58,7 @@
             </a>
           </nuxt-link>
         </scrollactive>
-        <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-          <i class="mdi mdi-download"></i>
-          {{ $t('links.resume') }}
-        </a>
+        <app-link-download-resume class="resume-download"></app-link-download-resume>
         <nuxt-link
           v-if="$route.path !== localePath('contact-me')"
           :to="localePath('contact-me')"
@@ -81,12 +78,14 @@
 import AppButton from '@/components/shared/AppButton'
 import AppHamburger from '@/components/shared/AppHamburger'
 import AppMobileNavigation from '@/components/shared/AppMobileNavigation'
+import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
 
 export default {
   components: {
     AppButton,
     AppHamburger,
-    AppMobileNavigation
+    AppMobileNavigation,
+    AppLinkDownloadResume
   },
   data() {
     return {}

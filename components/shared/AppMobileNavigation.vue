@@ -43,7 +43,9 @@
           <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
         </nuxt-link>
       </template>
-
+      <li>
+        <app-link-download-resume></app-link-download-resume>
+      </li>
       <nuxt-link
         v-if="$route.path !== localePath('contact-me')"
         :to="localePath('contact-me')"
@@ -67,7 +69,12 @@
 </template>
 
 <script>
+import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
+
 export default {
+  components: {
+    AppLinkDownloadResume
+  },
   computed: {
     availableLocales() {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)

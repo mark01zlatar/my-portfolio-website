@@ -27,10 +27,7 @@
               >{{ $t('links.technologies') }}</a>
             </li>
             <li>
-              <a :href="require('~/assets/MarkoZlatarResume.pdf')" download class="resume-download">
-                <i class="mdi mdi-download"></i>
-                {{ $t('links.resume') }}
-              </a>
+              <app-link-download-resume></app-link-download-resume>
             </li>
             <nuxt-link :to="localePath('contact-me')" tag="li">
               <a>{{ $t('links.contact') }}</a>
@@ -55,7 +52,13 @@
 </template>
 
 <script>
-export default {}
+import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
+
+export default {
+  components: {
+    AppLinkDownloadResume
+  }
+}
 </script>
 
 <style lang="scss" scoped>

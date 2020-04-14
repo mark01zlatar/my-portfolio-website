@@ -22,6 +22,9 @@ export const getters = {
   isCookiesAccepted(state) {
     return state.cookiesAccepted
   },
+  getLocaleLang(state, getters, rootState, rootGetters) {
+    return rootState.i18n.locale
+  },
 }
 
 export const mutations = {
