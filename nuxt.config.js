@@ -73,6 +73,14 @@ export default {
     '@nuxtjs/robots',
     // Doc: https://www.npmjs.com/package/@nuxtjs/sitemap
     '@nuxtjs/sitemap',
+    // Doc: https://github.com/WilliamDASILVA/nuxt-trailingslash-module
+    [
+      'nuxt-trailingslash-module',
+      {
+        /* module options */
+        methods: ['GET', 'HEAD'],
+      },
+    ],
   ],
   /*
    ** Axios module configuration
@@ -114,7 +122,7 @@ export default {
   },
   robots: {},
   sitemap: {
-    hostname: 'https://markozlatar.com'
+    hostname: 'https://markozlatar.com',
   },
   /*
    ** Build configuration
