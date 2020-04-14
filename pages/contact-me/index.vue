@@ -10,7 +10,7 @@
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <transition mode="out-in" name="slide-fade">
+      <transition-group class="transition-group" mode="out-in" name="slide-fade">
         <button
           v-show="!email.show && !name.show && !subject.show && !message.show"
           @click.prevent="email.show = true"
@@ -18,7 +18,7 @@
           :key="'start'"
         >{{ $t('contact.buttons.start') }}</button>
         <!-- Email Input -->
-        <div v-else-show="email.show" class="form-group" :key="'email'">
+        <div v-show="email.show" class="form-group" :key="'email'">
           <label for="email">{{ $t('contact.labels.email.title') }}</label>
           <div>
             <input
@@ -33,7 +33,7 @@
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
               <small
-                v-show="$v.email.value.$invalid && $v.email.value.$dirty"
+                v-if="$v.email.value.$invalid && $v.email.value.$dirty"
               >{{ $t('contact.labels.email.errorText') }}</small>
             </transition>
           </div>
@@ -51,7 +51,7 @@
           </div>
         </div>
         <!-- Name Input -->
-        <div v-else-show="name.show" class="form-group" :key="'name'">
+        <div v-show="name.show" class="form-group" :key="'name'">
           <label for="firstName">{{ $t('contact.labels.name.first') }}</label>
           <div>
             <input
@@ -66,7 +66,7 @@
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
               <small
-                v-show="$v.name.first.$invalid && $v.name.first.$dirty"
+                v-if="$v.name.first.$invalid && $v.name.first.$dirty"
                 style="margin-bottom: 30px;"
               >{{ $t('contact.labels.name.errorText') }}</small>
             </transition>
@@ -85,7 +85,7 @@
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
               <small
-                v-show="$v.name.last.$invalid && $v.name.last.$dirty"
+                v-if="$v.name.last.$invalid && $v.name.last.$dirty"
               >{{ $t('contact.labels.name.errorText') }}</small>
             </transition>
           </div>
@@ -103,7 +103,7 @@
           </div>
         </div>
         <!-- Subject Input -->
-        <div v-else-show="subject.show" class="form-group" :key="'subject'">
+        <div v-show="subject.show" class="form-group" :key="'subject'">
           <label for="subject">{{ $t('contact.labels.subject.title') }}</label>
           <div>
             <input
@@ -118,7 +118,7 @@
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
               <small
-                v-show="$v.subject.value.$invalid && $v.subject.value.$dirty"
+                v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
               >{{ $t('contact.labels.subject.errorText') }}</small>
             </transition>
           </div>
@@ -136,7 +136,7 @@
           </div>
         </div>
         <!-- Message Input -->
-        <div v-else-show="message.show" class="form-group" :key="'message'">
+        <div v-show="message.show" class="form-group" :key="'message'">
           <label for="message">{{ $t('contact.labels.message.title') }}</label>
           <div>
             <textarea
@@ -150,7 +150,7 @@
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
               <small
-                v-show="$v.message.value.$invalid && $v.message.value.$dirty"
+                v-if="$v.message.value.$invalid && $v.message.value.$dirty"
               >{{ $t('contact.labels.message.errorText') }}</small>
             </transition>
           </div>
@@ -168,7 +168,7 @@
             ></app-button>
           </div>
         </div>
-      </transition>
+      </transition-group>
     </form>
   </div>
 </template>
@@ -373,12 +373,12 @@ export default {
   width: 100%;
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 form {
   width: 70%;
-  height: auto;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -389,6 +389,12 @@ form {
   justify-content: center;
 }
 
+.transition-group {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .contact-button {
   padding: 5px;
   width: 100%;
@@ -396,12 +402,16 @@ form {
   min-height: 65px;
   border: 1px solid $site-text-dark;
   font-size: 25px;
-  background-color: $site-text-dark;
+  background: $site-text-dark;
   color: white;
   cursor: pointer;
-  transition: all 350ms ease 0ms;
+  transition: background 250ms ease 0ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   &:hover {
-    background-color: $site-button-dark;
+    background: $site-button-dark;
   }
 }
 
@@ -412,6 +422,10 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   label {
     font-size: 23px;
@@ -494,34 +508,39 @@ form {
   }
 }
 
+.slide-fade-enter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -300px);
+}
 .slide-fade-enter-active {
-  animation: slade-fade-in 500ms forwards;
+  transition: all 500ms ease 500ms;
+}
+.slide-fade-enter-to {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.slide-fade-leave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 .slide-fade-leave-active {
-  animation: slade-fade-out 500ms forwards;
+  transition: all 500ms ease 0ms;
 }
-
-@keyframes slade-fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-150px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes slade-fade-out {
-  0% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(150px);
-  }
+.slide-fade-leave-to {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, 120px);
 }
 
 .shake-enter-active {
