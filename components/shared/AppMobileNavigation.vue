@@ -89,6 +89,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media screen and (min-width: 1200px) {
+  .mobile-navigation-container {
+    display: none !important;
+  }
+}
 .mobile-navigation-container {
   width: 100%;
   height: 100vh;
