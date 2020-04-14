@@ -14,7 +14,7 @@ let toast = ({
   imageWidth = 50,
   progressBarColor,
   theme = 'light',
-  backgroundColor
+  backgroundColor,
 }) => {
   if (type === VueNotifications.types.warn) type = 'warning'
   return iziToast[type]({
@@ -27,7 +27,7 @@ let toast = ({
     imageWidth,
     theme,
     progressBarColor,
-    backgroundColor
+    backgroundColor,
   })
 }
 
@@ -35,7 +35,7 @@ const options = {
   success: toast,
   error: toast,
   info: toast,
-  warn: toast
+  warn: toast,
 }
 
 Vue.use(VueNotifications, options)

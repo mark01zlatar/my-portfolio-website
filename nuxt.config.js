@@ -10,7 +10,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: titleChunk => {
+    titleTemplate: (titleChunk) => {
       // If undefined or blank then we don't need the hyphen
       return titleChunk ? `${titleChunk} | Marko Zlatar` : 'Marko Zlatar'
     },
@@ -20,17 +20,17 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
-      }
+        content: process.env.npm_package_description || '',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         href:
           'https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css',
-        rel: 'stylesheet'
-      }
-    ]
+        rel: 'stylesheet',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -41,7 +41,7 @@ export default {
    */
   css: [
     // SCSS file in the project
-    '@/assets/scss/main.scss'
+    '@/assets/scss/main.scss',
   ],
   /*
    ** Plugins to load before mounting the App
@@ -50,7 +50,7 @@ export default {
   plugins: [
     { src: '~plugins/vue-carousel-3d', ssr: false },
     { src: '~plugins/vue-scrollactive' },
-    { src: '~plugins/vue-notifications', ssr: false }
+    { src: '~plugins/vue-notifications', ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -67,7 +67,7 @@ export default {
     // Doc: https://www.npmjs.com/package/@nuxtjs/style-resources
     '@nuxtjs/style-resources',
     // Doc: https://nuxt-community.github.io/nuxt-i18n/
-    'nuxt-i18n'
+    'nuxt-i18n',
   ],
   /*
    ** Axios module configuration
@@ -75,31 +75,31 @@ export default {
    */
   axios: {},
   styleResources: {
-    scss: ['@/assets/scss/_colors.scss']
+    scss: ['@/assets/scss/_colors.scss'],
   },
   i18n: {
     locales: [
       { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
-      { code: 'en', iso: 'en-US', name: 'English' }
+      { code: 'en', iso: 'en-US', name: 'English' },
     ],
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
-      messages: { en, sr }
+      messages: { en, sr },
     },
     baseUrl: process.env.baseURL,
     parsePages: false,
     pages: {
       'contact-me/index': {
         en: '/contact-me',
-        sr: '/kontaktiraj-me'
-      }
+        sr: '/kontaktiraj-me',
+      },
     },
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: true
-    }
+      alwaysRedirect: true,
+    },
   },
   /*
    ** Build configuration
@@ -110,7 +110,7 @@ export default {
      */
     extend(config, ctx) {
       // Find the rule which contains a assets file extension
-      const assetsLoader = config.module.rules.find(rule =>
+      const assetsLoader = config.module.rules.find((rule) =>
         rule.test.test('.png')
       )
 
@@ -118,6 +118,6 @@ export default {
       assetsLoader.test = /\.(png|jpe?g|gif|svg|webp|pdf)$/i
 
       return config
-    }
-  }
+    },
+  },
 }

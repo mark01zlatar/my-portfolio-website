@@ -1,4 +1,4 @@
-export default async function(to, from, savedPosition) {
+export default async function (to, from, savedPosition) {
   if (savedPosition) {
     return savedPosition
   }
@@ -6,7 +6,7 @@ export default async function(to, from, savedPosition) {
   const findEl = async (hash, x = 0) => {
     return (
       document.querySelector(hash) ||
-      new Promise(resolve => {
+      new Promise((resolve) => {
         if (x > 50) {
           return resolve(document.querySelector('#app'))
         }
@@ -18,20 +18,20 @@ export default async function(to, from, savedPosition) {
   }
 
   if (to.hash) {
-    console.log('executed 1')
-
     let el = await findEl(to.hash)
-    console.log(el)
-    if ('scrollBehavior' in document.documentElement.style) {
-      console.log('executed 2')
 
+    let jumpTo =
+      el.getBoundingClientRect().top > el.offsetTop
+        ? el.getBoundingClientRect().top
+        : el.offsetTop
+
+    if ('scrollBehavior' in document.documentElement.style) {
       return window.scrollTo({
-        top: el.getBoundingClientRect().top,
-        behavior: 'smooth'
+        top: jumpTo,
+        behavior: 'smooth',
       })
     } else {
-      console.log('executed 3')
-      return window.scrollTo(0, el.getBoundingClientRect().top)
+      return window.scrollTo(0, jumpTo)
     }
   }
 

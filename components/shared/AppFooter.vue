@@ -4,11 +4,7 @@
     <nav>
       <scrollactive tag="div">
         <a :href="localePath({ path: '/', hash: '#top' })" class="scrollactive-item">
-          <img
-            src="@/assets/images/MZ-logo-white-small.png"
-            width="70"
-            alt="Marko Zlatar Logo"
-          />
+          <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo" />
         </a>
         <div>
           <ul class="navigation-list">

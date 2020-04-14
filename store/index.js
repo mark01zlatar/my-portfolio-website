@@ -3,7 +3,7 @@ export const state = () => ({
   projectDialogContent: false,
   projectDialogData: null,
   mobileNavbar: false,
-  cookiesAccepted: true
+  cookiesAccepted: true,
 })
 
 export const getters = {
@@ -21,7 +21,7 @@ export const getters = {
   },
   isCookiesAccepted(state) {
     return state.cookiesAccepted
-  }
+  },
 }
 
 export const mutations = {
@@ -40,12 +40,12 @@ export const mutations = {
   },
   SET_COOKIES_ACCEPTED(state, payload) {
     state.cookiesAccepted = payload
-  }
+  },
 }
 
 export const actions = {
   openDialog(context, payload) {
     context.commit('SET_PROJECT_DIALOG_OVERLAY', true)
     context.commit('SET_PROJECT_DIALOG_DATA', payload)
-  }
+  },
 }
