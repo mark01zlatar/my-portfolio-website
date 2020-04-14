@@ -78,7 +78,7 @@ export default {
       seoMind: {
         title: 'SEO Mind - Website project',
         overview:
-          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. In process of creating web application, for style is used Sass(Scss) and for version control is use Git & Github',
+          'To create this project, first I used tool created by Nuxt.js team called create-nuxt-app. In process of creating web application, for style is used Sass(Scss) and for version control is used Git & Github',
       },
       greatAthlete: {
         title: 'Great Athlete - GYM website project',
