@@ -92,8 +92,8 @@ export default {
         id: 'UA-163702233-1',
         config: {
           send_page_view: false,
-          debug: true, 
-          disableAutoPageTrack: false,
+          debug: true,
+          disableAutoPageTrack: true,
         },
       },
     ],

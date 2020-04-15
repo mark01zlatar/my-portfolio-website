@@ -302,7 +302,6 @@ export default {
             title: this.$t('contact.notifications.success.title'),
             message: this.$t('contact.notifications.success.message')
           })
-          this.$v.$reset()
           this.cancel()
         } catch (err) {
           this.showErrorNotification({
@@ -331,6 +330,8 @@ export default {
         show: false,
         value: ''
       }
+
+      this.$v.$reset();
     }
   },
   notifications: {
