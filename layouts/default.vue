@@ -27,6 +27,12 @@ export default {
     }
   },
   mounted() {
+    if (process.browser) {
+      this.$gtag('config', 'UA-163702233-1', {
+        page_title: this.$metaInfo.title,
+        page_path: this.$route.fullPath,
+      })
+    }
     this.cookiesAccepted = JSON.parse(localStorage.getItem('cookiesAccepted'))
 
     this.$store.commit('SET_COOKIES_ACCEPTED', this.cookiesAccepted)

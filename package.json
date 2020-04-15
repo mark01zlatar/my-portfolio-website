@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.2.0",
     "izitoast": "^1.4.0",

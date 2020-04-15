@@ -371,7 +371,8 @@ export default {
   background-color: $site-gray;
   color: white;
   width: 100%;
-  min-height: 100vh;
+  min-height: 750px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }

@@ -84,6 +84,19 @@ export default {
         },
       },
     ],
+    // Doc: https://github.com/nuxt-community/google-gtag
+    [
+      '@nuxtjs/google-gtag',
+      {
+        /* module options */
+        id: 'UA-163702233-1',
+        config: {
+          send_page_view: false,
+          debug: true, 
+          disableAutoPageTrack: false,
+        },
+      },
+    ],
   ],
   /*
    ** Axios module configuration
