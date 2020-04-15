@@ -43,6 +43,7 @@ export default {
   plugins: [
     { src: '~plugins/vue-scrollactive' },
     { src: '~plugins/vue-notifications', ssr: false },
+    { src: '~plugins/vue-gtag', ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules
@@ -82,19 +83,6 @@ export default {
         brotli: {
           threshold: 10240,
         },
-      },
-    ],
-    // Doc: https://github.com/nuxt-community/google-gtag
-    [
-      '@nuxtjs/google-gtag',
-      {
-        /* module options */
-        id: 'UA-163702233-1',
-        config: {
-          send_page_view: false,
-        },
-        debug: false,
-        disableAutoPageTrack: true,
       },
     ],
   ],

@@ -1,17 +1,26 @@
 <template>
   <div class="cookie-banner-container">
-    <i class="mdi mdi-cookie"></i>
+    <cookie-icon :size="40" class="cookieIcon"></cookie-icon>
     <p>{{ $t('cookies.message') }}</p>
     <button @click="acceptCookies">{{ $t('cookies.button') }}</button>
   </div>
 </template>
 
 <script>
+import { bootstrap } from "vue-gtag"
+import CookieIcon from "vue-material-design-icons/Cookie.vue"
+
 export default {
+  components: {
+    CookieIcon
+  },
   methods: {
     acceptCookies() {
       localStorage.setItem('cookiesAccepted', true)
       this.$store.commit('SET_COOKIES_ACCEPTED', true)
+
+      bootstrap().then(gtag => {
+      });
     }
   }
 }
@@ -33,9 +42,6 @@ export default {
   z-index: 99;
   color: $site-gray;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.253);
-  i {
-    font-size: 70px;
-  }
   p {
     font-size: 22px;
   }
@@ -54,14 +60,11 @@ export default {
     }
   }
 }
-@media screen and(max-width: 900px) {
+@media screen and(max-width: 1100px) {
   .cookie-banner-container {
     width: 100%;
     bottom: 0px;
     min-height: 60px;
-    i {
-      font-size: 30px;
-    }
     p {
       font-size: 16px;
     }
@@ -82,7 +85,7 @@ export default {
     padding: 5px;
     text-align: center;
     flex-wrap: none;
-    i {
+    .cookieIcon {
       display: none;
     }
     p {
