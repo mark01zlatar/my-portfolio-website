@@ -30,7 +30,7 @@ button {
   outline: none;
   transition: all 450ms ease 0ms;
   font-size: 18px;
-  font-family: RobotoMedium;
+  font-family: RobotoMedium, sans-serif;
   margin: 5px 0px;
   cursor: pointer;
   &:hover {

@@ -111,7 +111,7 @@ export default {
   h1 {
     text-align: center;
     margin-bottom: 50px;
-    font-family: RobotoThin;
+    font-family: RobotoThin, sans-serif;
     font-size: 45px;
   }
 }
@@ -135,11 +135,11 @@ export default {
       margin-bottom: 30px;
     }
     h3 {
-      font-family: RobotoRegular;
+      font-family: RobotoRegular, sans-serif;
       margin-bottom: 15px;
     }
     p {
-      font-family: RobotoThin;
+      font-family: RobotoThin, sans-serif;
     }
   }
 }

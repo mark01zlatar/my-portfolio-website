@@ -31,7 +31,7 @@ export default {
   border-radius: 80px;
   margin-right: 30px;
   transition: all 300ms ease-out 0ms;
-  font-family: RobotoMedium;
+  font-family: RobotoMedium, sans-serif;
   font-size: 18px;
   padding: 0px 10px;
   cursor: pointer;

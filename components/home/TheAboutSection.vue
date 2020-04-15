@@ -74,7 +74,7 @@ export default {}
     margin: 20px 0px;
     font-size: 22px;
     color: $site-text-dark;
-    font-family: RobotoRegular;
+    font-family: RobotoRegular, sans-serif;
   }
 }
 
