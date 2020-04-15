@@ -54,7 +54,8 @@ export default {
           },
           loop: true,
           preventClicksPropagation: false,
-          noSwiping: false
+          noSwiping: false,
+          slideToClickedSlide: true
       },
       slides: [
         {

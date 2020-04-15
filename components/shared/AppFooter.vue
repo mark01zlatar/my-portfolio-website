@@ -126,6 +126,7 @@ nav {
 .social-media-icons {
   margin-left: auto;
   margin-right: 50px;
+  display: flex;
   span {
     transition: color 200ms ease;
     margin: 5px;
@@ -135,7 +136,7 @@ nav {
   }
 }
 
-@media screen and(max-width: 1210px) {
+@media screen and(max-width: 1250px) {
   nav {
     & > div {
       flex-direction: column;

@@ -23,14 +23,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        href:
-          'https://cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css',
-        rel: 'stylesheet',
-      },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -78,6 +71,17 @@ export default {
       {
         /* module options */
         methods: ['GET', 'HEAD'],
+      },
+    ],
+    [
+      'nuxt-compress',
+      {
+        gzip: {
+          cache: true,
+        },
+        brotli: {
+          threshold: 10240,
+        },
       },
     ],
   ],
