@@ -1,7 +1,20 @@
 <template>
   <div class="services-container">
     <h1 id="services">{{ $t('home.servicesSection.title') }}</h1>
-    <client-only>
+    <div v-swiper="swiperOption">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="slide in slides" :key="slide.index">
+          <img
+            height="100"
+            :src="require(`@/assets/icons/services/${slide.src}`)"
+            :alt="slide.title + ' - service image'"
+          />
+          <h3>{{ slide.title }}</h3>
+          <p>{{ slide.text }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- <client-only>
       <carousel-3d class="carousel" :controls-visible="true" width="530" height="360">
         <slide class="slide" v-for="slide in slides" :key="slide.index" :index="slide.index">
           <img
@@ -13,14 +26,36 @@
           <p>{{ slide.text }}</p>
         </slide>
       </carousel-3d>
-    </client-only>
+    </client-only>-->
   </div>
 </template>
 
 <script>
+import { directive } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css';
+
 export default {
+   directives: {
+    swiper: directive
+  },
   data() {
     return {
+      swiperOption: {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+          },
+          loop: true,
+          preventClicksPropagation: false,
+          noSwiping: false
+      },
       slides: [
         {
           index: 0,
@@ -69,7 +104,9 @@ export default {
   background: $site-gray;
   padding: 150px 0px 150px 0px;
   color: white;
-
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
   h1 {
     text-align: center;
     margin-bottom: 50px;
@@ -78,36 +115,39 @@ export default {
   }
 }
 
-.slide {
-  background-color: $site-gray-dark;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px;
-  text-align: center;
-  img {
-    margin-bottom: 30px;
-  }
-  h3 {
-    font-family: RobotoRegular;
-    margin-bottom: 15px;
-  }
-  p {
-    font-family: RobotoThin;
+.swiper-wrapper {
+  width: 100%;
+  height: 500px;
+  .swiper-slide {
+    background-color: $site-gray-dark;
+    width: 500px;
+    height: 330px;
+    margin: auto 0px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 25px;
+    text-align: center;
+    img {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-family: RobotoRegular;
+      margin-bottom: 15px;
+    }
+    p {
+      font-family: RobotoThin;
+    }
   }
 }
 
-@media screen and (max-width: 400px) {
-  .carousel {
-    height: 400px !important;
-  }
-  .slide {
-    height: 400px !important;
-    padding: 5px 20px;
-    img {
-      height: 85px;
+@media screen and (max-width: 500px) {
+  .swiper-wrapper {
+    .swiper-slide {
+      height: 450px;
+      width: 100%;
     }
   }
 }
