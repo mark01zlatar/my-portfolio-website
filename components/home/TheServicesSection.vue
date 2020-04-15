@@ -13,20 +13,8 @@
           <p>{{ slide.text }}</p>
         </div>
       </div>
+      <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
-    <!-- <client-only>
-      <carousel-3d class="carousel" :controls-visible="true" width="530" height="360">
-        <slide class="slide" v-for="slide in slides" :key="slide.index" :index="slide.index">
-          <img
-            height="100"
-            :src="require(`@/assets/icons/services/${slide.src}`)"
-            :alt="slide.title + ' - service image'"
-          />
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.text }}</p>
-        </slide>
-      </carousel-3d>
-    </client-only>-->
   </div>
 </template>
 
@@ -55,7 +43,11 @@ export default {
           loop: true,
           preventClicksPropagation: false,
           noSwiping: false,
-          slideToClickedSlide: true
+          slideToClickedSlide: true,
+          pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true
+          }
       },
       slides: [
         {
@@ -150,6 +142,9 @@ export default {
       height: 450px;
       width: 100%;
     }
+  }
+  .swiper-pagination {
+    bottom: 0px !important;
   }
 }
 </style>

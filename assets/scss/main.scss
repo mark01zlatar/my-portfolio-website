@@ -82,3 +82,13 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: white;
 }
+
+// Swiper dots color
+.swiper-pagination-bullet {
+  background-color: $site-text-dark !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
