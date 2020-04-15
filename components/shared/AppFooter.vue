@@ -36,13 +36,13 @@
         </div>
         <div class="social-media-icons">
           <span href="#">
-            <i class="mdi mdi-facebook"></i>
+            <facebook-icon :size="30"></facebook-icon>
           </span>
           <span href="#">
-            <i class="mdi mdi-instagram"></i>
+            <instagram-icon :size="30"></instagram-icon>
           </span>
           <span href="#">
-            <i class="mdi mdi-linkedin"></i>
+            <linkedin-icon :size="30"></linkedin-icon>
           </span>
         </div>
       </scrollactive>
@@ -53,10 +53,16 @@
 
 <script>
 import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
+import FacebookIcon from "vue-material-design-icons/Facebook.vue"
+import InstagramIcon from "vue-material-design-icons/Instagram.vue"
+import LinkedinIcon from "vue-material-design-icons/Linkedin.vue"
 
 export default {
   components: {
-    AppLinkDownloadResume
+    AppLinkDownloadResume,
+    FacebookIcon,
+    InstagramIcon,
+    LinkedinIcon
   }
 }
 </script>

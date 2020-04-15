@@ -1,7 +1,6 @@
 <template>
   <button class="project-button" :class="buttonClasses">
-    <i class="mdi" :class="icon"></i>
-    <span style="margin-right: auto">{{ text }}</span>
+    <slot></slot>
   </button>
 </template>
 
@@ -9,9 +8,6 @@
 export default {
   props: {
     text: {
-      default: ''
-    },
-    icon: {
       default: ''
     },
     buttonClasses: {
@@ -22,11 +18,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.mdi {
-  font-size: 25px;
-  margin-right: auto;
-}
-
 .project-button {
   display: flex;
   align-items: center;
@@ -49,6 +40,10 @@ export default {
     color: white;
     background: $site-text-dark;
   }
+}
+
+span {
+  margin-right: 10px;
 }
 
 .project-button--reverse {

@@ -10,10 +10,7 @@
       @before-leave="$store.commit('SET_PROJECT_DIALOG_OVERLAY', false)"
     >
       <div v-if="$store.getters.isProjectDialogContent" class="dialog" key="dialog">
-        <i
-          @click.stop.self="$store.commit('SET_PROJECT_DIALOG_CONTENT', false)"
-          class="mdi mdi-close"
-        ></i>
+        <close-icon class="close-icon" @click="$store.commit('SET_PROJECT_DIALOG_CONTENT', false)"></close-icon>
         <h2>{{ getProjectDialogData.title }}</h2>
         <div class="dialog-box-1">
           <iframe
@@ -33,15 +30,16 @@
             </ul>
             <div>
               <a :href="getProjectDialogData.links.github" target="_blank">
-                <project-button :text="$t('links.sourceCode')" icon="mdi-github"></project-button>
+                <project-button>
+                  <github-icon></github-icon>
+                  {{ $t('links.sourceCode') }}
+                </project-button>
               </a>
               <a :href="getProjectDialogData.links.site" target="_blank">
-                <project-button
-                  :text="$t('links.visitSite')"
-                  icon="mdi-search-web"
-                  bordercolor="white"
-                  buttonClasses="project-button--white"
-                ></project-button>
+                <project-button bordercolor="white" buttonClasses="project-button--white">
+                  <search-web-icon></search-web-icon>
+                  {{ $t('links.visitSite') }}
+                </project-button>
               </a>
             </div>
           </div>
@@ -57,11 +55,17 @@
 
 <script>
 import ProjectButton from '@/components/home/ProjectButton'
+import CloseIcon from "vue-material-design-icons/Close.vue"
+import SearchWebIcon from "vue-material-design-icons/SearchWeb.vue"
+import GithubIcon from "vue-material-design-icons/Github.vue"
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
   components: {
-    ProjectButton
+    ProjectButton,
+    CloseIcon,
+    SearchWebIcon,
+    GithubIcon
   },
   computed: {
     ...mapGetters({
@@ -163,12 +167,12 @@ export default {
   max-width: 600px;
 }
 
-.mdi-close {
+.close-icon {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 25px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .scale-enter {

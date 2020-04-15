@@ -1,13 +1,19 @@
 <template>
   <scrollactive tag="div">
     <a :href="localePath('/#top')" class="scrollactive-item">
-      <i class="mdi mdi-chevron-double-up"></i>
+      <chevron-double-up-icon :size="40" class="icon-color"></chevron-double-up-icon>
     </a>
   </scrollactive>
 </template>
 
 <script>
-export default {}
+import ChevronDoubleUpIcon from 'vue-material-design-icons/ChevronDoubleUp.vue';
+
+export default {
+  components: {
+    ChevronDoubleUpIcon
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -28,13 +34,10 @@ a {
   transition: all 450ms ease 0ms;
   cursor: pointer;
   z-index: 10;
-  i {
-    font-size: 55px;
-  }
   &:hover {
     background-color: $site-button-dark;
     border: 1px solid white;
-    i {
+    .icon-color {
       color: white;
     }
   }

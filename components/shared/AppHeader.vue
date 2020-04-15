@@ -53,7 +53,7 @@
             tag="li"
           >
             <a>
-              <i class="mdi mdi-translate"></i>
+              <translate-icon></translate-icon>
               {{ locale.name }}
             </a>
           </nuxt-link>
@@ -79,13 +79,15 @@ import AppButton from '@/components/shared/AppButton'
 import AppHamburger from '@/components/shared/AppHamburger'
 import AppMobileNavigation from '@/components/shared/AppMobileNavigation'
 import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
+import TranslateIcon from "vue-material-design-icons/Translate.vue"
 
 export default {
   components: {
     AppButton,
     AppHamburger,
     AppMobileNavigation,
-    AppLinkDownloadResume
+    AppLinkDownloadResume,
+    TranslateIcon
   },
   data() {
     return {}

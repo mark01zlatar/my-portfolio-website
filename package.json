@@ -20,6 +20,7 @@
     "nuxt-trailingslash-module": "^1.1.0",
     "swiper": "^5.3.7",
     "vue-awesome-swiper": "^4.1.0",
+    "vue-material-design-icons": "^4.5.0",
     "vue-notifications": "^1.0.2",
     "vue-scrollactive": "^0.8.0",
     "vuelidate": "^0.7.5"

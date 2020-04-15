@@ -3,21 +3,32 @@
     v-if="$store.getters.getLocaleLang === 'en'"
     :href="require(`~/assets/MarkoZlatarResume.pdf`)"
     download
+    class="link"
   >
-    <i class="mdi mdi-download"></i>
+    <download-icon class="icon"></download-icon>
     {{ $t('links.resume') }}
   </a>
   <a v-else :href="require(`~/assets/MarkoZlatarRezime.pdf`)" download>
-    <i class="mdi mdi-download"></i>
+    <download-icon class="icon"></download-icon>
     {{ $t('links.resume') }}
   </a>
 </template>
 
 <script>
-export default {
+import DownloadIcon from 'vue-material-design-icons/Download.vue';
 
+export default {
+  components: {
+    DownloadIcon
+  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 </style>

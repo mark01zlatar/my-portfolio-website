@@ -60,7 +60,7 @@
         tag="li"
       >
         <a>
-          <i class="mdi mdi-translate"></i>
+          <translate-icon></translate-icon>
           {{ locale.name }}
         </a>
       </nuxt-link>
@@ -70,10 +70,12 @@
 
 <script>
 import AppLinkDownloadResume from '@/components/shared/AppLinkDownloadResume'
+import TranslateIcon from "vue-material-design-icons/Translate.vue"
 
 export default {
   components: {
-    AppLinkDownloadResume
+    AppLinkDownloadResume,
+    TranslateIcon
   },
   computed: {
     availableLocales() {
