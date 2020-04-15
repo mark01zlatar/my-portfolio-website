@@ -82,11 +82,6 @@ export default {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   },
-  watch: {
-    '$router.path': function(value) {
-      console.log(value)
-    }
-  }
 }
 </script>
 
