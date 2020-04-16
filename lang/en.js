@@ -68,22 +68,22 @@ export default {
       gemMedia: {
         title: 'Gem Media - Social media project',
         overview:
-          'This project was created from two separate parts - frontend and backend. For frontend, I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI I used Vuetify.js(Material Design component framework). For backend, I created a REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For interactions with MongoDB, a mongoose library is used. To implement the private messaging feature Socket.io library is used .Node.js REST API is tested with Mocha.js, Chai.js, Sinon.js...Also, rate-limiting is implemented.',
+          'This project was created from two separate parts - frontend and backend. For frontend, I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI I used Vuetify.js(Material Design component framework). For backend, I created a REST API with Node.js(Express framework). For database MongoDB(NoSQL database) was used. For interactions with MongoDB, a mongoose library was used. To implement the private messaging feature Socket.io library was used. Node.js REST API was tested with Mocha.js, Chai.js, Sinon.js...Also, rate-limiting is implemented.',
       },
       wlfClothing: {
         title: 'WLF(We love fashion) Clothing - eCommerce project',
         overview:
-          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI I used Vuetify.js(Material Design component framework). For backend, I created a REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For interactions with MongoDB mongoose library is used. Some of the features that are implemented are: Authentication & Authorization, Payment with PayPal, CMS for users and products, pagination, email interactions, AWS S3 storage... basically everything one e-commerce must-have.',
+          'This project was created from two separate parts - frontend and backend. For frontend I used Nuxt.js to create SSR(Server Side Render) Vue.js application. For UI I used Vuetify.js(Material Design component framework). For backend, I created a REST API with Node.js(Express framework). For database MongoDB(NoSQL database) is used. For interactions with MongoDB mongoose library is used. Some of the features that are implemented: Authentication & Authorization, Payment with PayPal, CMS for users and products, pagination, email interactions, AWS S3 storage... basically everything one e-commerce must-have.',
       },
       seoMind: {
         title: 'SEO Mind - Website project',
         overview:
-          'To create this project, first I used a tool created by the Nuxt.js team called create-nuxt-app. In process of creating a web application, for style is used Sass(Scss) and for version control is used Git & Github.',
+          'To create this project, first I used a tool created by the Nuxt.js team called create-nuxt-app. In process of creating a web application, for managing CSS style I used Sass(Scss) and for version control was used Git & Github.',
       },
       greatAthlete: {
         title: 'Great Athlete - GYM website project',
         overview:
-          'To create this project, first I created a setup with Webpack(module bundler). Once webpack setup is done correctly, he is responsible for the fast development process and bundled minified code in production. Sass is used as a CSS extension so I was able to reuse CSS and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.',
+          'To create this project, first I created a setup with Webpack(module bundler). Once webpack setup was done correctly, he was responsible for the fast development process and bundled minified code in production. Sass was used as a CSS extension so I was able to reuse CSS and organize it well. For all interactions with user vanilla JavaScript was used. Git and Github were used for version control.',
       },
     },
     technologiesSection: {
