@@ -83,7 +83,7 @@ export default {
           title: this.$t('home.projectsSection.wlfClothing.title'),
           links: {
             github: 'https://github.com/mark01Zlatar/e-commerce-frontend',
-            site: 'https://gem-media-frontend.herokuapp.com/'
+            site: 'https://wlf-e-commerce-frontend.herokuapp.com/'
           },
           technologies: [
             'HTML5',
