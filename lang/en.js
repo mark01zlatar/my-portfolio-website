@@ -1,8 +1,4 @@
 export default {
-  head: {
-    title: '',
-    description: '',
-  },
   links: {
     home: 'Home',
     about: 'About me',
@@ -17,6 +13,11 @@ export default {
     sourceCode: 'Source Code',
   },
   home: {
+    head: {
+      title: 'Home',
+      description:
+        'Marko Zlatar - Self taught software and web developer. Most of my time I spend building websites and web apps, taking my craft and skills to the next level.',
+    },
     landingSection: {
       title: 'Self taught software and web developer',
     },
@@ -106,6 +107,11 @@ export default {
     title: 'WORK. DISCIPLINE. FREEDOM.',
   },
   contact: {
+    head: {
+      title: 'Contact',
+      description:
+        'Tell me what you have in mind - Here you can send me a message about any subject you are interested in.',
+    },
     buttons: {
       start: 'Click here to send a message',
       prev: 'Previous',

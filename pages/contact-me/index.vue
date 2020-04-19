@@ -195,13 +195,13 @@ export default {
   name: 'contact-me',
   head() {
     return {
-      title: 'Contact me',
+      title: this.$t('contact.head.title'),
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'Tell me what you have in mind - Here you can send me a message about any subject you are interested in.'
+            this.$t('contact.head.description')
         }
       ],
       noscript: [{ innerHTML: 'Body No Scripts', body: true }]
