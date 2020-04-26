@@ -16,7 +16,7 @@ export default {
     head: {
       title: 'Početna stranica',
       description:
-        'Marko Zlatar - Samouki softver i web developer. Većinu vremena provodim kreirajući web sajtove i web aplikacije, unapređujući svoje znanje i veštine na viši nivo.',
+        'Marko Zlatar - Samouki softver i web developer. Vreme provodim unapređujući svoje znanje i veštine na viši nivo.',
     },
     landingSection: {
       title: 'Samouki Software i Web developer',

@@ -16,7 +16,7 @@ export default {
     head: {
       title: 'Home',
       description:
-        'Marko Zlatar - Self taught software and web developer. Most of my time I spend building websites and web apps, taking my craft and skills to the next level.',
+        'Marko Zlatar - Self taught software and web developer. I spend time taking my craft and skills to the next level.',
     },
     landingSection: {
       title: 'Self taught software and web developer',

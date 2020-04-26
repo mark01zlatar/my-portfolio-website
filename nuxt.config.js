@@ -66,14 +66,6 @@ export default {
     '@nuxtjs/robots',
     // Doc: https://www.npmjs.com/package/@nuxtjs/sitemap
     '@nuxtjs/sitemap',
-    // Doc: https://github.com/WilliamDASILVA/nuxt-trailingslash-module
-    [
-      'nuxt-trailingslash-module',
-      {
-        /* module options */
-        methods: ['GET', 'HEAD'],
-      },
-    ],
     [
       'nuxt-compress',
       {
@@ -109,8 +101,8 @@ export default {
     parsePages: false,
     pages: {
       'contact-me/index': {
-        en: '/contact-me',
-        sr: '/kontaktiraj-me',
+        en: '/contact-me/',
+        sr: '/kontaktiraj-me/',
       },
     },
     detectBrowserLanguage: {
@@ -127,6 +119,7 @@ export default {
   robots: {},
   sitemap: {
     hostname: 'https://markozlatar.com',
+    trailingslash: true,
   },
   /*
    ** Build configuration
@@ -149,5 +142,8 @@ export default {
   },
   env: {
     BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
+  },
+  router: {
+    trailingSlash: true,
   },
 }

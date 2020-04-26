@@ -18,7 +18,6 @@
     "nuxt": "^2.12.2",
     "nuxt-compress": "^1.1.0",
     "nuxt-i18n": "^6.8.1",
-    "nuxt-trailingslash-module": "^1.1.0",
     "swiper": "^5.3.7",
     "vue-awesome-swiper": "^4.1.0",
     "vue-gtag": "^1.6.2",
