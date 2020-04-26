@@ -1,7 +1,7 @@
 <template>
   <header id="top">
     <nav>
-      <nuxt-link tag="a" :to="localePath('/')">
+      <nuxt-link class="logo" tag="a" :to="localePath('/')">
         <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo" />
       </nuxt-link>
       <div class="desktop-navigation">
@@ -101,13 +101,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.logo {
+  z-index: 100;
+}
 header {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
   height: 120px;
-  z-index: 1;
+  z-index: 2;
   background-color: $site-gray;
   display: flex;
   align-items: center;
