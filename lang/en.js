@@ -17,6 +17,8 @@ export default {
       title: 'Home',
       description:
         'Marko Zlatar - Self taught software and web developer. I spend time taking my craft and skills to the next level.',
+      keywords:
+        'Marko Zlatar, Self taught web developer, Web developer, programming, Web development, create website',
     },
     landingSection: {
       title: 'Self taught software and web developer',
@@ -111,6 +113,8 @@ export default {
       title: 'Contact',
       description:
         'Tell me what you have in mind - Here you can send me a message about any subject you are interested in.',
+      keywords:
+        'Contact Marko Zlatar',
     },
     buttons: {
       start: 'Click here to send a message',

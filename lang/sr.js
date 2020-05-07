@@ -17,6 +17,8 @@ export default {
       title: 'Početna stranica',
       description:
         'Marko Zlatar - Samouki softver i web developer. Vreme provodim unapređujući svoje znanje i veštine na viši nivo.',
+      keywords:
+        'Marko Zlatar, Samouki web developer, Programiranje, kreiranje websajta',
     },
     landingSection: {
       title: 'Samouki Software i Web developer',
@@ -112,6 +114,7 @@ export default {
       title: 'Kontakt stranica ',
       description:
         'Recite šta imate na umu - Ovde možete da mi pošaljete poruku na željenu temu.',
+      keywords: 'Kontakt Marko Zlatar',
     },
     buttons: {
       start: 'Klikni ovde kako bi poslao poruku',

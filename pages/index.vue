@@ -32,6 +32,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.$t('home.head.description')
+        },
+        {
+          hid: 'keywords',
+          name: "keywords",
+          content: this.$t('home.head.keywords')
         }
       ],
       noscript: [{ innerHTML: 'Body No Scripts', body: true }]

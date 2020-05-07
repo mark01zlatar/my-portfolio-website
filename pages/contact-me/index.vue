@@ -202,6 +202,11 @@ export default {
           name: 'description',
           content:
             this.$t('contact.head.description')
+        },
+        {
+          hid: 'keywords',
+          name: "keywords",
+          content: this.$t('contact.head.keywords')
         }
       ],
       noscript: [{ innerHTML: 'Body No Scripts', body: true }]

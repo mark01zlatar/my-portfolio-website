@@ -20,7 +20,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'Marko Zlatar - Self taught software and web developer',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -87,6 +87,7 @@ export default {
     scss: ['@/assets/scss/_colors.scss'],
   },
   i18n: {
+    seo: false,
     locales: [
       { code: 'sr', iso: 'sr-RS', name: 'Srpski' },
       { code: 'en', iso: 'en-US', name: 'English' },
