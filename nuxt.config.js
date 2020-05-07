@@ -108,7 +108,7 @@ export default {
     },
     detectBrowserLanguage: {
       useCookie: true,
-      alwaysRedirect: true,
+      alwaysRedirect: false,
     },
     vuex: {
       moduleName: 'i18n',
