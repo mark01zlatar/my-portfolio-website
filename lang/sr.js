@@ -96,13 +96,13 @@ export default {
         title:
           'Tehnologije koje koristim kako bih kreirao prelepe frontend aplikacije.',
         subtitle:
-          'Neke od njih su: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, itd.',
+          'Neke od njih su: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Gulp, PWA, Git & Github, itd.',
       },
       backend: {
         title:
           'Tehnologije koje koristim kako bih kreirao funkcionalne backend aplikacije.',
         subtitle:
-          'Neke od njih su: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...',
+          'Neke od njih su: Node.js(Express), TypeScript, MongoDB, MySQL, Socket.io, GraphQL, Git & Github...',
       },
     },
   },

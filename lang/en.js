@@ -95,13 +95,13 @@ export default {
         title:
           'Technologies that I use to create beautiful front-end applications',
         subtitle:
-          'Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Git & Github, etc.',
+          'Some of them are: HTML5, CSS3, JavaScript, Vue.js, Nuxt.js, Sass, Bootstrap, Vuetify.js, Webpack, Gulp, PWA, Git & Github, etc.',
       },
       backend: {
         title:
           'Technologies that I use to create functional back-end applications',
         subtitle:
-          'Some of them are: Node.js(Express), MongoDB, MySQL, Socket.io, GraphQL, Git & Github...',
+          'Some of them are: Node.js(Express), TypeScript, MongoDB, MySQL, Socket.io, GraphQL, Git & Github...',
       },
     },
   },
