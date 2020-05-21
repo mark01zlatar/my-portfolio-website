@@ -2,7 +2,11 @@
   <div class="skewed-box">
     <div class="about-me-container">
       <div class="about-me-image-box">
-        <img src="@/assets/images/markozlatar.webp" height="500px" alt="Marko Zlatar" />
+        <img
+          src="@/assets/images/markozlatar-400x600.webp"
+          height="500px"
+          alt="Marko Zlatar"
+        />
       </div>
       <div class="about-me-text">
         <h2 id="about">{{ $t('home.aboutSection.title') }}</h2>

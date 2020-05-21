@@ -30,12 +30,12 @@
           </image-box>
           <image-box>
             <img
-              src="@/assets/images/technologies-images/webpack.webp"
+              src="@/assets/images/technologies-images/pwa.webp"
               class="technology-image"
               width="150px"
-              alt="Webpack logo image"
+              alt="PWA logo image"
             />
-            <p>Webpack</p>
+            <p>PWA</p>
           </image-box>
         </div>
         <div class="image-box-container second">
@@ -95,12 +95,12 @@
         <div class="image-box-container image-box-container-backend second">
           <image-box>
             <img
-              src="@/assets/images/technologies-images/socketio.webp"
+              src="@/assets/images/technologies-images/typescript.webp"
               class="technology-image"
               width="150px"
-              alt="Socket.io logo image"
+              alt="Typescript logo image"
             />
-            <p>Socket.io</p>
+            <p>TS</p>
           </image-box>
           <image-box>
             <img

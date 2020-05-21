@@ -10,13 +10,19 @@
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <transition-group class="transition-group" mode="out-in" name="slide-fade">
+      <transition-group
+        class="transition-group"
+        mode="out-in"
+        name="slide-fade"
+      >
         <button
           v-show="!email.show && !name.show && !subject.show && !message.show"
           @click.prevent="email.show = true"
           class="contact-button"
           :key="'start'"
-        >{{ $t('contact.buttons.start') }}</button>
+        >
+          {{ $t('contact.buttons.start') }}
+        </button>
         <!-- Email Input -->
         <div v-show="email.show" class="form-group" :key="'email'">
           <label for="email">{{ $t('contact.labels.email.title') }}</label>
@@ -32,9 +38,9 @@
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
-              <small
-                v-if="$v.email.value.$invalid && $v.email.value.$dirty"
-              >{{ $t('contact.labels.email.errorText') }}</small>
+              <small v-if="$v.email.value.$invalid && $v.email.value.$dirty">{{
+                $t('contact.labels.email.errorText')
+              }}</small>
             </transition>
           </div>
           <div class="buttons-container">
@@ -42,10 +48,16 @@
               @click.prevent.native="email.show = false"
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              @click.prevent.native="cancel"
+              :text="$t('contact.buttons.cancel')"
+            ></app-button>
             <app-button
               :disabled="$v.email.value.$invalid"
-              @click.prevent.native="email.show = false; name.show = true"
+              @click.prevent.native="
+                email.show = false
+                name.show = true
+              "
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -68,7 +80,8 @@
               <small
                 v-if="$v.name.first.$invalid && $v.name.first.$dirty"
                 style="margin-bottom: 30px;"
-              >{{ $t('contact.labels.name.errorText') }}</small>
+                >{{ $t('contact.labels.name.errorText') }}</small
+              >
             </transition>
           </div>
           <label for="lastName">{{ $t('contact.labels.name.last') }}</label>
@@ -84,20 +97,29 @@
             />
             <span class="border-line"></span>
             <transition mode="out-in" name="shake">
-              <small
-                v-if="$v.name.last.$invalid && $v.name.last.$dirty"
-              >{{ $t('contact.labels.name.errorText') }}</small>
+              <small v-if="$v.name.last.$invalid && $v.name.last.$dirty">{{
+                $t('contact.labels.name.errorText')
+              }}</small>
             </transition>
           </div>
           <div class="buttons-container">
             <app-button
-              @click.prevent.native="name.show = false; email.show = true"
+              @click.prevent.native="
+                name.show = false
+                email.show = true
+              "
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              @click.prevent.native="cancel"
+              :text="$t('contact.buttons.cancel')"
+            ></app-button>
             <app-button
               :disabled="$v.name.first.$invalid || $v.name.last.$invalid"
-              @click.prevent.native="subject.show = true; name.show = false"
+              @click.prevent.native="
+                subject.show = true
+                name.show = false
+              "
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -119,18 +141,28 @@
             <transition mode="out-in" name="shake">
               <small
                 v-if="$v.subject.value.$invalid && $v.subject.value.$dirty"
-              >{{ $t('contact.labels.subject.errorText') }}</small>
+                >{{ $t('contact.labels.subject.errorText') }}</small
+              >
             </transition>
           </div>
           <div class="buttons-container">
             <app-button
-              @click.prevent.native="subject.show = false; name.show = true"
+              @click.prevent.native="
+                subject.show = false
+                name.show = true
+              "
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              @click.prevent.native="cancel"
+              :text="$t('contact.buttons.cancel')"
+            ></app-button>
             <app-button
               :disabled="$v.subject.value.$invalid"
-              @click.prevent.native="subject.show = false; message.show = true"
+              @click.prevent.native="
+                subject.show = false
+                message.show = true
+              "
               :text="$t('contact.buttons.next')"
             ></app-button>
           </div>
@@ -151,15 +183,22 @@
             <transition mode="out-in" name="shake">
               <small
                 v-if="$v.message.value.$invalid && $v.message.value.$dirty"
-              >{{ $t('contact.labels.message.errorText') }}</small>
+                >{{ $t('contact.labels.message.errorText') }}</small
+              >
             </transition>
           </div>
           <div class="buttons-container">
             <app-button
-              @click.prevent.native="subject.show = true; message.show = false"
+              @click.prevent.native="
+                subject.show = true
+                message.show = false
+              "
               :text="$t('contact.buttons.prev')"
             ></app-button>
-            <app-button @click.prevent.native="cancel" :text="$t('contact.buttons.cancel')"></app-button>
+            <app-button
+              @click.prevent.native="cancel"
+              :text="$t('contact.buttons.cancel')"
+            ></app-button>
             <app-button
               :disabled="$v.$invalid"
               @click.prevent.native="handleSubmit"
@@ -345,7 +384,7 @@ export default {
       message:
         "Hi, your message was successfully sent, I'll try to answer as soon as possible.",
       type: 'success',
-      image: require('~/assets/images/markozlatar.webp'),
+      image: require('~/assets/images/markozlatar-184x184.webp'),
       layout: 2,
       imageWidth: 100,
       timeout: 20000,
@@ -358,7 +397,7 @@ export default {
       message: "Somewhere in process an error occurred, I'm working on it...",
       type: 'error',
       layout: 2,
-      image: require('~/assets/images/markozlatar.webp'),
+      image: require('~/assets/images/markozlatar-184x184.webp'),
       imageWidth: 100,
       timeout: 20000,
       theme: 'dark',

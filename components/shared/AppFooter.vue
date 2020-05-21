@@ -3,8 +3,15 @@
     <h1>{{ $t('footer.title') }}</h1>
     <nav>
       <scrollactive tag="div">
-        <a :href="localePath({ path: '/', hash: '#top' })" class="scrollactive-item">
-          <img src="@/assets/images/MZ-logo-white-small.png" width="70" alt="Marko Zlatar Logo" />
+        <a
+          :href="localePath({ path: '/', hash: '#top' })"
+          class="scrollactive-item"
+        >
+          <img
+            src="@/assets/images/MZ-logo-white-small.png"
+            width="70"
+            alt="Marko Zlatar Logo"
+          />
         </a>
         <div>
           <ul class="navigation-list">
@@ -12,19 +19,22 @@
               <a
                 :href="localePath({ path: '/', hash: '#about' })"
                 class="scrollactive-item"
-              >{{ $t('links.about') }}</a>
+                >{{ $t('links.about') }}</a
+              >
             </li>
             <li>
               <a
                 :href="localePath({ path: '/', hash: '#portfolio' })"
                 class="scrollactive-item"
-              >{{ $t('links.portfolio') }}</a>
+                >{{ $t('links.portfolio') }}</a
+              >
             </li>
             <li>
               <a
                 :href="localePath({ path: '/', hash: '#technologies' })"
                 class="scrollactive-item"
-              >{{ $t('links.technologies') }}</a>
+                >{{ $t('links.technologies') }}</a
+              >
             </li>
             <li>
               <app-link-download-resume></app-link-download-resume>
@@ -35,15 +45,12 @@
           </ul>
         </div>
         <div class="social-media-icons">
-          <span href="#">
+          <a href="https://www.facebook.com/marko.zlatar.98">
             <facebook-icon :size="30"></facebook-icon>
-          </span>
-          <span href="#">
-            <instagram-icon :size="30"></instagram-icon>
-          </span>
-          <span href="#">
+          </a>
+          <a href="https://www.linkedin.com/in/marko-zlatar-6526291aa/">
             <linkedin-icon :size="30"></linkedin-icon>
-          </span>
+          </a>
         </div>
       </scrollactive>
       <p class="rights">&copy; 2020 Marko Zlatar.</p>
