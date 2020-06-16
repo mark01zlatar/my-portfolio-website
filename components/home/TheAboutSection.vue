@@ -47,6 +47,9 @@ export default {}
   margin-right: 60px;
   img {
     z-index: 1;
+    max-width: 330px;
+    width: 100%;
+    height: auto;
   }
   &::before {
     content: '';
