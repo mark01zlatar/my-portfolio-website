@@ -11,7 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.2.0",
     "izitoast": "^1.4.0",
@@ -19,11 +19,13 @@
     "nuxt-compress": "^1.1.0",
     "nuxt-i18n": "^6.8.1",
     "swiper": "^5.3.7",
+    "vue": "^2.6.12",
     "vue-awesome-swiper": "^4.1.0",
     "vue-gtag": "^1.6.2",
     "vue-material-design-icons": "^4.5.0",
     "vue-notifications": "^1.0.2",
     "vue-scrollactive": "^0.8.0",
+    "vue-template-compiler": "^2.6.12",
     "vuelidate": "^0.7.5"
   },
   "devDependencies": {
