@@ -29,6 +29,7 @@
               >{{ technologie }}</li>
             </ul>
             <div>
+              <!--
               <a :href="getProjectDialogData.links.github" target="_blank">
                 <project-button>
                   <github-icon></github-icon>
@@ -41,6 +42,7 @@
                   {{ $t('links.visitSite') }}
                 </project-button>
               </a>
+              -->
             </div>
           </div>
         </div>

@@ -14,23 +14,25 @@
           {{ $t('links.viewMore') }}
         </project-button>
 
-        <a :href="project.links.github" target="_blank">
-          <project-button :text="$t('links.sourceCode')" icon="mdi-github">
-            <github-icon></github-icon>
-            {{ $t('links.sourceCode') }}
-          </project-button>
-        </a>
-        <a :href="project.links.site" target="_blank">
-          <project-button
-            :text="$t('links.visitSite')"
-            icon="mdi-search-web"
-            bordercolor="white"
-            buttonClasses="project-button--white"
-          >
-            <search-web-icon></search-web-icon>
-            {{ $t('links.visitSite') }}
-          </project-button>
-        </a>
+       <!--
+          <a :href="project.links.github" target="_blank">
+            <project-button :text="$t('links.sourceCode')" icon="mdi-github">
+              <github-icon></github-icon>
+              {{ $t('links.sourceCode') }}
+            </project-button>
+          </a>
+          <a :href="project.links.site" target="_blank">
+            <project-button
+              :text="$t('links.visitSite')"
+              icon="mdi-search-web"
+              bordercolor="white"
+              buttonClasses="project-button--white"
+            >
+              <search-web-icon></search-web-icon>
+              {{ $t('links.visitSite') }}
+            </project-button>
+          </a>
+        -->
       </div>
     </div>
     <hr class="horizontal-line" />
