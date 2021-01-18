@@ -45,7 +45,7 @@
           </ul>
         </div>
         <div class="social-media-icons">
-          <a href="https://www.facebook.com/marko.zlatar.98">
+          <a href="https://www.facebook.com/mark01zlatar">
             <facebook-icon :size="30"></facebook-icon>
           </a>
           <a href="https://www.linkedin.com/in/marko-zlatar-6526291aa/">

@@ -106,15 +106,14 @@ export default {
     },
   },
   footer: {
-    title: 'WORK. DISCIPLINE. FREEDOM.',
+    title: 'FOCUS. SIMPLICITY. DISCIPLINE.',
   },
   contact: {
     head: {
       title: 'Contact',
       description:
         'Tell me what you have in mind - Here you can send me a message about any subject you are interested in.',
-      keywords:
-        'Contact Marko Zlatar',
+      keywords: 'Contact Marko Zlatar',
     },
     buttons: {
       start: 'Click here to send a message',

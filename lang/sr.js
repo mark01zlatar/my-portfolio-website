@@ -107,7 +107,7 @@ export default {
     },
   },
   footer: {
-    title: 'RAD. DISCIPLINA. SLOBODA.',
+    title: 'FOCUS. SIMPLICIZAM. DISCIPLINA.',
   },
   contact: {
     head: {
