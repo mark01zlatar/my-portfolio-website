@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <landing-section></landing-section>
-    <services-section></services-section>
-    <about-section></about-section>
-    <projects-section></projects-section>
-    <technologies-section></technologies-section>
+    <!-- <services-section></services-section> -->
+    <!-- <about-section></about-section> -->
+    <!-- <projects-section></projects-section> -->
+    <!-- <technologies-section></technologies-section> -->
     <app-button-scroll-up></app-button-scroll-up>
   </div>
 </template>

@@ -107,7 +107,7 @@ export default {
     },
   },
   footer: {
-    title: 'FOCUS. SIMPLICIZAM. DISCIPLINA.',
+    title: 'FOKUS. SIMPLICIZAM. DISCIPLINA.',
   },
   contact: {
     head: {

@@ -5,47 +5,47 @@
       <template
         v-if="$route.path === localePath('/') || $route.path=== localePath('/').slice(0, -1) "
       >
-        <li>
-          <a
-            :href="localePath({ path: '/', hash: '#about' })"
-            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            class="scrollactive-item"
-          >{{ $t('links.about') }}</a>
-        </li>
-        <li>
-          <a
-            :href="localePath({ path: '/', hash: '#portfolio' })"
-            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            class="scrollactive-item"
-          >{{ $t('links.portfolio') }}</a>
-        </li>
-        <li>
-          <a
-            :href="localePath({ path: '/', hash: '#technologies' })"
-            @click="$store.commit('SET_MOBILE_NAVBAR', false)"
-            class="scrollactive-item"
-          >{{ $t('links.technologies') }}</a>
-        </li>
+        <!-- <li> -->
+          <!-- <a -->
+            <!-- :href="localePath({ path: '/', hash: '#about' })" -->
+            <!-- @click="$store.commit('SET_MOBILE_NAVBAR', false)" -->
+            <!-- class="scrollactive-item" -->
+          <!-- >{{ $t('links.about') }}</a> -->
+        <!-- </li> -->
+        <!-- <li> -->
+          <!-- <a -->
+            <!-- :href="localePath({ path: '/', hash: '#portfolio' })" -->
+            <!-- @click="$store.commit('SET_MOBILE_NAVBAR', false)" -->
+            <!-- class="scrollactive-item" -->
+          <!-- >{{ $t('links.portfolio') }}</a> -->
+        <!-- </li> -->
+        <!-- <li> -->
+          <!-- <a -->
+            <!-- :href="localePath({ path: '/', hash: '#technologies' })" -->
+            <!-- @click="$store.commit('SET_MOBILE_NAVBAR', false)" -->
+            <!-- class="scrollactive-item" -->
+          <!-- >{{ $t('links.technologies') }}</a> -->
+        <!-- </li> -->
       </template>
       <!-- Links for other pages -->
       <template v-else>
         <nuxt-link tag="li" :to="localePath('/')">
           <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.home') }}</a>
         </nuxt-link>
-        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#about' })">
-          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.about') }}</a>
-        </nuxt-link>
-        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#portfolio' })">
-          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a>
-        </nuxt-link>
+        <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#about' })"> -->
+          <!-- <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.about') }}</a> -->
+        <!-- </nuxt-link> -->
+        <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#portfolio' })"> -->
+          <!-- <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.portfolio') }}</a> -->
+        <!-- </nuxt-link> -->
 
-        <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#technologies' })">
-          <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
-        </nuxt-link>
+        <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#technologies' })"> -->
+          <!-- <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a> -->
+        <!-- </nuxt-link> -->
       </template>
-      <li>
-        <app-link-download-resume></app-link-download-resume>
-      </li>
+      <!-- <li> -->
+        <!-- <app-link-download-resume></app-link-download-resume> -->
+      <!-- </li> -->
       <nuxt-link
         v-if="$route.path !== localePath('contact-me')"
         :to="localePath('contact-me')"

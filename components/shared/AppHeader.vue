@@ -10,40 +10,40 @@
           <template
             v-if="$route.path === localePath('/') || $route.path === localePath('/').slice(0, -1)"
           >
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#about' })"
-                class="scrollactive-item"
-              >{{ $t('links.about') }}</a>
-            </li>
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#portfolio' })"
-                class="scrollactive-item"
-              >{{ $t('links.portfolio') }}</a>
-            </li>
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#technologies' })"
-                class="scrollactive-item"
-              >{{ $t('links.technologies') }}</a>
-            </li>
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#about' })" -->
+                <!-- class="scrollactive-item" -->
+              <!-- >{{ $t('links.about') }}</a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#portfolio' })" -->
+                <!-- class="scrollactive-item" -->
+              <!-- >{{ $t('links.portfolio') }}</a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#technologies' })" -->
+                <!-- class="scrollactive-item" -->
+              <!-- >{{ $t('links.technologies') }}</a> -->
+            <!-- </li> -->
           </template>
           <!-- Links for other pages -->
           <template v-else>
-            <nuxt-link tag="li" :to="localePath('/')">
-              <a>{{ $t('links.home') }}</a>
-            </nuxt-link>
-            <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#about' })">
-              <a>{{ $t('links.about') }}</a>
-            </nuxt-link>
-            <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#portfolio' })">
-              <a>{{ $t('links.portfolio') }}</a>
-            </nuxt-link>
-
-            <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#technologies' })">
-              <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a>
-            </nuxt-link>
+            <!-- <nuxt-link tag="li" :to="localePath('/')"> -->
+              <!-- <a>{{ $t('links.home') }}</a> -->
+            <!-- </nuxt-link> -->
+            <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#about' })"> -->
+              <!-- <a>{{ $t('links.about') }}</a> -->
+            <!-- </nuxt-link> -->
+            <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#portfolio' })"> -->
+              <!-- <a>{{ $t('links.portfolio') }}</a> -->
+            <!-- </nuxt-link> -->
+<!--  -->
+            <!-- <nuxt-link tag="li" :to="localePath({ path: '/', hash: '#technologies' })"> -->
+              <!-- <a @click="$store.commit('SET_MOBILE_NAVBAR', false)">{{ $t('links.technologies') }}</a> -->
+            <!-- </nuxt-link> -->
           </template>
 
           <nuxt-link
@@ -58,7 +58,7 @@
             </a>
           </nuxt-link>
         </scrollactive>
-        <app-link-download-resume class="resume-download"></app-link-download-resume>
+        <!-- <app-link-download-resume class="resume-download"></app-link-download-resume> -->
         <nuxt-link
           v-if="$route.path !== localePath('contact-me')"
           :to="localePath('contact-me')"
@@ -133,6 +133,7 @@ header {
 }
 
 .navigation-list {
+  margin-right: auto;
   color: white;
   display: flex;
   li {

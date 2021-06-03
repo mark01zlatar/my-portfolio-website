@@ -15,30 +15,30 @@
         </a>
         <div>
           <ul class="navigation-list">
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#about' })"
-                class="scrollactive-item"
-                >{{ $t('links.about') }}</a
-              >
-            </li>
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#portfolio' })"
-                class="scrollactive-item"
-                >{{ $t('links.portfolio') }}</a
-              >
-            </li>
-            <li>
-              <a
-                :href="localePath({ path: '/', hash: '#technologies' })"
-                class="scrollactive-item"
-                >{{ $t('links.technologies') }}</a
-              >
-            </li>
-            <li>
-              <app-link-download-resume></app-link-download-resume>
-            </li>
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#about' })" -->
+                <!-- class="scrollactive-item" -->
+                <!-- >{{ $t('links.about') }}</a -->
+              <!-- > -->
+            <!-- </li> -->
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#portfolio' })" -->
+                <!-- class="scrollactive-item" -->
+                <!-- >{{ $t('links.portfolio') }}</a -->
+              <!-- > -->
+            <!-- </li> -->
+            <!-- <li> -->
+              <!-- <a -->
+                <!-- :href="localePath({ path: '/', hash: '#technologies' })" -->
+                <!-- class="scrollactive-item" -->
+                <!-- >{{ $t('links.technologies') }}</a -->
+              <!-- > -->
+            <!-- </li> -->
+            <!-- <li> -->
+              <!-- <app-link-download-resume></app-link-download-resume> -->
+            <!-- </li> -->
             <nuxt-link :to="localePath('contact-me')" tag="li">
               <a>{{ $t('links.contact') }}</a>
             </nuxt-link>
